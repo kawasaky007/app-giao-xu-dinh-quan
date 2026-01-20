@@ -91,7 +91,16 @@ export default function EventForm({ onSubmit, initialData }: EventFormProps) {
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
-        if (!file || !storage) return;
+        if (!file) return;
+
+        if (!storage) {
+            toast({
+                variant: "destructive",
+                title: "Lỗi cấu hình",
+                description: "Dịch vụ lưu trữ Firebase không khả dụng. Vui lòng thử lại sau hoặc liên hệ quản trị viên.",
+            });
+            return;
+        }
 
         setIsUploading(true);
         setUploadProgress(0);
