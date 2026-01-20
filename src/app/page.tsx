@@ -8,17 +8,15 @@ import { Clock, Phone, MapPin, Calendar, Newspaper } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getRecentArticles, NewsArticle } from '@/lib/news';
+import { getRecentEvents, Event } from '@/lib/events';
+import { format } from 'date-fns';
+
 
 export default async function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-church-interior');
   const recentArticles = await getRecentArticles(3);
+  const recentEvents = await getRecentEvents(3);
   
-  const eventImages = {
-    concert: PlaceHolderImages.find(p => p.id === 'event-concert'),
-    festival: PlaceHolderImages.find(p => p.id === 'event-festival'),
-    dinner: PlaceHolderImages.find(p => p.id === 'event-dinner'),
-  }
-
   return (
     <div className="flex flex-col min-h-screen bg-background font-body">
       <Header />
@@ -42,7 +40,7 @@ export default async function Home() {
               A beacon of faith, hope, and love in the heart of the community.
             </p>
             <Button size="lg" asChild>
-              <Link href="/#contact">Plan Your Visit</Link>
+              <Link href="/about">Learn More About Us</Link>
             </Button>
           </div>
         </section>
@@ -62,7 +60,7 @@ export default async function Home() {
                   <p className="mb-2"><strong>Sunday:</strong> 8:00 AM, 10:30 AM</p>
                   <p className="mb-4"><strong>Weekdays:</strong> 7:00 AM (Chapel)</p>
                   <Button variant="outline" asChild>
-                    <Link href="/#events">View Full Schedule</Link>
+                    <Link href="/schedule">View Full Schedule</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -154,42 +152,35 @@ export default async function Home() {
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="overflow-hidden">
-                {eventImages.concert && <Image src={eventImages.concert.imageUrl} alt={eventImages.concert.description} width={400} height={250} className="w-full h-48 object-cover" data-ai-hint={eventImages.concert.imageHint} />}
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl">Christmas Choir Concert</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-foreground/80 mb-2"><strong>Date:</strong> December 18th, 7:00 PM</p>
-                  <p className="text-foreground/80 mb-4">A beautiful evening of traditional carols and sacred music.</p>
-                  <Button variant="link" className="p-0">Event Details</Button>
-                </CardContent>
-              </Card>
-              <Card className="overflow-hidden">
-                {eventImages.festival && <Image src={eventImages.festival.imageUrl} alt={eventImages.festival.description} width={400} height={250} className="w-full h-48 object-cover" data-ai-hint={eventImages.festival.imageHint} />}
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl">St. Francis Day Festival</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-foreground/80 mb-2"><strong>Date:</strong> October 4th, 12:00 PM - 4:00 PM</p>
-                  <p className="text-foreground/80 mb-4">Blessing of the animals, games, and food for the whole family.</p>
-                  <Button variant="link" className="p-0">Event Details</Button>
-                </CardContent>
-              </Card>
-              <Card className="overflow-hidden">
-                {eventImages.dinner && <Image src={eventImages.dinner.imageUrl} alt={eventImages.dinner.description} width={400} height={250} className="w-full h-48 object-cover" data-ai-hint={eventImages.dinner.imageHint} />}
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl">Knights of Columbus Dinner</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-foreground/80 mb-2"><strong>Date:</strong> November 12th, 6:00 PM</p>
-                  <p className="text-foreground/80 mb-4">Enjoy a delicious pasta dinner and support our local Knights.</p>
-                  <Button variant="link" className="p-0">Event Details</Button>
-                </CardContent>
-              </Card>
+              {recentEvents.map((event: Event) => {
+                const eventImage = PlaceHolderImages.find(p => p.id === event.image);
+                return (
+                    <Card key={event.id} className="overflow-hidden">
+                        {eventImage && (
+                            <Link href={`/events/${event.slug}`}>
+                                <Image src={eventImage.imageUrl} alt={event.title} width={400} height={250} className="w-full h-48 object-cover" data-ai-hint={eventImage.imageHint} />
+                            </Link>
+                        )}
+                        <CardHeader>
+                        <CardTitle className="font-headline text-xl">
+                            <Link href={`/events/${event.slug}`} className="hover:text-primary transition-colors">{event.title}</Link>
+                        </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-sm text-foreground/80 mb-2"><strong>Date:</strong> {format(new Date(event.date), 'MMMM d, yyyy')}</p>
+                            <p className="text-foreground/80 mb-4 line-clamp-3">{event.excerpt}</p>
+                            <Button variant="link" className="p-0" asChild>
+                                <Link href={`/events/${event.slug}`}>Event Details</Link>
+                            </Button>
+                        </CardContent>
+                    </Card>
+                );
+              })}
             </div>
             <div className="text-center mt-12">
-              <Button size="lg">View Full Calendar</Button>
+              <Button size="lg" asChild>
+                <Link href="/events">View Full Calendar</Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -199,5 +190,3 @@ export default async function Home() {
     </div>
   );
 }
-
-    

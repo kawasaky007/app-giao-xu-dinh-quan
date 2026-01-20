@@ -1,0 +1,79 @@
+{
+  "schedules": {
+    "weekend": [
+      { "day": "Saturday Vigil", "time": "5:00 PM" },
+      { "day": "Sunday", "time": "8:00 AM" },
+      { "day": "Sunday", "time": "10:30 AM (Choir)" },
+      { "day": "Sunday", "time": "1:00 PM (Spanish)" }
+    ],
+    "weekday": [
+      { "day": "Monday - Friday", "time": "7:00 AM (Chapel)" },
+      { "day": "Saturday", "time": "8:00 AM (Chapel)" }
+    ],
+    "confession": [
+      { "day": "Wednesday", "time": "6:00 PM - 6:45 PM" },
+      { "day": "Saturday", "time": "3:30 PM - 4:30 PM" }
+    ],
+    "adoration": [
+      { "day": "Fridays", "time": "7:30 AM - 12:00 PM (Chapel)" }
+    ]
+  },
+  "specialSchedules": [
+    {
+      "season": "Christmas 2024",
+      "schedule": [
+        { "name": "Christmas Eve Vigil", "date": "December 24", "time": "4:00 PM (Children's Mass)" },
+        { "name": "Christmas Eve Vigil", "date": "December 24", "time": "7:00 PM" },
+        { "name": "Christmas Midnight Mass", "date": "December 24", "time": "12:00 AM" },
+        { "name": "Christmas Day", "date": "December 25", "time": "9:00 AM" },
+        { "name": "Christmas Day", "date": "December 25", "time": "11:00 AM" }
+      ]
+    },
+    {
+      "season": "Holy Week 2025",
+      "schedule": [
+        { "name": "Holy Thursday", "date": "April 17", "time": "7:00 PM (Mass of the Lord's Supper)" },
+        { "name": "Good Friday", "date": "April 18", "time": "3:00 PM (Liturgy of the Lord's Passion)" },
+        { "name": "Holy Saturday", "date": "April 19", "time": "8:00 PM (Easter Vigil)" }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "st-francis-festival-2024",
+      "slug": "st-francis-festival-2024",
+      "title": "St. Francis Day Festival & Blessing of Animals",
+      "date": "2024-10-04T12:00:00.000Z",
+      "endTime": "2024-10-04T16:00:00.000Z",
+      "location": "Church Lawn & Parking Lot",
+      "image": "event-festival",
+      "category": "Parish Events",
+      "excerpt": "Join us for our annual St. Francis Day festival! A fun day for the whole family with games, food, and the beloved Blessing of the Animals.",
+      "description": "<p>Celebrate the feast day of St. Francis of Assisi, patron saint of animals and the environment, at our annual parish festival. The afternoon will be filled with joy and community spirit.</p><p>Activities include carnival games for kids, a bake sale hosted by the Women's Guild, and a delicious BBQ lunch. The highlight of the day is the Blessing of the Animals at 2:00 PM on the church steps. Bring your beloved pets (leashed or in carriers, please) for a special blessing from Father Michael.</p><p>This is a wonderful tradition and a great way to enjoy a fall afternoon with your parish family. All are welcome!</p>"
+    },
+    {
+      "id": "knights-of-columbus-pancake-breakfast-2024",
+      "slug": "knights-of-columbus-pancake-breakfast-2024",
+      "title": "Knights of Columbus Pancake Breakfast",
+      "date": "2024-10-20T08:30:00.000Z",
+      "endTime": "2024-10-20T12:30:00.000Z",
+      "location": "Parish Hall",
+      "image": "event-pancake-breakfast",
+      "category": "Fundraiser",
+      "excerpt": "Support our local Knights of Columbus council and enjoy a delicious breakfast of pancakes, sausage, and more. A great way to connect after Sunday Mass.",
+      "description": "<p>The Knights of Columbus Council #5821 invites you to their monthly Pancake Breakfast! Join us in the parish hall after the Sunday morning Masses for a delicious and hearty breakfast.</p><p>The menu features all-you-can-eat pancakes, sausage links, scrambled eggs, orange juice, and coffee. All proceeds go towards the Knights' many charitable activities, including support for local food banks, scholarships for parish youth, and aid for families in need.</p><p>Come for the food, stay for the fellowship! It's a perfect opportunity to catch up with friends and fellow parishioners while supporting a great cause. Cost is $8 for adults and $5 for children under 12.</p>"
+    },
+    {
+      "id": "parish-advent-retreat-2024",
+      "slug": "parish-advent-retreat-2024",
+      "title": "Advent Retreat: Preparing Our Hearts for Christ",
+      "date": "2024-12-07T09:00:00.000Z",
+      "endTime": "2024-12-07T12:00:00.000Z",
+      "location": "Main Church & Parish Hall",
+      "image": "event-advent-retreat",
+      "category": "Spiritual Growth",
+      "excerpt": "Take a morning to step away from the holiday rush and enter into the quiet, prayerful spirit of Advent at our parish retreat.",
+      "description": "<p>In the midst of a busy season, our Advent Retreat offers a peaceful oasis to prepare our hearts for the coming of the Lord. This year's retreat, led by guest speaker Sister Mary Katherine from the Sisters of Mercy, will focus on the theme 'Watching and Waiting in Joyful Hope.'</p><p>The morning will include a reflection on the Advent scriptures, time for silent prayer and adoration, the opportunity for the Sacrament of Reconciliation, and fellowship with coffee and pastries. It is a time to slow down, reflect, and spiritually ready ourselves for the celebration of Christmas.</p><p>The retreat is open to all adult parishioners. There is no cost to attend, but please RSVP to the parish office so we can prepare accordingly.</p>"
+    }
+  ]
+}

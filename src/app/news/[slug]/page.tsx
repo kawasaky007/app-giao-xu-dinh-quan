@@ -7,6 +7,7 @@ import { Calendar, User, Tag } from 'lucide-react';
 import type { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 type Props = {
   params: { slug: string }

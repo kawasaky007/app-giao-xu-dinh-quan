@@ -8,8 +8,9 @@ import { Button } from './ui/button';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
+  { href: '/schedule', label: 'Schedule' },
   { href: '/news', label: 'News' },
-  { href: '/#events', label: 'Events' },
+  { href: '/events', label: 'Events' },
   { href: '/#contact', label: 'Contact' },
 ];
 

@@ -61,6 +61,24 @@
       "imageHint": "community dinner"
     },
     {
+      "id": "event-pancake-breakfast",
+      "description": "A stack of pancakes with syrup and butter on a plate.",
+      "imageUrl": "https://images.unsplash.com/photo-1528207776546-365bb010ee93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYW5jYWtlcyUyMGJyZWFrZmFzdHxlbnwwfHx8fDE3MjE4MzYzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pancakes breakfast"
+    },
+    {
+      "id": "event-advent-retreat",
+      "description": "A person sitting alone in a church pew, in quiet prayer.",
+      "imageUrl": "https://images.unsplash.com/photo-1484910292437-025d3a13a772?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxxdWlldCUyMHByYXllcnxlbnwwfHx8fDE3MjE4MzY0MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "quiet prayer"
+    },
+    {
+      "id": "schedule-header",
+      "description": "A close-up of an ornate church calendar or liturgical book.",
+      "imageUrl": "https://images.unsplash.com/photo-1518778642335-a63475c7b396?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBjYWxlbmRhcnxlbnwwfHx8fDE3MjE4MzY0NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "church calendar"
+    },
+    {
       "id": "about-hero",
       "description": "A detailed close-up of a beautiful stained glass window, showing intricate patterns and vibrant colors.",
       "imageUrl": "https://images.unsplash.com/photo-1549989476-69a92fa57c36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdGFpbmVkJTIwZ2xhc3N8ZW58MHx8fHwxNzY4OTA3MzAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
