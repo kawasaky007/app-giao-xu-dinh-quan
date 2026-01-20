@@ -1,0 +1,49 @@
+import { getFaqs } from '@/lib/faq';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'FAQ | Our Sacred Place',
+    description: 'Find answers to frequently asked questions about Our Sacred Place parish, including Mass times, parish registration, sacraments, and how to get involved.',
+};
+
+export default async function FaqPage() {
+  const faqs = await getFaqs();
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': faqs.map(faq => ({
+      '@type': 'Question',
+      'name': faq.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        // A plain text version of the answer is better for SEO
+        'text': faq.answer.replace(/<[^>]*>?/gm, '') 
+      }
+    }))
+  };
+
+  return (
+    <main className="py-16 md:py-24 bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="container px-4 max-w-3xl mx-auto">
+        <Accordion type="single" collapsible className="w-full">
+          {faqs.map((faq, index) => (
+            <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionTrigger className="text-xl text-left font-headline text-primary">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="prose prose-lg max-w-none text-foreground/80">
+                 <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </main>
+  );
+}

@@ -1,0 +1,36 @@
+{
+  "faqs": [
+    {
+      "question": "What are the Mass times?",
+      "answer": "You can find our complete Mass schedule, including weekend, weekday, and special holiday times, on our <a href='/schedule' class='text-primary hover:underline'>Schedule page</a>."
+    },
+    {
+      "question": "How do I register as a new parishioner?",
+      "answer": "Welcome! We are so glad to have you join our community. You can register by filling out the New Parishioner form available on our <a href='/documents' class='text-primary hover:underline'>Documents page</a> or by visiting the parish office during office hours."
+    },
+    {
+      "question": "How do I arrange for a baptism?",
+      "answer": "Congratulations! For information on scheduling a baptism and the required preparation classes for parents and godparents, please visit the <a href='/catechism#sacraments' class='text-primary hover:underline'>Sacrament Preparation</a> section on our Catechism page or contact the parish office."
+    },
+    {
+      "question": "How can I get married at Our Sacred Place?",
+      "answer": "We would be honored to be a part of your special day. Please contact the parish office at least six months in advance of your desired wedding date to begin the marriage preparation process. You can find more initial information in the Holy Matrimony section on our <a href='/catechism#sacraments' class='text-primary hover:underline'>Catechism page</a>."
+    },
+    {
+      "question": "How can I get involved in parish ministries?",
+      "answer": "There are many ways to share your time and talents! You can learn about our various ministries on the <a href='/about#organization' class='text-primary hover:underline'>About Us page</a>. To volunteer, please fill out the Ministry Volunteer Application on our <a href='/documents' class='text-primary hover:underline'>Documents page</a> or contact the ministry leader directly."
+    },
+    {
+      "question": "How do I make a donation?",
+      "answer": "Thank you for your generosity. You can make a one-time or recurring donation through the 'Giving' link in our website's footer. Donations can also be made via the collection basket at Mass or by mail to the parish office."
+    },
+    {
+      "question": "Is the church wheelchair accessible?",
+      "answer": "Yes, our church is fully accessible. There are ramps at the main entrance and accessible seating areas available. The parish hall is also wheelchair accessible."
+    },
+    {
+      "question": "Do you have a 'cry room' for infants?",
+      "answer": "While we do not have a separate 'cry room,' we welcome and encourage families with young children to participate fully in the Mass. We love hearing the sounds of our youngest parishioners! If you need to step out for a moment, the narthex (lobby) is available, and you can still hear the Mass."
+    }
+  ]
+}
