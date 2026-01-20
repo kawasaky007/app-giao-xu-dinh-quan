@@ -16,22 +16,48 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { useUserRole } from '@/hooks/use-user-role';
+import React from 'react';
+import { cn } from '@/lib/utils';
 
-
-const navLinks = [
-  { href: '/', label: 'Trang Chủ' },
-  { href: '/about', label: 'Giới Thiệu' },
-  { href: '/schedule', label: 'Lịch Phụng Vụ' },
-  { href: '/news', label: 'Tin Tức' },
-  { href: '/events', label: 'Sự Kiện' },
-  { href: '/gallery', label: 'Hình Ảnh' },
-  { href: '/catechism', label: 'Giáo Lý' },
-  { href: '/documents', label: 'Tài Liệu' },
-  { href: '/faq', label: 'Hỏi Đáp' },
-  { href: '/contact', label: 'Liên Hệ' },
+const navGroups = [
+  {
+    title: "Về Giáo Xứ",
+    links: [
+      { href: '/about', label: 'Giới Thiệu', description: 'Lược sử, sứ mạng, và tầm nhìn của giáo xứ.' },
+      { href: '/schedule', label: 'Lịch Phụng Vụ', description: 'Xem giờ lễ và các lịch sinh hoạt khác.' },
+      { href: '/faq', label: 'Hỏi Đáp', description: 'Câu trả lời cho các câu hỏi thường gặp.' },
+      { href: '/contact', label: 'Liên Hệ', description: 'Thông tin liên hệ và bản đồ đến giáo xứ.' },
+    ]
+  },
+  {
+    title: "Đời Sống Cộng Đoàn",
+    links: [
+      { href: '/news', label: 'Tin Tức', description: 'Cập nhật tin tức và thông báo mới nhất.' },
+      { href: '/events', label: 'Sự Kiện', description: 'Tham gia các sự kiện sắp tới của giáo xứ.' },
+      { href: '/gallery', label: 'Thư Viện', description: 'Xem hình ảnh và video về đời sống giáo xứ.' },
+    ]
+  },
+  {
+    title: "Tài Nguyên",
+    links: [
+      { href: '/catechism', label: 'Giáo Lý', description: 'Chương trình giáo lý cho mọi lứa tuổi.' },
+      { href: '/documents', label: 'Tài Liệu', description: 'Tải các biểu mẫu và tài liệu quan trọng.' },
+    ]
+  }
 ];
+
 
 export default function Header() {
   const { user, isUserLoading } = useUser();
@@ -55,17 +81,37 @@ export default function Header() {
           <span className="hidden lg:inline">Giáo Xứ Các Thánh TĐVN</span>
           <span className="lg:hidden">GX Các Thánh TĐVN</span>
         </Link>
-        <nav className="hidden items-center gap-6 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="font-medium text-foreground/70 transition-colors hover:text-primary"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        
+        <NavigationMenu className="hidden md:flex">
+          <NavigationMenuList>
+             <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Trang Chủ
+                    </NavigationMenuLink>
+                </Link>
+            </NavigationMenuItem>
+            {navGroups.map((group) => (
+                <NavigationMenuItem key={group.title}>
+                    <NavigationMenuTrigger>{group.title}</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                        {group.links.map((link) => (
+                        <ListItem
+                            key={link.label}
+                            title={link.label}
+                            href={link.href}
+                        >
+                            {link.description}
+                        </ListItem>
+                        ))}
+                    </ul>
+                    </NavigationMenuContent>
+                </NavigationMenuItem>
+            ))}
+          </NavigationMenuList>
+        </NavigationMenu>
+
         <div className="flex items-center gap-2">
           <ThemeToggle />
 
@@ -94,9 +140,9 @@ export default function Header() {
                 <DropdownMenuItem asChild>
                     <Link href="/dashboard"><LayoutDashboard className="mr-2 h-4 w-4" />Trang quản trị</Link>
                 </DropdownMenuItem>
-                {role === 'admin' && (
+                {(role === 'admin' || role === 'editor') && (
                   <DropdownMenuItem asChild>
-                      <Link href="/admin"><Shield className="mr-2 h-4 w-4" />Quản trị viên</Link>
+                      <Link href="/admin"><Shield className="mr-2 h-4 w-4" />Admin Panel</Link>
                   </DropdownMenuItem>
                 )}
                 <DropdownMenuSeparator />
@@ -107,9 +153,10 @@ export default function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
-            <Button asChild className='hidden md:inline-flex'>
+            <Button asChild variant="ghost" size="icon" className='hidden md:inline-flex'>
               <Link href="/login">
-                <LogIn className="mr-2 h-4 w-4" /> Đăng Nhập
+                <LogIn />
+                 <span className="sr-only">Đăng Nhập</span>
               </Link>
             </Button>
           )}
@@ -123,29 +170,41 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
-                <div className="grid gap-6 p-6">
-                  <Link
-                    href="/"
-                    className="flex items-center gap-3 font-headline text-xl font-bold text-primary"
-                  >
-                    <Church className="h-8 w-8" />
-                    <span>Giáo Xứ</span>
-                  </Link>
-                  <nav className="grid gap-4">
-                    {navLinks.map((link) => (
-                      <SheetClose asChild key={link.href}>
-                        <Link
-                          href={link.href}
-                          className="text-lg font-medium text-foreground transition-colors hover:text-primary"
-                        >
-                          {link.label}
-                        </Link>
-                      </SheetClose>
-                    ))}
+                <div className="flex flex-col h-full">
+                   <div className="p-6">
+                     <Link
+                        href="/"
+                        className="flex items-center gap-3 font-headline text-xl font-bold text-primary"
+                    >
+                        <Church className="h-8 w-8" />
+                        <span>Giáo Xứ</span>
+                    </Link>
+                   </div>
+                  <nav className="flex-1 px-4 overflow-y-auto">
+                     <SheetClose asChild>
+                        <Link href="/" className="block py-3 text-lg font-medium text-foreground transition-colors hover:text-primary">Trang Chủ</Link>
+                    </SheetClose>
+                    <Accordion type="multiple" className="w-full">
+                        {navGroups.map((group) => (
+                             <AccordionItem value={group.title} key={group.title}>
+                                <AccordionTrigger className="py-3 text-lg font-medium">{group.title}</AccordionTrigger>
+                                <AccordionContent>
+                                    <ul className="pl-4">
+                                    {group.links.map(link => (
+                                        <li key={link.href}>
+                                            <SheetClose asChild>
+                                                <Link href={link.href} className="block py-2 text-base text-muted-foreground hover:text-primary">{link.label}</Link>
+                                            </SheetClose>
+                                        </li>
+                                    ))}
+                                    </ul>
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
                   </nav>
                   {!user && (
-                    <>
-                      <div className="border-t pt-6">
+                      <div className="border-t p-4 mt-auto">
                         <SheetClose asChild>
                           <Button asChild className='w-full'>
                             <Link href="/login">
@@ -154,9 +213,8 @@ export default function Header() {
                           </Button>
                         </SheetClose>
                       </div>
-                    </>
                   )}
-                </div>
+                 </div>
               </SheetContent>
             </Sheet>
           </div>
@@ -165,3 +223,30 @@ export default function Header() {
     </header>
   );
 }
+
+
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  )
+})
+ListItem.displayName = "ListItem"
