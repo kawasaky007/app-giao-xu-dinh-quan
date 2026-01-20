@@ -24,6 +24,7 @@ import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } f
 import { useStorage } from '@/firebase';
 import Image from 'next/image';
 import { Progress } from '@/components/ui/progress';
+import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
   title: z.string().min(3, { message: 'Tiêu đề phải có ít nhất 3 ký tự.' }),
@@ -66,6 +67,7 @@ const toDatetimeLocal = (isoString: string) => {
 
 export default function EventForm({ onSubmit, initialData }: EventFormProps) {
     const storage = useStorage();
+    const { toast } = useToast();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isUploading, setIsUploading] = useState(false);
     const [uploadProgress, setUploadProgress] = useState(0);
@@ -105,6 +107,11 @@ export default function EventForm({ onSubmit, initialData }: EventFormProps) {
             (error) => {
                 console.error("Upload failed:", error);
                 setIsUploading(false);
+                toast({
+                    variant: "destructive",
+                    title: "Tải lên thất bại",
+                    description: `Đã có lỗi xảy ra: ${error.message}`,
+                });
             },
             () => {
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
