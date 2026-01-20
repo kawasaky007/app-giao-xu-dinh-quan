@@ -8,6 +8,7 @@ import { Progress } from '@/components/ui/progress';
 import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useStorage } from '@/firebase';
 import type ReactQuillType from 'react-quill';
+import { useToast } from '@/hooks/use-toast';
 
 interface RichTextEditorProps {
   value: string;
@@ -23,6 +24,7 @@ const RichTextEditor = ({ value, onChange, placeholder }: RichTextEditorProps) =
 
   const quillRef = useRef<ReactQuillType>(null);
   const storage = useStorage();
+  const { toast } = useToast();
   const [uploading, setUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
 
@@ -54,7 +56,11 @@ const RichTextEditor = ({ value, onChange, placeholder }: RichTextEditorProps) =
         (error) => {
           console.error("Upload failed:", error);
           setUploading(false);
-          // TODO: Add a toast notification for the error
+          toast({
+              variant: "destructive",
+              title: "Tải tệp lên thất bại",
+              description: `Đã có lỗi xảy ra: ${error.message}`,
+          });
         }, 
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
@@ -75,7 +81,7 @@ const RichTextEditor = ({ value, onChange, placeholder }: RichTextEditorProps) =
         }
       );
     };
-  }, [storage]);
+  }, [storage, toast]);
 
   const modules = useMemo(() => ({
     toolbar: {
