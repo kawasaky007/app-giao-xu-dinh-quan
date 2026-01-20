@@ -105,27 +105,28 @@ export default function ArticleForm({ onSubmit, initialData }: ArticleFormProps)
         const sRef = storageRef(storage, `article-thumbnails/${Date.now()}-${file.name}`);
         const uploadTask = uploadBytesResumable(sRef, file);
 
+        // Listen for state changes to show progress
         uploadTask.on('state_changed',
             (snapshot) => {
                 const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                 setUploadProgress(progress);
-            },
-            (error) => {
-                console.error("Upload failed:", error);
-                setIsUploading(false);
-                toast({
-                    variant: "destructive",
-                    title: "Tải lên thất bại",
-                    description: `Đã có lỗi xảy ra: ${error.message}`,
-                });
-            },
-            () => {
-                getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-                    form.setValue('thumbnail', downloadURL, { shouldDirty: true });
-                    setIsUploading(false);
-                });
             }
         );
+
+        // Use the promise-like behavior of uploadTask for completion and error
+        uploadTask.then(async (snapshot) => {
+            const downloadURL = await getDownloadURL(snapshot.ref);
+            form.setValue('thumbnail', downloadURL, { shouldDirty: true });
+            setIsUploading(false);
+        }).catch((error) => {
+            console.error("Upload failed:", error);
+            setIsUploading(false);
+            toast({
+                variant: "destructive",
+                title: "Tải lên thất bại",
+                description: `Đã có lỗi xảy ra: ${error.code} - ${error.message}`,
+            });
+        });
     };
     
     const handleRemoveImage = () => {
