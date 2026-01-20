@@ -10,8 +10,31 @@ import Link from 'next/link';
 
 export default function AboutPage() {
   const aboutHeroImage = PlaceHolderImages.find(p => p.id === 'about-hero');
-  const priestImage = PlaceHolderImages.find(p => p.id === 'priest-portrait');
   
+  const priests = [
+      {
+        id: 'priest-main',
+        name: 'Linh mục Gioan Baotixita Trần Văn Minh',
+        role: 'Linh Mục Chánh Xứ',
+        description: 'Được thụ phong linh mục năm 1995, Cha Gioan Baotixita đã phục vụ tại ba giáo xứ trước khi được bổ nhiệm về Giáo xứ chúng ta vào năm 2015. Với tình yêu sâu sắc dành cho Kinh Thánh và các Bí tích, ngài luôn tận tâm xây dựng một giáo xứ chào đón và sống động về mặt tâm linh.',
+      },
+      {
+        id: 'priest-associate-1',
+        name: 'Linh mục Phêrô Nguyễn Văn An',
+        role: 'Linh Mục Phó Xứ',
+        description: 'Chịu trách nhiệm mục vụ cho giới trẻ và các chương trình giáo lý, giúp các thế hệ tương lai lớn lên trong đức tin.',
+      },
+      {
+        id: 'priest-associate-2',
+        name: 'Linh mục Anrê Lê Hoàng Dũng',
+        role: 'Linh Mục Phó Xứ',
+        description: 'Phụ trách các hoạt động bác ái xã hội và thăm viếng bệnh nhân, mang tình yêu thương của Chúa đến cho những người cần giúp đỡ nhất.',
+      }
+  ];
+
+  const mainPriest = priests[0];
+  const associatePriests = priests.slice(1);
+
   const orgMembers = [
     {
       id: 'council-member-1',
@@ -141,25 +164,72 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Parish Priest Section */}
-        <section id="priest" className="py-16 md:py-24 bg-background">
-          <div className="container px-4 max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <User className="w-12 h-12 mx-auto text-primary mb-4" />
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Linh Mục Chánh Xứ</h2>
+        {/* Priests Section */}
+        <section id="priests" className="py-16 md:py-24 bg-background">
+          <div className="container px-4">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <Users className="w-12 h-12 mx-auto text-primary mb-4" />
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Ban Linh Mục</h2>
+              <p className="text-lg text-foreground/80">
+                Giáo xứ chúng ta được dẫn dắt bởi một đội ngũ các linh mục tận tâm, luôn hết lòng phục vụ cộng đoàn và hướng dẫn đời sống thiêng liêng cho mọi giáo dân.
+              </p>
             </div>
-            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              {priestImage && <Image src={priestImage.imageUrl} alt={priestImage.description} width={300} height={300} className="rounded-full shadow-lg w-48 h-48 md:w-60 md:h-60 object-cover" data-ai-hint={priestImage.imageHint} />}
-              <div className="text-center md:text-left">
-                <h3 className="text-2xl font-headline font-bold text-primary">Linh mục Gioan Baotixita Trần Văn Minh</h3>
-                <p className="text-foreground/80 mt-4 prose prose-lg">
-                  Được thụ phong linh mục năm 1995, Cha Gioan Baotixita đã phục vụ tại ba giáo xứ trước khi được bổ nhiệm về Giáo xứ chúng ta vào năm 2015. Ngài là một nhà giảng thuyết đầy nhiệt huyết với tình yêu sâu sắc dành cho Kinh Thánh và các Bí tích. Các bài giảng của ngài được biết đến là vừa sâu sắc vừa gần gũi. Cha Gioan Baotixita luôn tận tâm xây dựng một giáo xứ chào đón và sống động về mặt tâm linh cho tất cả mọi người.
-                </p>
-              </div>
+            
+            <div className="flex flex-col items-center gap-8 md:gap-12">
+              {/* Main Priest */}
+              {(() => {
+                  const priest = mainPriest;
+                  const priestImage = PlaceHolderImages.find(p => p.id === priest.id);
+                  return (
+                    <Card key={priest.id} className="text-center flex flex-col items-center max-w-sm shadow-lg">
+                      <CardHeader>
+                        <Avatar className="w-24 h-24 mb-4">
+                          {priestImage && <AvatarImage src={priestImage.imageUrl} alt={priest.name} data-ai-hint={priestImage.imageHint} />}
+                          <AvatarFallback>{priest.name.charAt(0)}</AvatarFallback>
+                        </Avatar>
+                        <CardTitle className="font-headline text-xl">{priest.name}</CardTitle>
+                        <p className="text-sm font-medium text-primary">{priest.role}</p>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-foreground/80 text-sm text-justify">{priest.description}</p>
+                      </CardContent>
+                    </Card>
+                  );
+                })()}
+
+              {/* Connecting Line */}
+              {associatePriests.length > 0 && <div className="w-px h-12 bg-border"></div>}
+
+              {/* Associate Priests */}
+              {associatePriests.length > 0 && (
+                <div className="w-full max-w-5xl mx-auto">
+                  <h3 className="text-center text-2xl font-headline font-bold text-primary mb-8">Các Linh Mục Phó Xứ</h3>
+                  <div className="grid sm:grid-cols-2 gap-8 justify-center">
+                    {associatePriests.map((priest) => {
+                      const priestImage = PlaceHolderImages.find(p => p.id === priest.id);
+                      return (
+                        <Card key={priest.id} className="text-center flex flex-col items-center">
+                          <CardHeader>
+                            <Avatar className="w-24 h-24 mb-4">
+                              {priestImage && <AvatarImage src={priestImage.imageUrl} alt={priest.name} data-ai-hint={priestImage.imageHint} />}
+                              <AvatarFallback>{priest.name.charAt(0)}</AvatarFallback>
+                            </Avatar>
+                            <CardTitle className="font-headline text-xl">{priest.name}</CardTitle>
+                            <p className="text-sm font-medium text-primary">{priest.role}</p>
+                          </CardHeader>
+                          <CardContent>
+                            <p className="text-foreground/80 text-sm">{priest.description}</p>
+                          </CardContent>
+                        </Card>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </section>
-
+        
         {/* Organization Chart Section */}
         <section id="organization" className="py-16 md:py-24 bg-secondary/50">
           <div className="container px-4">
@@ -173,30 +243,28 @@ export default function AboutPage() {
             
             <div className="flex flex-col items-center gap-8 md:gap-12">
               {/* Top Level: Parish Council President */}
-              <div className="flex justify-center">
-                {(() => {
-                  const member = councilPresident;
-                  const memberImage = PlaceHolderImages.find(p => p.id === member.id);
-                  return (
-                    <Card key={member.id} className="text-center flex flex-col items-center max-w-sm shadow-lg">
-                      <CardHeader>
-                        <Avatar className="w-24 h-24 mb-4">
-                          {memberImage && <AvatarImage src={memberImage.imageUrl} alt={member.name} data-ai-hint={memberImage.imageHint} />}
-                          <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
-                        </Avatar>
-                        <CardTitle className="font-headline text-xl">{member.name}</CardTitle>
-                        <p className="text-sm font-medium text-primary">{member.role}</p>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-foreground/80 text-sm">{member.description}</p>
-                      </CardContent>
-                    </Card>
-                  );
-                })()}
-              </div>
+              {(() => {
+                const member = councilPresident;
+                const memberImage = PlaceHolderImages.find(p => p.id === member.id);
+                return (
+                  <Card key={member.id} className="text-center flex flex-col items-center max-w-sm shadow-lg">
+                    <CardHeader>
+                      <Avatar className="w-24 h-24 mb-4">
+                        {memberImage && <AvatarImage src={memberImage.imageUrl} alt={member.name} data-ai-hint={memberImage.imageHint} />}
+                        <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+                      </Avatar>
+                      <CardTitle className="font-headline text-xl">{member.name}</CardTitle>
+                      <p className="text-sm font-medium text-primary">{member.role}</p>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-foreground/80 text-sm">{member.description}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })()}
 
               {/* Connecting Line */}
-              <div className="w-px h-12 bg-border self-center"></div>
+              <div className="w-px h-12 bg-border"></div>
 
               {/* Second Level: Ministry Leads */}
               <div className="w-full max-w-5xl mx-auto">
@@ -231,3 +299,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

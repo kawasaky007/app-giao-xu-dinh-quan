@@ -67,10 +67,22 @@
       "imageHint": "kính màu"
     },
     {
-      "id": "priest-portrait",
+      "id": "priest-main",
       "description": "Chân dung ấm áp và thân thiện của một linh mục Công giáo lớn tuổi trong trang phục giáo sĩ.",
       "imageUrl": "https://images.unsplash.com/photo-1620616149265-7169408a29d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcmllc3QlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njg5MDczNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chân dung linh mục"
+    },
+    {
+      "id": "priest-associate-1",
+      "description": "Chân dung một linh mục trẻ, tốt bụng đang mỉm cười.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzIyMzgxNTc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chân dung nam"
+    },
+    {
+      "id": "priest-associate-2",
+      "description": "Chân dung một linh mục trung niên có kinh nghiệm với vẻ ngoài thân thiện.",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzIyMzgxNTc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chân dung nam"
     },
     {
       "id": "council-member-1",
