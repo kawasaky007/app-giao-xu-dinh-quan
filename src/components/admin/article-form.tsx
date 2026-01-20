@@ -19,6 +19,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Card, CardContent } from '@/components/ui/card';
 import { useState } from 'react';
 import type { NewsArticle } from '@/lib/news';
+import RichTextEditor from './rich-text-editor';
 
 const formSchema = z.object({
   title: z.string().min(3, { message: 'Tiêu đề phải có ít nhất 3 ký tự.' }),
@@ -136,9 +137,13 @@ export default function ArticleForm({ onSubmit, initialData }: ArticleFormProps)
                                 <FormItem>
                                     <FormLabel>Nội dung</FormLabel>
                                     <FormControl>
-                                        <Textarea placeholder="Viết nội dung bài viết tại đây. Bạn có thể dùng mã HTML." {...field} rows={15} />
+                                        <RichTextEditor
+                                            value={field.value}
+                                            onChange={field.onChange}
+                                            placeholder="Viết nội dung bài viết tại đây..."
+                                        />
                                     </FormControl>
-                                    <FormDescription>Nội dung đầy đủ của bài viết. Hỗ trợ mã HTML.</FormDescription>
+                                    <FormDescription>Nội dung đầy đủ của bài viết. Hỗ trợ định dạng văn bản, liên kết và đa phương tiện.</FormDescription>
                                     <FormMessage />
                                 </FormItem>
                             )}

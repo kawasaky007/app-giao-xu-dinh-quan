@@ -66,3 +66,41 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom styles for React Quill */
+@layer components {
+    .rich-text-editor .ql-toolbar {
+        @apply rounded-t-md border-input bg-transparent border-b-0;
+    }
+    .rich-text-editor .ql-container {
+        @apply rounded-b-md border-input text-base md:text-sm;
+    }
+    .rich-text-editor .ql-editor {
+        @apply min-h-[250px] resize-y bg-transparent;
+        color: hsl(var(--foreground));
+    }
+    .dark .rich-text-editor .ql-snow .ql-stroke {
+        @apply stroke-slate-400;
+    }
+    .dark .rich-text-editor .ql-snow .ql-picker-label {
+        @apply text-slate-400;
+    }
+    .dark .rich-text-editor .ql-snow .ql-picker-label:hover {
+        @apply text-slate-200;
+    }
+    .dark .rich-text-editor .ql-snow .ql-picker-item:hover {
+        @apply text-slate-200;
+    }
+    .dark .rich-text-editor .ql-snow .ql-fill {
+        @apply fill-slate-400;
+    }
+    .dark .rich-text-editor .ql-snow .ql-active .ql-stroke {
+       @apply stroke-primary;
+    }
+     .dark .rich-text-editor .ql-snow .ql-active .ql-fill {
+       @apply fill-primary;
+    }
+    .dark .rich-text-editor .ql-snow .ql-active .ql-picker-label {
+       @apply text-primary;
+    }
+}
