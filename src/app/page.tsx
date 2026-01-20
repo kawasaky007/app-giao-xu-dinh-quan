@@ -7,14 +7,12 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Clock, Phone, MapPin, Calendar, Newspaper } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getRecentArticles, NewsArticle } from '@/lib/news';
 
-export default function Home() {
+export default async function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-church-interior');
-  const newsImages = {
-    community: PlaceHolderImages.find(p => p.id === 'news-community-event'),
-    bible: PlaceHolderImages.find(p => p.id === 'news-bible-study'),
-    exterior: PlaceHolderImages.find(p => p.id === 'news-church-exterior'),
-  }
+  const recentArticles = await getRecentArticles(3);
+  
   const eventImages = {
     concert: PlaceHolderImages.find(p => p.id === 'event-concert'),
     festival: PlaceHolderImages.find(p => p.id === 'event-festival'),
@@ -44,7 +42,7 @@ export default function Home() {
               A beacon of faith, hope, and love in the heart of the community.
             </p>
             <Button size="lg" asChild>
-              <Link href="#contact">Plan Your Visit</Link>
+              <Link href="/#contact">Plan Your Visit</Link>
             </Button>
           </div>
         </section>
@@ -64,7 +62,7 @@ export default function Home() {
                   <p className="mb-2"><strong>Sunday:</strong> 8:00 AM, 10:30 AM</p>
                   <p className="mb-4"><strong>Weekdays:</strong> 7:00 AM (Chapel)</p>
                   <Button variant="outline" asChild>
-                    <Link href="#events">View Full Schedule</Link>
+                    <Link href="/#events">View Full Schedule</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -79,7 +77,7 @@ export default function Home() {
                   <p className="mb-2"><strong>Hours:</strong> Mon-Fri, 9 AM - 4 PM</p>
                   <p className="mb-4">123 Faith Street, Devotion, USA</p>
                   <Button variant="outline" asChild>
-                    <Link href="#contact">Get Directions</Link>
+                    <Link href="/#contact">Get Directions</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -94,7 +92,7 @@ export default function Home() {
                   <p className="mb-2"><strong>Phone:</strong> (123) 456-7890</p>
                   <p className="mb-4"><strong>Email:</strong> contact@oursacredplace.com</p>
                   <Button variant="outline" asChild>
-                    <Link href="#contact">Send a Message</Link>
+                    <Link href="/#contact">Send a Message</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -113,39 +111,34 @@ export default function Home() {
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="overflow-hidden">
-                {newsImages.community && <Image src={newsImages.community.imageUrl} alt={newsImages.community.description} width={400} height={250} className="w-full h-48 object-cover" data-ai-hint={newsImages.community.imageHint} />}
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl">Annual Parish Picnic</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-foreground/80 mb-4">A wonderful day of fellowship, food, and fun was had by all. See the photos!</p>
-                  <Button variant="link" className="p-0">Read More</Button>
-                </CardContent>
-              </Card>
-               <Card className="overflow-hidden">
-                {newsImages.bible && <Image src={newsImages.bible.imageUrl} alt={newsImages.bible.description} width={400} height={250} className="w-full h-48 object-cover" data-ai-hint={newsImages.bible.imageHint} />}
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl">New Bible Study Group</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-foreground/80 mb-4">Join our new study group on the Gospel of John, starting this fall.</p>
-                  <Button variant="link" className="p-0">Learn More</Button>
-                </CardContent>
-              </Card>
-               <Card className="overflow-hidden">
-                {newsImages.exterior && <Image src={newsImages.exterior.imageUrl} alt={newsImages.exterior.description} width={400} height={250} className="w-full h-48 object-cover" data-ai-hint={newsImages.exterior.imageHint} />}
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl">Church Restoration Update</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-foreground/80 mb-4">The bell tower restoration is complete! Thank you for your generous donations.</p>
-                  <Button variant="link" className="p-0">See Progress</Button>
-                </CardContent>
-              </Card>
+              {recentArticles.map((article: NewsArticle) => {
+                const articleImage = PlaceHolderImages.find(p => p.id === article.image);
+                return (
+                  <Card key={article.id} className="overflow-hidden">
+                    {articleImage && (
+                      <Link href={`/news/${article.slug}`}>
+                        <Image src={articleImage.imageUrl} alt={article.title} width={400} height={250} className="w-full h-48 object-cover" data-ai-hint={articleImage.imageHint} />
+                      </Link>
+                    )}
+                    <CardHeader>
+                      <CardTitle className="font-headline text-xl">
+                        <Link href={`/news/${article.slug}`} className="hover:text-primary transition-colors">{article.title}</Link>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-foreground/80 mb-4 line-clamp-3">{article.excerpt}</p>
+                      <Button variant="link" className="p-0" asChild>
+                        <Link href={`/news/${article.slug}`}>Read More</Link>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
             <div className="text-center mt-12">
-              <Button size="lg">View All News</Button>
+              <Button size="lg" asChild>
+                <Link href="/news">View All News</Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -206,3 +199,5 @@ export default function Home() {
     </div>
   );
 }
+
+    

@@ -95,6 +95,42 @@
       "description": "A professional portrait of a kind-looking man in his 60s.",
       "imageUrl": "https://images.unsplash.com/photo-1542384992-7d098a50404a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNnx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY4OTA3NDA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "person portrait"
+    },
+    {
+      "id": "news-picnic-large",
+      "description": "A large crowd of people at an outdoor picnic on a sunny day.",
+      "imageUrl": "https://images.unsplash.com/photo-1756281957679-ae18e1aafcad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb21tdW5pdHklMjBwaWNuaWN8ZW58MHx8fHwxNzY4ODI4NDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "community picnic"
+    },
+    {
+      "id": "news-study-group-large",
+      "description": "People gathered around a table for a discussion.",
+      "imageUrl": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3R1ZHklMjBncm91cHxlbnwwfHx8fDE3Njg4OTk4MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "study group"
+    },
+    {
+      "id": "news-restoration-large",
+      "description": "Scaffolding on the side of a historic church tower.",
+      "imageUrl": "https://images.unsplash.com/photo-1655285401112-c7390eb0687f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaHVyY2glMjByZXN0b3JhdGlvbnxlbnwwfHx8fDE3Njg4OTk4MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "church restoration"
+    },
+    {
+      "id": "news-volunteer-drive",
+      "description": "Volunteers sorting canned goods at a food pantry.",
+      "imageUrl": "https://images.unsplash.com/photo-1709630998238-00ca5c6fa817?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2b2x1bnRlZXIlMjBkcml2ZXxlbnwwfHx8fDE3Njg4OTk4MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "volunteer drive"
+    },
+    {
+      "id": "news-christmas-play",
+      "description": "Children in costume for a Christmas nativity play.",
+      "imageUrl": "https://images.unsplash.com/photo-1544906200-5471c5769123?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuYXRpdml0eSUyMHBsYXl8ZW58MHx8fHwxNzY4ODk5ODEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nativity play"
+    },
+    {
+      "id": "news-guest-speaker",
+      "description": "A speaker at a podium addressing a seated audience.",
+      "imageUrl": "https://images.unsplash.com/photo-1764330100532-610a822708ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxndWVzdCUyMHNwZWFrZXJ8ZW58MHx8fHwxNzY4ODE5NzAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "guest speaker"
     }
   ]
 }

@@ -8,9 +8,9 @@ import { Button } from './ui/button';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
-  { href: '#news', label: 'News' },
-  { href: '#events', label: 'Events' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/news', label: 'News' },
+  { href: '/#events', label: 'Events' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export default function Header() {
@@ -60,3 +60,5 @@ export default function Header() {
     </header>
   );
 }
+
+    
