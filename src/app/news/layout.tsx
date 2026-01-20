@@ -11,10 +11,10 @@ export default function NewsLayout({
         <div className="container px-4 text-center">
             <Newspaper className="w-12 h-12 mx-auto text-primary mb-4" />
             <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">
-              News & Announcements
+              Tin Tức & Thông Báo
             </h1>
             <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-              Stay updated with the latest happenings, stories, and announcements from Our Sacred Place.
+              Cập nhật những sự kiện, câu chuyện và thông báo mới nhất từ Giáo xứ.
             </p>
         </div>
       </section>
@@ -22,4 +22,3 @@ export default function NewsLayout({
     </>
   );
 }
-    

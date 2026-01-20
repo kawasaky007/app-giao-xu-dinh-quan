@@ -11,10 +11,10 @@ export default function FaqLayout({
         <div className="container px-4 text-center">
             <HelpCircle className="w-12 h-12 mx-auto text-primary mb-4" />
             <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">
-              Frequently Asked Questions
+              Các Câu Hỏi Thường Gặp
             </h1>
             <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-              Find answers to common questions about our parish.
+              Tìm câu trả lời cho các câu hỏi phổ biến về giáo xứ của chúng ta.
             </p>
         </div>
       </section>

@@ -18,11 +18,11 @@ export default async function GalleryPage() {
           <TabsList className="grid w-full grid-cols-2 mb-8 max-w-md mx-auto">
             <TabsTrigger value="photos">
               <Camera className="w-5 h-5 mr-2" />
-              Photo Albums
+              Album Ảnh
             </TabsTrigger>
             <TabsTrigger value="videos">
               <Video className="w-5 h-5 mr-2" />
-              Video Library
+              Thư Viện Video
             </TabsTrigger>
           </TabsList>
 
@@ -58,7 +58,7 @@ export default async function GalleryPage() {
                     </CardContent>
                      <div className="p-6 pt-0">
                         <Button asChild variant="link" className="p-0">
-                            <Link href={`/gallery/${album.slug}`}>View Album →</Link>
+                            <Link href={`/gallery/${album.slug}`}>Xem Album →</Link>
                         </Button>
                     </div>
                   </Card>

@@ -11,10 +11,10 @@ export default function EventsLayout({
         <div className="container px-4 text-center">
             <Calendar className="w-12 h-12 mx-auto text-primary mb-4" />
             <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">
-              Parish Events
+              Sự Kiện Giáo Xứ
             </h1>
             <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-              Join us for fellowship, faith, and fun. There's something for everyone in our vibrant parish community.
+              Cùng chúng tôi tham gia các hoạt động hiệp thông, đức tin và niềm vui. Luôn có những điều thú vị cho mọi người trong cộng đoàn giáo xứ sống động của chúng ta.
             </p>
         </div>
       </section>
@@ -22,4 +22,3 @@ export default function EventsLayout({
     </>
   );
 }
-    

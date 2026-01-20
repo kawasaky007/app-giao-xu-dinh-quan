@@ -32,7 +32,7 @@ export type Event = {
   endTime: string; // ISO 8601 format
   location: string;
   image: string; // id from placeholder images
-  category: 'Parish Events' | 'Fundraiser' | 'Spiritual Growth' | 'Community Outreach';
+  category: 'Sự Kiện Giáo Xứ' | 'Gây Quỹ' | 'Tăng Tiến Đời Sống Thiêng Liêng' | 'Phục Vụ Cộng Đoàn';
   excerpt: string;
   description: string; // HTML content
 };
@@ -63,4 +63,3 @@ export async function getRecentEvents(limit: number): Promise<Event[]> {
     const upcomingEvents = allEvents.filter(event => new Date(event.date) > new Date());
     return upcomingEvents.slice(0, limit);
 }
-    

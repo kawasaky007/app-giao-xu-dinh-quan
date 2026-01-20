@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { format } from 'date-fns';
+import { vi } from 'date-fns/locale';
 import { Calendar, Clock, MapPin, ExternalLink } from 'lucide-react';
 import type { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
@@ -24,11 +25,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const event = await getEventBySlug(params.slug);
 
   if (!event) {
-    return { title: 'Event Not Found' }
+    return { title: 'Không Tìm Thấy Sự Kiện' }
   }
 
   return {
-    title: `${event.title} | Our Sacred Place`,
+    title: `${event.title} | Giáo Xứ Các Thánh Tử Đạo Việt Nam`,
     description: event.excerpt,
     openGraph: {
       title: event.title,
@@ -80,12 +81,12 @@ export default async function EventPage({ params }: Props) {
     'eventStatus': 'https://schema.org/EventScheduled',
     'location': {
         '@type': 'Place',
-        'name': 'Our Sacred Place',
+        'name': 'Giáo Xứ Các Thánh Tử Đạo Việt Nam',
         'address': {
             '@type': 'PostalAddress',
-            'streetAddress': '123 Faith Street',
-            'addressLocality': 'Devotion',
-            'addressCountry': 'USA'
+            'streetAddress': '123 Đường Đức Tin',
+            'addressLocality': 'Thành Phố Tình Yêu',
+            'addressCountry': 'VN'
         }
     },
     'image': [
@@ -94,7 +95,7 @@ export default async function EventPage({ params }: Props) {
     'description': event.excerpt,
     'organizer': {
         '@type': 'Organization',
-        'name': 'Our Sacred Place',
+        'name': 'Giáo Xứ Các Thánh Tử Đạo Việt Nam',
         'url': 'https://example.com' // Replace with actual URL
     }
   };
@@ -134,7 +135,7 @@ export default async function EventPage({ params }: Props) {
                 <div className="flex flex-col text-muted-foreground gap-4 mb-8 border-y py-6">
                     <div className="flex items-center gap-3 text-lg">
                         <Calendar className="w-5 h-5 text-primary" />
-                        <span className='font-semibold'>{format(startDate, 'EEEE, MMMM d, yyyy')}</span>
+                        <span className='font-semibold'>{format(startDate, 'EEEE, dd MMMM, yyyy', { locale: vi })}</span>
                     </div>
                     <div className="flex items-center gap-3 text-lg">
                         <Clock className="w-5 h-5 text-primary" />
@@ -154,11 +155,11 @@ export default async function EventPage({ params }: Props) {
                 <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
                     <Button asChild size="lg">
                         <Link href={googleCalendarUrl.toString()} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="mr-2 h-4 w-4" /> Add to Google Calendar
+                            <ExternalLink className="mr-2 h-4 w-4" /> Thêm vào Lịch Google
                         </Link>
                     </Button>
                     <Button asChild variant="outline" size="lg">
-                        <Link href="/events">← Back to Events</Link>
+                        <Link href="/events">← Quay lại Sự kiện</Link>
                     </Button>
                 </div>
             </div>

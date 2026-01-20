@@ -32,7 +32,7 @@ export type DocumentItem = {
 }
 
 export type DocumentCategory = {
-    category: string;
+    category: 'Bản tin' | 'Biểu mẫu';
     items: DocumentItem[];
 }
 

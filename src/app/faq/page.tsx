@@ -3,8 +3,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'FAQ | Our Sacred Place',
-    description: 'Find answers to frequently asked questions about Our Sacred Place parish, including Mass times, parish registration, sacraments, and how to get involved.',
+    title: 'Hỏi Đáp | Giáo Xứ Các Thánh Tử Đạo Việt Nam',
+    description: 'Tìm câu trả lời cho các câu hỏi thường gặp về giáo xứ, bao gồm giờ Lễ, đăng ký giáo xứ, các bí tích, và làm thế nào để tham gia.',
 };
 
 export default async function FaqPage() {

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { format } from 'date-fns';
+import { vi } from 'date-fns/locale';
 import { Calendar, User, Tag } from 'lucide-react';
 import type { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
@@ -27,12 +28,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!article) {
     return {
-      title: 'Article Not Found'
+      title: 'Không Tìm Thấy Bài Viết'
     }
   }
 
   return {
-    title: `${article.title} | Our Sacred Place`,
+    title: `${article.title} | Giáo Xứ Các Thánh Tử Đạo Việt Nam`,
     description: article.excerpt,
     openGraph: {
       title: article.title,
@@ -73,7 +74,7 @@ export default async function ArticlePage({ params }: Props) {
     },
     'publisher': {
       '@type': 'Organization',
-      'name': 'Our Sacred Place',
+      'name': 'Giáo Xứ Các Thánh Tử Đạo Việt Nam',
       'logo': {
         '@type': 'ImageObject',
         'url': 'https://example.com/logo.png' // Replace with actual logo URL
@@ -124,7 +125,7 @@ export default async function ArticlePage({ params }: Props) {
                     </div>
                     <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
-                        <time dateTime={article.date}>{format(new Date(article.date), 'MMMM d, yyyy')}</time>
+                        <time dateTime={article.date}>{format(new Date(article.date), 'dd MMMM, yyyy', { locale: vi })}</time>
                     </div>
                 </div>
 
@@ -135,7 +136,7 @@ export default async function ArticlePage({ params }: Props) {
 
                 <div className="mt-12 text-center">
                     <Button asChild>
-                        <Link href="/news">← Back to News</Link>
+                        <Link href="/news">← Quay lại trang Tin Tức</Link>
                     </Button>
                 </div>
             </div>
@@ -145,4 +146,3 @@ export default async function ArticlePage({ params }: Props) {
     </article>
   );
 }
-    

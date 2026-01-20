@@ -6,25 +6,26 @@ import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Button } from './ui/button';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
-  { href: '/schedule', label: 'Schedule' },
-  { href: '/news', label: 'News' },
-  { href: '/events', label: 'Events' },
-  { href: '/gallery', label: 'Gallery' },
-  { href: '/catechism', label: 'Catechism' },
-  { href: '/documents', label: 'Documents' },
-  { href: '/faq', label: 'FAQ' },
-  { href: '/#contact', label: 'Contact' },
+  { href: '/', label: 'Trang Chủ' },
+  { href: '/about', label: 'Giới Thiệu' },
+  { href: '/schedule', label: 'Lịch Phụng Vụ' },
+  { href: '/news', label: 'Tin Tức' },
+  { href: '/events', label: 'Sự Kiện' },
+  { href: '/gallery', label: 'Hình Ảnh' },
+  { href: '/catechism', label: 'Giáo Lý' },
+  { href: '/documents', label: 'Tài Liệu' },
+  { href: '/faq', label: 'Hỏi Đáp' },
+  { href: '/#contact', label: 'Liên Hệ' },
 ];
 
 export default function Header() {
   return (
     <header className="w-full sticky top-0 z-50 border-b shadow-sm bg-background/90 backdrop-blur-sm">
       <div className="container mx-auto flex items-center justify-between h-20 px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-3 text-primary font-headline font-bold text-2xl">
+        <Link href="/" className="flex items-center gap-3 text-primary font-headline font-bold text-xl md:text-2xl">
           <Church className="w-8 h-8" />
-          <span>Our Sacred Place</span>
+          <span className='hidden sm:inline'>Giáo Xứ Các Thánh TĐVN</span>
+          <span className='sm:hidden'>GX Các Thánh TĐVN</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
@@ -40,14 +41,14 @@ export default function Header() {
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon">
                   <Menu className="h-6 w-6" />
-                  <span className="sr-only">Toggle navigation menu</span>
+                  <span className="sr-only">Mở menu</span>
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
                 <div className="grid gap-6 p-6">
                   <Link href="/" className="flex items-center gap-3 text-primary font-headline font-bold text-2xl">
                     <Church className="w-8 h-8" />
-                    <span>Our Sacred Place</span>
+                    <span>Giáo Xứ</span>
                   </Link>
                   <nav className="grid gap-4">
                     {navLinks.map((link) => (

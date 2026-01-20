@@ -8,7 +8,7 @@ import Link from 'next/link';
 // A map of icon names to their components
 const iconMap: { [key: string]: React.ComponentType<any> } = {
   Baby: lucide.Baby,
-  GlassWater: lucide.GlassWater,
+  Cross: lucide.Cross,
   Wind: lucide.Wind,
   HeartHandshake: lucide.HeartHandshake,
 };
@@ -23,8 +23,8 @@ export default async function CatechismPage() {
       <section id="lessons" className="py-16 md:py-24">
         <div className="container px-4 max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Catechism for All Ages</h2>
-            <p className="text-lg text-foreground/80">Our parish offers faith formation resources for every step of the journey.</p>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Các Lớp Giáo Lý</h2>
+            <p className="text-lg text-foreground/80">Giáo xứ cung cấp các chương trình đào tạo đức tin cho mọi lứa tuổi.</p>
           </div>
           <Accordion type="single" collapsible className="w-full">
             {catechismLessons.map((category, index) => (
@@ -51,8 +51,8 @@ export default async function CatechismPage() {
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
              <lucide.Cross className="w-12 h-12 mx-auto text-primary mb-4" />
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Sacrament Preparation</h2>
-            <p className="text-lg text-foreground/80">Resources and information for receiving the sacraments at Our Sacred Place.</p>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Chuẩn Bị Lãnh Nhận Các Bí Tích</h2>
+            <p className="text-lg text-foreground/80">Thông tin và tài liệu dành cho việc lãnh nhận các bí tích tại Giáo xứ.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {sacramentDocs.map((doc) => {
@@ -68,7 +68,7 @@ export default async function CatechismPage() {
                   <CardContent>
                     <p className="mb-4 text-foreground/80">{doc.description}</p>
                     <Button asChild variant="link">
-                      <Link href="#">Learn More</Link>
+                      <Link href="#">Tìm Hiểu Thêm</Link>
                     </Button>
                   </CardContent>
                 </Card>

@@ -1,36 +1,36 @@
 {
   "faqs": [
     {
-      "question": "What are the Mass times?",
-      "answer": "You can find our complete Mass schedule, including weekend, weekday, and special holiday times, on our <a href='/schedule' class='text-primary hover:underline'>Schedule page</a>."
+      "question": "Giờ lễ của nhà thờ như thế nào?",
+      "answer": "Bạn có thể tìm thấy toàn bộ lịch phụng vụ, bao gồm các giờ lễ cuối tuần, ngày thường và các dịp lễ đặc biệt, tại trang <a href='/schedule' class='text-primary hover:underline'>Lịch Phụng Vụ</a>."
     },
     {
-      "question": "How do I register as a new parishioner?",
-      "answer": "Welcome! We are so glad to have you join our community. You can register by filling out the New Parishioner form available on our <a href='/documents' class='text-primary hover:underline'>Documents page</a> or by visiting the parish office during office hours."
+      "question": "Làm thế nào để đăng ký làm giáo dân mới?",
+      "answer": "Chào mừng bạn! Chúng tôi rất vui khi có bạn gia nhập cộng đoàn. Bạn có thể đăng ký bằng cách điền vào mẫu Đăng ký Giáo dân mới có sẵn trên trang <a href='/documents' class='text-primary hover:underline'>Tài Liệu</a> hoặc đến văn phòng giáo xứ trong giờ làm việc."
     },
     {
-      "question": "How do I arrange for a baptism?",
-      "answer": "Congratulations! For information on scheduling a baptism and the required preparation classes for parents and godparents, please visit the <a href='/catechism#sacraments' class='text-primary hover:underline'>Sacrament Preparation</a> section on our Catechism page or contact the parish office."
+      "question": "Làm thế nào để đăng ký Rửa Tội cho con?",
+      "answer": "Xin chúc mừng! Để biết thông tin về việc sắp xếp lịch Rửa Tội và các lớp học chuẩn bị bắt buộc cho cha mẹ và người đỡ đầu, vui lòng truy cập mục <a href='/catechism#sacraments' class='text-primary hover:underline'>Chuẩn bị Bí tích</a> trên trang Giáo Lý hoặc liên hệ văn phòng giáo xứ."
     },
     {
-      "question": "How can I get married at Our Sacred Place?",
-      "answer": "We would be honored to be a part of your special day. Please contact the parish office at least six months in advance of your desired wedding date to begin the marriage preparation process. You can find more initial information in the Holy Matrimony section on our <a href='/catechism#sacraments' class='text-primary hover:underline'>Catechism page</a>."
+      "question": "Làm thế nào để tổ chức Hôn Lễ tại nhà thờ?",
+      "answer": "Chúng tôi rất vinh dự được là một phần trong ngày đặc biệt của bạn. Vui lòng liên hệ văn phòng giáo xứ ít nhất sáu tháng trước ngày cưới dự định để bắt đầu quá trình chuẩn bị hôn nhân. Bạn có thể tìm thêm thông tin ban đầu trong mục Bí tích Hôn Phối trên trang <a href='/catechism#sacraments' class='text-primary hover:underline'>Giáo Lý</a>."
     },
     {
-      "question": "How can I get involved in parish ministries?",
-      "answer": "There are many ways to share your time and talents! You can learn about our various ministries on the <a href='/about#organization' class='text-primary hover:underline'>About Us page</a>. To volunteer, please fill out the Ministry Volunteer Application on our <a href='/documents' class='text-primary hover:underline'>Documents page</a> or contact the ministry leader directly."
+      "question": "Làm sao để tham gia các ban ngành, đoàn thể trong giáo xứ?",
+      "answer": "Có rất nhiều cách để chia sẻ thời gian và tài năng của bạn! Bạn có thể tìm hiểu về các ban ngành, đoàn thể của chúng tôi trên trang <a href='/about#organization' class='text-primary hover:underline'>Giới Thiệu</a>. Để tình nguyện, vui lòng điền vào Đơn Đăng ký Phục vụ trên trang <a href='/documents' class='text-primary hover:underline'>Tài Liệu</a> hoặc liên hệ trực tiếp với người đứng đầu ban ngành."
     },
     {
-      "question": "How do I make a donation?",
-      "answer": "Thank you for your generosity. You can make a one-time or recurring donation through the 'Giving' link in our website's footer. Donations can also be made via the collection basket at Mass or by mail to the parish office."
+      "question": "Làm thế nào để dâng cúng cho nhà thờ?",
+      "answer": "Xin chân thành cảm ơn lòng quảng đại của bạn. Bạn có thể dâng cúng một lần hoặc định kỳ qua liên kết 'Dâng Cúng' ở cuối trang web. Bạn cũng có thể dâng cúng qua giỏ tiền trong Thánh Lễ hoặc gửi qua đường bưu điện đến văn phòng giáo xứ."
     },
     {
-      "question": "Is the church wheelchair accessible?",
-      "answer": "Yes, our church is fully accessible. There are ramps at the main entrance and accessible seating areas available. The parish hall is also wheelchair accessible."
+      "question": "Nhà thờ có lối đi cho xe lăn không?",
+      "answer": "Có, nhà thờ của chúng tôi hoàn toàn có thể tiếp cận được. Có các đường dốc ở lối vào chính và các khu vực ngồi có thể tiếp cận. Hội trường giáo xứ cũng có lối đi cho xe lăn."
     },
     {
-      "question": "Do you have a 'cry room' for infants?",
-      "answer": "While we do not have a separate 'cry room,' we welcome and encourage families with young children to participate fully in the Mass. We love hearing the sounds of our youngest parishioners! If you need to step out for a moment, the narthex (lobby) is available, and you can still hear the Mass."
+      "question": "Nhà thờ có 'phòng khóc' cho trẻ sơ sinh không?",
+      "answer": "Mặc dù chúng tôi không có một 'phòng khóc' riêng biệt, chúng tôi chào đón và khuyến khích các gia đình có trẻ nhỏ tham gia đầy đủ vào Thánh Lễ. Chúng tôi yêu thích nghe những âm thanh của các giáo dân nhỏ tuổi nhất! Nếu bạn cần bước ra ngoài một lát, có thể ra khu vực tiền sảnh và vẫn có thể nghe được Thánh Lễ."
     }
   ]
 }

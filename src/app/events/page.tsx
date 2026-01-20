@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, MapPin, Clock } from 'lucide-react';
 import { format } from 'date-fns';
+import { vi } from 'date-fns/locale';
 
 export default async function EventsPage() {
   const events = await getEvents();
@@ -48,7 +49,7 @@ export default async function EventsPage() {
                     <div className="flex flex-col text-sm text-muted-foreground gap-2 pt-2">
                         <div className="flex items-center gap-2">
                             <Calendar className="w-4 h-4" />
-                            <time dateTime={event.date}>{format(eventDate, 'MMMM d, yyyy')}</time>
+                            <time dateTime={event.date}>{format(eventDate, 'dd MMMM, yyyy', { locale: vi })}</time>
                         </div>
                         <div className="flex items-center gap-2">
                             <Clock className="w-4 h-4" />
@@ -65,7 +66,7 @@ export default async function EventsPage() {
                   </CardContent>
                   <div className="p-6 pt-0">
                     <Button asChild variant="link" className="p-0">
-                      <Link href={`/events/${event.slug}`}>View Details →</Link>
+                      <Link href={`/events/${event.slug}`}>Xem Chi Tiết →</Link>
                     </Button>
                   </div>
                 </Card>
@@ -74,12 +75,11 @@ export default async function EventsPage() {
           </div>
         ) : (
             <div className="text-center py-16 border-2 border-dashed rounded-lg">
-                <h3 className="text-xl font-semibold text-foreground">No Upcoming Events</h3>
-                <p className="text-muted-foreground mt-2">Please check back soon for future events.</p>
+                <h3 className="text-xl font-semibold text-foreground">Chưa có Sự Kiện nào</h3>
+                <p className="text-muted-foreground mt-2">Vui lòng quay lại sau để biết các sự kiện trong tương lai.</p>
             </div>
         )}
       </div>
     </main>
   );
 }
-    

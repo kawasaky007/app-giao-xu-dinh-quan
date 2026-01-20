@@ -1,47 +1,47 @@
 {
   "albums": [
     {
-      "id": "parish-picnic-2024",
-      "slug": "parish-picnic-2024",
-      "title": "Annual Parish Picnic 2024",
-      "description": "A wonderful day of fellowship, food, and fun under the sun. See our community come together.",
+      "id": "picnic-giao-xu-2024",
+      "slug": "picnic-giao-xu-2024",
+      "title": "Ngày Hội Giáo Xứ 2024",
+      "description": "Một ngày tuyệt vời của tình hiệp thông, ẩm thực và niềm vui dưới ánh nắng mặt trời. Cùng xem cộng đoàn chúng ta quây quần bên nhau.",
       "coverImage": "gallery-picnic-cover",
       "images": ["gallery-picnic-1", "gallery-picnic-2", "gallery-picnic-3", "gallery-picnic-4", "gallery-picnic-5", "gallery-picnic-6"]
     },
     {
-      "id": "christmas-2023",
-      "slug": "christmas-2023",
-      "title": "Christmas at Our Sacred Place 2023",
-      "description": "Celebrating the birth of our Lord. Moments from the Midnight Mass and Christmas Day services.",
+      "id": "giang-sinh-2023",
+      "slug": "giang-sinh-2023",
+      "title": "Mùa Giáng Sinh Tại Giáo Xứ 2023",
+      "description": "Mừng Chúa Giáng Sinh. Những khoảnh khắc từ Thánh Lễ Đêm và các Thánh Lễ ngày Giáng Sinh.",
       "coverImage": "gallery-christmas-cover",
       "images": ["gallery-christmas-1", "gallery-christmas-2", "gallery-christmas-3", "gallery-christmas-4", "gallery-christmas-5", "gallery-christmas-6"]
     },
     {
-        "id": "easter-vigil-2024",
-        "slug": "easter-vigil-2024",
-        "title": "Easter Vigil 2024",
-        "description": "The holiest night of the year, as we celebrate the Resurrection of the Lord.",
+        "id": "vong-phuc-sinh-2024",
+        "slug": "vong-phuc-sinh-2024",
+        "title": "Đêm Vọng Phục Sinh 2024",
+        "description": "Đêm thánh thiêng nhất trong năm, khi chúng ta cử hành Chúa Phục Sinh.",
         "coverImage": "gallery-easter-cover",
         "images": ["gallery-easter-1", "gallery-easter-2", "gallery-easter-3", "gallery-easter-4", "gallery-easter-5", "gallery-easter-6"]
     }
   ],
   "videos": [
     {
-      "id": "christmas-message-2023",
-      "title": "A Christmas Message from Father Michael",
-      "description": "Father Michael shares a message of hope and joy for the Christmas season.",
+      "id": "thong-diep-giang-sinh-2023",
+      "title": "Thông Điệp Giáng Sinh từ Cha Xứ",
+      "description": "Cha xứ chia sẻ thông điệp hy vọng và niềm vui cho mùa Giáng Sinh.",
       "youtubeId": "dQw4w9WgXcQ"
     },
     {
-      "id": "easter-homily-2024",
-      "title": "Easter Sunday Homily",
-      "description": "Deacon Thomas delivers a powerful message on the meaning of the Resurrection.",
+      "id": "bai-giang-phuc-sinh-2024",
+      "title": "Bài Giảng Chúa Nhật Phục Sinh",
+      "description": "Cha phó chia sẻ một thông điệp mạnh mẽ về ý nghĩa của sự Phục Sinh.",
       "youtubeId": "y6120QOlsfU"
     },
     {
-        "id": "parish-history-video",
-        "title": "The History of Our Sacred Place",
-        "description": "A short documentary exploring the rich history and founding of our parish.",
+        "id": "video-lich-su-giao-xu",
+        "title": "Lịch Sử Giáo Xứ Chúng Ta",
+        "description": "Một bộ phim tài liệu ngắn khám phá lịch sử phong phú và sự thành lập của giáo xứ.",
         "youtubeId": "3tmd-ClpJxA"
     }
   ]

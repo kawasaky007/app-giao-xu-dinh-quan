@@ -2,297 +2,297 @@
   "placeholderImages": [
     {
       "id": "hero-church-interior",
-      "description": "The sunlit interior of a grand, classic church, with light streaming through stained glass windows onto rows of pews.",
+      "description": "Nội thất bên trong một nhà thờ cổ điển, lớn, với ánh sáng chiếu qua cửa sổ kính màu xuống các hàng ghế.",
       "imageUrl": "https://images.unsplash.com/photo-1699830506478-af7b3f5e6cc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaHVyY2glMjBpbnRlcmlvcnxlbnwwfHx8fDE3Njg4MTUyNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "church interior"
+      "imageHint": "nội thất nhà thờ"
     },
     {
       "id": "worship-service",
-      "description": "A congregation during a worship service, with a priest at the altar.",
+      "description": "Một cộng đoàn trong một buổi lễ thờ phượng, với một linh mục tại bàn thờ.",
       "imageUrl": "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b3JzaGlwJTIwc2VydmljZXxlbnwwfHx8fDE3Njg4OTkyNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "worship service"
+      "imageHint": "buổi lễ"
     },
     {
       "id": "community-gathering",
-      "description": "A diverse group of parishioners talking and laughing together after a service.",
+      "description": "Một nhóm giáo dân đa dạng đang nói chuyện và cười đùa cùng nhau sau buổi lễ.",
       "imageUrl": "https://images.unsplash.com/photo-1542315099045-93937d70c67a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb21tdW5pdHklMjBwZW9wbGV8ZW58MHx8fHwxNzY4ODY3MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "community people"
+      "imageHint": "cộng đoàn"
     },
     {
       "id": "volunteer-service",
-      "description": "Parish volunteers working together at a local food bank.",
+      "description": "Các tình nguyện viên của giáo xứ đang làm việc cùng nhau tại một ngân hàng thực phẩm địa phương.",
       "imageUrl": "https://images.unsplash.com/photo-1761666507437-9fb5a6ef7b0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaGFyaXR5JTIwdm9sdW50ZWVyfGVufDB8fHx8MTc2ODg5OTI0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "charity volunteer"
+      "imageHint": "tình nguyện"
     },
     {
       "id": "news-community-event",
-      "description": "A vibrant community event held on the church grounds.",
+      "description": "Một sự kiện cộng đồng sôi động được tổ chức trên sân nhà thờ.",
       "imageUrl": "https://images.unsplash.com/photo-1528605105345-5344ea20e269?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29tbXVuaXR5JTIwZXZlbnR8ZW58MHx8fHwxNzY4ODI4NDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "community event"
+      "imageHint": "sự kiện cộng đồng"
     },
     {
       "id": "news-bible-study",
-      "description": "A small group of people engaged in a bible study session.",
+      "description": "Một nhóm nhỏ người đang tham gia một buổi học kinh thánh.",
       "imageUrl": "https://images.unsplash.com/photo-1559534703-e191bce0d946?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiaWJsZSUyMHN0dWR5fGVufDB8fHx8MTc2ODg2MTIxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "bible study"
+      "imageHint": "học kinh thánh"
     },
     {
       "id": "news-church-exterior",
-      "description": "The exterior of the church building on a sunny day.",
+      "description": "Bên ngoài tòa nhà nhà thờ vào một ngày nắng đẹp.",
       "imageUrl": "https://images.unsplash.com/photo-1608569569089-5d2e3e644ea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBleHRlcmlvcnxlbnwwfHx8fDE3Njg4MTMyNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "church exterior"
+      "imageHint": "nhà thờ bên ngoài"
     },
     {
       "id": "event-concert",
-      "description": "A choir performing a concert inside the church.",
+      "description": "Một ca đoàn đang biểu diễn một buổi hòa nhạc bên trong nhà thờ.",
       "imageUrl": "https://images.unsplash.com/photo-1761901219072-491a18f3ccd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaG9pciUyMGNvbmNlcnR8ZW58MHx8fHwxNzY4ODk5MjQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "choir concert"
+      "imageHint": "hòa tấu ca đoàn"
     },
     {
       "id": "event-festival",
-      "description": "An outdoor parish festival with games and food stalls.",
+      "description": "Một lễ hội giáo xứ ngoài trời với các trò chơi và gian hàng ẩm thực.",
       "imageUrl": "https://images.unsplash.com/photo-1631179234473-f48fedffed9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxvdXRkb29yJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzY4ODU2Mzk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "outdoor festival"
+      "imageHint": "lễ hội ngoài trời"
     },
     {
       "id": "event-dinner",
-      "description": "A community dinner being held in the parish hall.",
+      "description": "Một bữa ăn tối cộng đồng đang được tổ chức tại hội trường giáo xứ.",
       "imageUrl": "https://images.unsplash.com/photo-1721180672417-81a4c8515ea5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb21tdW5pdHklMjBkaW5uZXJ8ZW58MHx8fHwxNzY4ODk5MjQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "community dinner"
+      "imageHint": "bữa tối cộng đồng"
     },
     {
       "id": "event-pancake-breakfast",
-      "description": "A stack of pancakes with syrup and butter on a plate.",
+      "description": "Một chồng bánh pancake với xi-rô và bơ trên đĩa.",
       "imageUrl": "https://images.unsplash.com/photo-1528207776546-365bb010ee93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYW5jYWtlcyUyMGJyZWFrZmFzdHxlbnwwfHx8fDE3MjE4MzYzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pancakes breakfast"
+      "imageHint": "bữa sáng pancake"
     },
     {
       "id": "event-advent-retreat",
-      "description": "A person sitting alone in a church pew, in quiet prayer.",
+      "description": "Một người đang ngồi một mình trên ghế nhà thờ, trong thinh lặng cầu nguyện.",
       "imageUrl": "https://images.unsplash.com/photo-1484910292437-025d3a13a772?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxxdWlldCUyMHByYXllcnxlbnwwfHx8fDE3MjE4MzY0MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "quiet prayer"
+      "imageHint": "cầu nguyện thinh lặng"
     },
     {
       "id": "schedule-header",
-      "description": "A close-up of an ornate church calendar or liturgical book.",
+      "description": "Cận cảnh một cuốn lịch phụng vụ hoặc sách lễ trang trí công phu.",
       "imageUrl": "https://images.unsplash.com/photo-1518778642335-a63475c7b396?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBjYWxlbmRhcnxlbnwwfHx8fDE3MjE4MzY0NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "church calendar"
+      "imageHint": "lịch nhà thờ"
     },
     {
       "id": "about-hero",
-      "description": "A detailed close-up of a beautiful stained glass window, showing intricate patterns and vibrant colors.",
+      "description": "Cận cảnh chi tiết một cửa sổ kính màu tuyệt đẹp, hiển thị các hoa văn phức tạp và màu sắc rực rỡ.",
       "imageUrl": "https://images.unsplash.com/photo-1549989476-69a92fa57c36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdGFpbmVkJTIwZ2xhc3N8ZW58MHx8fHwxNzY4OTA3MzAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "stained glass"
+      "imageHint": "kính màu"
     },
     {
       "id": "priest-portrait",
-      "description": "A warm and friendly portrait of a senior Catholic priest in his clerical collar.",
+      "description": "Chân dung ấm áp và thân thiện của một linh mục Công giáo lớn tuổi trong trang phục giáo sĩ.",
       "imageUrl": "https://images.unsplash.com/photo-1620616149265-7169408a29d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcmllc3QlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njg5MDczNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "priest portrait"
+      "imageHint": "chân dung linh mục"
     },
     {
       "id": "council-member-1",
-      "description": "A professional portrait of a smiling woman in her 50s.",
+      "description": "Chân dung chuyên nghiệp của một người đàn ông mỉm cười ở độ tuổi 50.",
       "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njg5MDc0MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person portrait"
+      "imageHint": "chân dung người"
     },
     {
       "id": "ministry-lead-1",
-      "description": "A professional portrait of a smiling man in his 40s.",
+      "description": "Chân dung chuyên nghiệp của một người phụ nữ mỉm cười ở độ tuổi 40.",
       "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njg5MDc0MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person portrait"
+      "imageHint": "chân dung người"
     },
     {
       "id": "choir-director-1",
-      "description": "A professional portrait of a woman with a creative and artistic look.",
+      "description": "Chân dung chuyên nghiệp của một người đàn ông có vẻ ngoài sáng tạo và nghệ thuật.",
       "imageUrl": "https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY4OTA3NDA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person portrait"
+      "imageHint": "chân dung người"
     },
     {
       "id": "catechism-teacher-1",
-      "description": "A professional portrait of a kind-looking man in his 60s.",
+      "description": "Chân dung chuyên nghiệp của một phụ nữ tốt bụng ở độ tuổi 60.",
       "imageUrl": "https://images.unsplash.com/photo-1542384992-7d098a50404a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNnx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY4OTA3NDA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person portrait"
+      "imageHint": "chân dung người"
     },
     {
       "id": "news-picnic-large",
-      "description": "A large crowd of people at an outdoor picnic on a sunny day.",
+      "description": "Một đám đông lớn người tại một buổi picnic ngoài trời vào một ngày nắng.",
       "imageUrl": "https://images.unsplash.com/photo-1756281957679-ae18e1aafcad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb21tdW5pdHklMjBwaWNuaWN8ZW58MHx8fHwxNzY4ODI4NDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "community picnic"
+      "imageHint": "picnic cộng đồng"
     },
     {
       "id": "news-study-group-large",
-      "description": "People gathered around a table for a discussion.",
+      "description": "Mọi người tụ tập quanh một chiếc bàn để thảo luận.",
       "imageUrl": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3R1ZHklMjBncm91cHxlbnwwfHx8fDE3Njg4OTk4MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "study group"
+      "imageHint": "nhóm học"
     },
     {
       "id": "news-restoration-large",
-      "description": "Scaffolding on the side of a historic church tower.",
+      "description": "Giàn giáo ở bên cạnh một tháp nhà thờ lịch sử.",
       "imageUrl": "https://images.unsplash.com/photo-1655285401112-c7390eb0687f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaHVyY2glMjByZXN0b3JhdGlvbnxlbnwwfHx8fDE3Njg4OTk4MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "church restoration"
+      "imageHint": "trùng tu nhà thờ"
     },
     {
       "id": "news-volunteer-drive",
-      "description": "Volunteers sorting canned goods at a food pantry.",
+      "description": "Các tình nguyện viên đang phân loại hàng đóng hộp tại một kho thực phẩm.",
       "imageUrl": "https://images.unsplash.com/photo-1709630998238-00ca5c6fa817?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2b2x1bnRlZXIlMjBkcml2ZXxlbnwwfHx8fDE3Njg4OTk4MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "volunteer drive"
+      "imageHint": "kêu gọi tình nguyện"
     },
     {
       "id": "news-christmas-play",
-      "description": "Children in costume for a Christmas nativity play.",
+      "description": "Trẻ em mặc trang phục cho một vở kịch Giáng sinh.",
       "imageUrl": "https://images.unsplash.com/photo-1544906200-5471c5769123?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuYXRpdml0eSUyMHBsYXl8ZW58MHx8fHwxNzY4ODk5ODEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "nativity play"
+      "imageHint": "vở kịch Giáng sinh"
     },
     {
       "id": "news-guest-speaker",
-      "description": "A speaker at a podium addressing a seated audience.",
+      "description": "Một diễn giả tại bục giảng đang nói chuyện với khán giả ngồi.",
       "imageUrl": "https://images.unsplash.com/photo-1764330100532-610a822708ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxndWVzdCUyMHNwZWFrZXJ8ZW58MHx8fHwxNzY4ODE5NzAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "guest speaker"
+      "imageHint": "diễn giả khách mời"
     },
     {
       "id": "catechism-header",
-      "description": "An open bible and a rosary on a wooden table, with soft light.",
+      "description": "Một cuốn kinh thánh mở và một chuỗi tràng hạt trên bàn gỗ, với ánh sáng dịu nhẹ.",
       "imageUrl": "https://images.unsplash.com/photo-1593340093863-45942420a7b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxCaWJsZSUyMGFuZCUyMHJvc2FyeXxlbnwwfHx8fDE3MjE4NTUwOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "bible rosary"
+      "imageHint": "kinh thánh và tràng hạt"
     },
     {
       "id": "documents-header",
-      "description": "A person speaking at a lectern inside a church.",
+      "description": "Một người đang nói chuyện tại bục giảng bên trong một nhà thờ.",
       "imageUrl": "https://images.unsplash.com/photo-1543888879-81eac85d512e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsZWN0ZXJuJTIwY2h1cmNofGVufDB8fHx8MTcyMTg1NTEzMHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "lectern church"
+      "imageHint": "bục giảng nhà thờ"
     },
     {
       "id": "gallery-header",
-      "description": "A collection of framed photos on a wall, representing a media gallery.",
+      "description": "Một bộ sưu tập các bức ảnh được đóng khung trên tường, đại diện cho một thư viện media.",
       "imageUrl": "https://images.unsplash.com/photo-1542038784-56eD854435AF?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaG90byUyMGdhbGxlcnl8ZW58MHx8fHwxNzIyMjcwMjk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "photo gallery"
+      "imageHint": "thư viện ảnh"
     },
     {
       "id": "gallery-picnic-cover",
-      "description": "A wide shot of a sunny park with people having a picnic.",
+      "description": "Một cảnh rộng của một công viên đầy nắng với mọi người đang đi dã ngoại.",
       "imageUrl": "https://images.unsplash.com/photo-1646171058093-db337d1ee840?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBwaWNuaWN8ZW58MHx8fHwxNzY4ODI4NDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "community picnic"
+      "imageHint": "dã ngoại cộng đồng"
     },
     {
       "id": "gallery-picnic-1",
-      "description": "Kids playing a game on the grass.",
+      "description": "Trẻ em đang chơi một trò chơi trên cỏ.",
       "imageUrl": "https://images.unsplash.com/photo-1533222481259-ce20eda1e20b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjaGlsZHJlbiUyMHBsYXlpbmd8ZW58MHx8fHwxNzY4ODY1NDg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "children playing"
+      "imageHint": "trẻ em chơi"
     },
     {
       "id": "gallery-picnic-2",
-      "description": "A close-up of a potluck food table.",
+      "description": "Cận cảnh một bàn ăn potluck.",
       "imageUrl": "https://images.unsplash.com/photo-1761051970492-0d54d728e3e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwb3RsdWNrJTIwZm9vZHxlbnwwfHx8fDE3Njg5MDA3MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "potluck food"
+      "imageHint": "đồ ăn potluck"
     },
     {
       "id": "gallery-picnic-3",
-      "description": "A group of adults chatting and laughing.",
+      "description": "Một nhóm người lớn đang trò chuyện và cười đùa.",
       "imageUrl": "https://images.unsplash.com/photo-1590650046871-92c887180603?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZW9wbGUlMjB0YWxraW5nfGVufDB8fHx8MTc2ODg4MDEwMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "people talking"
+      "imageHint": "mọi người nói chuyện"
     },
     {
       "id": "gallery-picnic-4",
-      "description": "A volunteer grilling hamburgers.",
+      "description": "Một tình nguyện viên đang nướng hamburger.",
       "imageUrl": "https://images.unsplash.com/photo-1662027920098-574dfe41dbc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncmlsbGluZyUyMGZvb2R8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "grilling food"
+      "imageHint": "nướng đồ ăn"
     },
     {
       "id": "gallery-picnic-5",
-      "description": "A wide shot of the crowd.",
+      "description": "Một cảnh rộng của đám đông.",
       "imageUrl": "https://images.unsplash.com/photo-1560439514-4e9645039924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjcm93ZCUyMGV2ZW50fGVufDB8fHx8MTc2ODkwMDcwOXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "crowd event"
+      "imageHint": "sự kiện đông người"
     },
     {
       "id": "gallery-picnic-6",
-      "description": "A child's face painted with a design.",
+      "description": "Mặt một đứa trẻ được vẽ mặt.",
       "imageUrl": "https://images.unsplash.com/photo-1662057525233-9a68a3e7449a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmYWNlJTIwcGFpbnR8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "face paint"
+      "imageHint": "vẽ mặt"
     },
     {
       "id": "gallery-christmas-cover",
-      "description": "The church altar decorated for Christmas with poinsettias.",
+      "description": "Bàn thờ nhà thờ được trang trí cho Giáng sinh với hoa trạng nguyên.",
       "imageUrl": "https://images.unsplash.com/photo-1672190099996-d68681f49f4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaHVyY2glMjBjaHJpc3RtYXN8ZW58MHx8fHwxNzY4ODgzNTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "church christmas"
+      "imageHint": "nhà thờ giáng sinh"
     },
     {
       "id": "gallery-christmas-1",
-      "description": "The choir singing during Midnight Mass.",
+      "description": "Ca đoàn hát trong Thánh lễ nửa đêm.",
       "imageUrl": "https://images.unsplash.com/photo-1610254449353-5698372fa83b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaG9pciUyMHNpbmdpbmd8ZW58MHx8fHwxNzY4ODgwNzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "choir singing"
+      "imageHint": "ca đoàn hát"
     },
     {
       "id": "gallery-christmas-2",
-      "description": "The priest giving a homily.",
+      "description": "Linh mục đang giảng.",
       "imageUrl": "https://images.unsplash.com/photo-1639092390330-89abd3e6024a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcmllc3QlMjBob21pbHl8ZW58MHx8fHwxNzY4OTAwNzEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "priest homily"
+      "imageHint": "linh mục giảng"
     },
     {
       "id": "gallery-christmas-3",
-      "description": "A close-up of the nativity scene in the church.",
+      "description": "Cận cảnh hang đá trong nhà thờ.",
       "imageUrl": "https://images.unsplash.com/photo-1672479327199-3490e6e1600b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuYXRpdml0eSUyMHNjZW5lfGVufDB8fHx8MTc2ODg4MzUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "nativity scene"
+      "imageHint": "hang đá"
     },
     {
       "id": "gallery-christmas-4",
-      "description": "Parishioners receiving communion.",
+      "description": "Giáo dân rước lễ.",
       "imageUrl": "https://images.unsplash.com/photo-1610131635230-9c4afb6238b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxob2x5JTIwY29tbXVuaW9ufGVufDB8fHx8MTc2ODg4Mjg5MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "holy communion"
+      "imageHint": "rước lễ"
     },
     {
       "id": "gallery-christmas-5",
-      "description": "The church exterior lit up at night.",
+      "description": "Nhà thờ được chiếu sáng vào ban đêm.",
       "imageUrl": "https://images.unsplash.com/photo-1702761235637-918977918bc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2h1cmNoJTIwbmlnaHR8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "church night"
+      "imageHint": "nhà thờ đêm"
     },
     {
       "id": "gallery-christmas-6",
-      "description": "A family lighting a candle.",
+      "description": "Một gia đình đang thắp nến.",
       "imageUrl": "https://images.unsplash.com/photo-1727118797443-344ed5d2c16e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsaWdodGluZyUyMGNhbmRsZXxlbnwwfHx8fDE3Njg5MDA3MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "lighting candle"
+      "imageHint": "thắp nến"
     },
     {
       "id": "gallery-easter-cover",
-      "description": "The paschal candle lit in a dark church during the Easter Vigil.",
+      "description": "Nến phục sinh được thắp sáng trong một nhà thờ tối trong Đêm Vọng Phục Sinh.",
       "imageUrl": "https://images.unsplash.com/photo-1634779846593-ad47a8f98b5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwYXNjaGFsJTIwY2FuZGxlfGVufDB8fHx8MTc2ODkwMDcwOXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "paschal candle"
+      "imageHint": "nến phục sinh"
     },
     {
       "id": "gallery-easter-1",
-      "description": "Catechumens being baptized.",
+      "description": "Các dự tòng được rửa tội.",
       "imageUrl": "https://images.unsplash.com/photo-1765267566923-4ce452dd9b02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiYXB0aXNtJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "baptism ceremony"
+      "imageHint": "lễ rửa tội"
     },
     {
       "id": "gallery-easter-2",
-      "description": "The congregation holding lit candles.",
+      "description": "Cộng đoàn cầm nến sáng.",
       "imageUrl": "https://images.unsplash.com/photo-1623808427896-c682eef40c3d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjYW5kbGVzJTIwdmlnaWx8ZW58MHx8fHwxNzY4OTAwNzEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "candles vigil"
+      "imageHint": "canh thức nến"
     },
     {
       "id": "gallery-easter-3",
-      "description": "The reading of the Exsultet.",
+      "description": "Việc đọc Exsultet.",
       "imageUrl": "https://images.unsplash.com/photo-1622294763041-40e2e4932eda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsaXR1cmd5JTIwcmVhZGluZ3xlbnwwfHx8fDE3Njg5MDA3MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "liturgy reading"
+      "imageHint": "đọc phụng vụ"
     },
     {
       "id": "gallery-easter-4",
-      "description": "The church decorated with Easter lilies.",
+      "description": "Nhà thờ được trang trí bằng hoa loa kèn Phục sinh.",
       "imageUrl": "https://images.unsplash.com/photo-1675807729108-c14b02afd08b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxlYXN0ZXIlMjBsaWxpZXN8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "easter lilies"
+      "imageHint": "hoa loa kèn Phục sinh"
     },
     {
       "id": "gallery-easter-5",
-      "description": "The 'Alleluia' being sung for the first time since Lent began.",
+      "description": "Bài hát 'Alleluia' được hát lần đầu tiên kể từ khi Mùa Chay bắt đầu.",
       "imageUrl": "https://images.unsplash.com/photo-1759874685095-8378bf6e7f57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2hvaXIlMjBzaW5naW5nfGVufDB8fHx8MTc2ODg4MDc0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "choir singing"
+      "imageHint": "ca đoàn hát"
     },
     {
       "id": "gallery-easter-6",
-      "description": "The final blessing at the end of the Vigil Mass.",
+      "description": "Phép lành cuối cùng vào cuối Thánh lễ Vọng.",
       "imageUrl": "https://images.unsplash.com/photo-1765947385186-9d3c7897481c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcmllc3QlMjBibGVzc2luZ3xlbnwwfHx8fDE3Njg5MDA3MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "priest blessing"
+      "imageHint": "linh mục ban phước"
     }
   ]
 }

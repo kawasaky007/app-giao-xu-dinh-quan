@@ -15,30 +15,30 @@ export default function AboutPage() {
   const orgMembers = [
     {
       id: 'council-member-1',
-      name: 'Theresa Augustin',
-      role: 'Parish Council President',
-      description: 'Leads the parish council in advising the pastor on the needs of the community.',
+      name: 'Ông Giuse Trần Văn Hùng',
+      role: 'Chủ Tịch Hội Đồng Mục Vụ',
+      description: 'Dẫn dắt Hội đồng Mục vụ trong việc cố vấn cho cha xứ về các nhu cầu của cộng đoàn.',
       icon: Users,
     },
     {
       id: 'ministry-lead-1',
-      name: 'Markus Fischer',
-      role: 'Head of Community Outreach',
-      description: 'Coordinates all volunteer efforts and charity work within our local community.',
+      name: 'Bà Maria Nguyễn Thị Lan',
+      role: 'Trưởng Ban Bác Ái Xã Hội',
+      description: 'Điều phối các hoạt động thiện nguyện và công tác từ thiện trong cộng đoàn địa phương.',
       icon: Heart,
     },
     {
       id: 'choir-director-1',
-      name: 'Sophia Dubois',
-      role: 'Choir Director',
-      description: 'Directs our parish choir, bringing beautiful sacred music to every liturgy.',
+      name: 'Anh Phêrô Lê Hoàng Anh',
+      role: 'Ca Trưởng Ca Đoàn Cêcilia',
+      description: 'Điều khiển ca đoàn, mang lại những bài thánh ca tuyệt vời cho mỗi buổi lễ.',
       icon: Music,
     },
     {
       id: 'catechism-teacher-1',
-      name: 'David Chen',
-      role: 'Lead Catechist',
-      description: 'Oversees the religious education programs for children and new members.',
+      name: 'Chị Têrêsa Hoàng Mai',
+      role: 'Trưởng Ban Giáo Lý',
+      description: 'Phụ trách các chương trình giáo lý đức tin cho thiếu nhi và tân tòng.',
       icon: BookOpen,
     },
   ]
@@ -60,7 +60,7 @@ export default function AboutPage() {
           />}
           <div className="container px-4 z-10">
             <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-white drop-shadow-lg">
-              About Our Sacred Place
+              Giới Thiệu Về Giáo Xứ
             </h1>
           </div>
         </section>
@@ -70,14 +70,14 @@ export default function AboutPage() {
           <div className="container px-4 max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Building className="w-12 h-12 mx-auto text-primary mb-4" />
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Our History</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Lược Sử Giáo Xứ</h2>
             </div>
             <div className="prose prose-lg max-w-none text-foreground/80 text-justify">
               <p>
-                Founded in 1888 by a group of devout families, Our Sacred Place has stood as a cornerstone of faith in the community for over a century. The original wooden chapel, built with the hands of our founders, served our parish for fifty years before the current stone church was erected in 1938. 
+                Được thành lập vào năm 1954 bởi một nhóm các gia đình đạo đức di cư, Giáo xứ Các Thánh Tử Đạo Việt Nam đã đứng vững như một nền tảng đức tin trong cộng đồng suốt nhiều thập kỷ. Ngôi nhà nguyện gỗ ban đầu, được xây dựng bằng chính đôi tay của các vị tiền nhân, đã phục vụ giáo xứ trong hai mươi năm trước khi ngôi nhà thờ đá hiện tại được dựng lên vào năm 1974.
               </p>
               <p>
-                This magnificent Gothic-style structure, with its soaring ceilings and breathtaking stained-glass windows, was a labor of love and a testament to the unwavering devotion of our ancestors. Through times of peace and periods of trial, our parish has grown from a small gathering into a vibrant, diverse community, always anchored by the enduring values of the Gospel. We cherish our rich heritage and continue to build upon the legacy of faith and fellowship entrusted to us.
+                Công trình kiến trúc mang phong cách hiện đại này, với trần nhà cao vút và những cửa sổ kính màu tuyệt đẹp, là thành quả của tình yêu thương và là một minh chứng cho lòng sùng kính kiên định của cha ông chúng ta. Qua những thời kỳ bình an và những giai đoạn thử thách, giáo xứ của chúng ta đã phát triển từ một nhóm nhỏ thành một cộng đoàn sôi động, đa dạng, luôn được neo giữ bởi những giá trị bền vững của Tin Mừng. Chúng ta trân trọng di sản phong phú và tiếp tục xây dựng trên nền tảng đức tin và tình huynh đệ đã được trao phó.
               </p>
             </div>
           </div>
@@ -92,10 +92,10 @@ export default function AboutPage() {
                   <div className="mx-auto bg-primary text-primary-foreground rounded-full p-3 w-fit mb-4">
                     <Target className="w-8 h-8" />
                   </div>
-                  <CardTitle className="font-headline text-2xl">Our Mission</CardTitle>
+                  <CardTitle className="font-headline text-2xl">Sứ Mạng</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>To be a living sign of God's love, welcoming all to encounter Jesus Christ through the sacraments, community, and service.</p>
+                  <p>Trở nên dấu chỉ sống động của tình yêu Thiên Chúa, chào đón mọi người đến gặp gỡ Chúa Giêsu Kitô qua các bí tích, đời sống cộng đoàn và tinh thần phục vụ.</p>
                 </CardContent>
               </Card>
               <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -103,10 +103,10 @@ export default function AboutPage() {
                   <div className="mx-auto bg-primary text-primary-foreground rounded-full p-3 w-fit mb-4">
                     <Eye className="w-8 h-8" />
                   </div>
-                  <CardTitle className="font-headline text-2xl">Our Vision</CardTitle>
+                  <CardTitle className="font-headline text-2xl">Tầm Nhìn</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>To be a beacon of hope and a center of spiritual nourishment, fostering a deep, personal relationship with God for all parishioners.</p>
+                  <p>Trở thành ngọn hải đăng của hy vọng và là trung tâm nuôi dưỡng đời sống thiêng liêng, vun trồng mối tương quan cá vị và sâu sắc với Thiên Chúa cho mọi giáo dân.</p>
                 </CardContent>
               </Card>
               <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -114,10 +114,10 @@ export default function AboutPage() {
                   <div className="mx-auto bg-primary text-primary-foreground rounded-full p-3 w-fit mb-4">
                     <Heart className="w-8 h-8" />
                   </div>
-                  <CardTitle className="font-headline text-2xl">Our Values</CardTitle>
+                  <CardTitle className="font-headline text-2xl">Giá Trị Cốt Lõi</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>Faith, Community, Reverence, Charity, and Tradition guide our worship, our actions, and our life together.</p>
+                  <p>Đức Tin, Tình Hiệp Thông, Lòng Tôn Thờ, Bác Ái và Truyền Thống là kim chỉ nam cho việc thờ phượng, hành động và đời sống chung của chúng ta.</p>
                 </CardContent>
               </Card>
             </div>
@@ -129,14 +129,14 @@ export default function AboutPage() {
           <div className="container px-4 max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <User className="w-12 h-12 mx-auto text-primary mb-4" />
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Our Parish Priest</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Linh Mục Chánh Xứ</h2>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
               {priestImage && <Image src={priestImage.imageUrl} alt={priestImage.description} width={300} height={300} className="rounded-full shadow-lg w-48 h-48 md:w-60 md:h-60 object-cover" data-ai-hint={priestImage.imageHint} />}
               <div className="text-center md:text-left">
-                <h3 className="text-2xl font-headline font-bold text-primary">Father Michael O'Connell</h3>
+                <h3 className="text-2xl font-headline font-bold text-primary">Linh mục Gioan Baotixita Trần Văn Minh</h3>
                 <p className="text-foreground/80 mt-4 prose prose-lg">
-                  Ordained in 1995, Father Michael has served three parishes before being assigned to Our Sacred Place in 2015. He is a passionate teacher of the faith with a deep love for scripture and the sacraments. His homilies are known for being both profound and relatable. Father Michael is dedicated to fostering a welcoming and spiritually vibrant parish for all.
+                  Được thụ phong linh mục năm 1995, Cha Gioan Baotixita đã phục vụ tại ba giáo xứ trước khi được bổ nhiệm về Giáo xứ chúng ta vào năm 2015. Ngài là một nhà giảng thuyết đầy nhiệt huyết với tình yêu sâu sắc dành cho Kinh Thánh và các Bí tích. Các bài giảng của ngài được biết đến là vừa sâu sắc vừa gần gũi. Cha Gioan Baotixita luôn tận tâm xây dựng một giáo xứ chào đón và sống động về mặt tâm linh cho tất cả mọi người.
                 </p>
               </div>
             </div>
@@ -148,9 +148,9 @@ export default function AboutPage() {
           <div className="container px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <Users className="w-12 h-12 mx-auto text-primary mb-4" />
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Our Parish Leadership</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Hội Đồng Mục Vụ & Các Đoàn Thể</h2>
               <p className="text-lg text-foreground/80">
-                Our parish is blessed with dedicated lay leaders who generously give their time and talent to serve our community.
+                Giáo xứ chúng ta được chúc phúc với những vị lãnh đạo giáo dân tận tụy, những người quảng đại cống hiến thời gian và tài năng để phục vụ cộng đoàn.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">

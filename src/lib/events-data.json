@@ -1,79 +1,79 @@
 {
   "schedules": {
     "weekend": [
-      { "day": "Saturday Vigil", "time": "5:00 PM" },
-      { "day": "Sunday", "time": "8:00 AM" },
-      { "day": "Sunday", "time": "10:30 AM (Choir)" },
-      { "day": "Sunday", "time": "1:00 PM (Spanish)" }
+      { "day": "Lễ Vọng Thứ Bảy", "time": "17:00" },
+      { "day": "Chúa Nhật", "time": "8:00" },
+      { "day": "Chúa Nhật", "time": "10:30 (Có Ca Đoàn)" },
+      { "day": "Chúa Nhật", "time": "18:00" }
     ],
     "weekday": [
-      { "day": "Monday - Friday", "time": "7:00 AM (Chapel)" },
-      { "day": "Saturday", "time": "8:00 AM (Chapel)" }
+      { "day": "Thứ Hai - Thứ Sáu", "time": "5:30 (Nhà nguyện)" },
+      { "day": "Thứ Bảy", "time": "8:00 (Nhà nguyện)" }
     ],
     "confession": [
-      { "day": "Wednesday", "time": "6:00 PM - 6:45 PM" },
-      { "day": "Saturday", "time": "3:30 PM - 4:30 PM" }
+      { "day": "Thứ Tư", "time": "18:00 - 18:45" },
+      { "day": "Thứ Bảy", "time": "15:30 - 16:30" }
     ],
     "adoration": [
-      { "day": "Fridays", "time": "7:30 AM - 12:00 PM (Chapel)" }
+      { "day": "Thứ Sáu Hàng Tuần", "time": "7:30 - 12:00 (Nhà nguyện)" }
     ]
   },
   "specialSchedules": [
     {
-      "season": "Christmas 2024",
+      "season": "Giáng Sinh 2024",
       "schedule": [
-        { "name": "Christmas Eve Vigil", "date": "December 24", "time": "4:00 PM (Children's Mass)" },
-        { "name": "Christmas Eve Vigil", "date": "December 24", "time": "7:00 PM" },
-        { "name": "Christmas Midnight Mass", "date": "December 24", "time": "12:00 AM" },
-        { "name": "Christmas Day", "date": "December 25", "time": "9:00 AM" },
-        { "name": "Christmas Day", "date": "December 25", "time": "11:00 AM" }
+        { "name": "Lễ Vọng Giáng Sinh", "date": "Ngày 24 tháng 12", "time": "16:00 (Lễ Thiếu Nhi)" },
+        { "name": "Lễ Vọng Giáng Sinh", "date": "Ngày 24 tháng 12", "time": "19:00" },
+        { "name": "Thánh Lễ Đêm Giáng Sinh", "date": "Ngày 24 tháng 12", "time": "22:00" },
+        { "name": "Lễ Rạng Đông", "date": "Ngày 25 tháng 12", "time": "5:00" },
+        { "name": "Lễ Ngày Giáng Sinh", "date": "Ngày 25 tháng 12", "time": "9:00" }
       ]
     },
     {
-      "season": "Holy Week 2025",
+      "season": "Tuần Thánh 2025",
       "schedule": [
-        { "name": "Holy Thursday", "date": "April 17", "time": "7:00 PM (Mass of the Lord's Supper)" },
-        { "name": "Good Friday", "date": "April 18", "time": "3:00 PM (Liturgy of the Lord's Passion)" },
-        { "name": "Holy Saturday", "date": "April 19", "time": "8:00 PM (Easter Vigil)" }
+        { "name": "Thứ Năm Tuần Thánh", "date": "Ngày 17 tháng 4", "time": "19:00 (Lễ Tiệc Ly)" },
+        { "name": "Thứ Sáu Tuần Thánh", "date": "Ngày 18 tháng 4", "time": "15:00 (Tưởng Niệm Cuộc Thương Khó)" },
+        { "name": "Thứ Bảy Tuần Thánh", "date": "Ngày 19 tháng 4", "time": "20:00 (Lễ Vọng Phục Sinh)" }
       ]
     }
   ],
   "events": [
     {
-      "id": "st-francis-festival-2024",
-      "slug": "st-francis-festival-2024",
-      "title": "St. Francis Day Festival & Blessing of Animals",
+      "id": "le-thanh-phanxico-2024",
+      "slug": "le-thanh-phanxico-2024",
+      "title": "Ngày Hội Mừng Lễ Thánh Phanxicô & Làm Phép Súc Vật",
       "date": "2024-10-04T12:00:00.000Z",
       "endTime": "2024-10-04T16:00:00.000Z",
-      "location": "Church Lawn & Parking Lot",
+      "location": "Sân Nhà Thờ & Bãi Xe",
       "image": "event-festival",
-      "category": "Parish Events",
-      "excerpt": "Join us for our annual St. Francis Day festival! A fun day for the whole family with games, food, and the beloved Blessing of the Animals.",
-      "description": "<p>Celebrate the feast day of St. Francis of Assisi, patron saint of animals and the environment, at our annual parish festival. The afternoon will be filled with joy and community spirit.</p><p>Activities include carnival games for kids, a bake sale hosted by the Women's Guild, and a delicious BBQ lunch. The highlight of the day is the Blessing of the Animals at 2:00 PM on the church steps. Bring your beloved pets (leashed or in carriers, please) for a special blessing from Father Michael.</p><p>This is a wonderful tradition and a great way to enjoy a fall afternoon with your parish family. All are welcome!</p>"
+      "category": "Sự Kiện Giáo Xứ",
+      "excerpt": "Tham gia ngày hội thường niên mừng lễ Thánh Phanxicô! Một ngày vui cho cả gia đình với các trò chơi, ẩm thực, và nghi thức Làm Phép Súc Vật được yêu mến.",
+      "description": "<p>Cùng nhau mừng lễ thánh Phanxicô Assisi, bổn mạng các loài vật và môi trường, tại ngày hội giáo xứ thường niên của chúng ta. Buổi chiều sẽ tràn ngập niềm vui và tinh thần cộng đoàn.</p><p>Các hoạt động bao gồm trò chơi hội chợ cho thiếu nhi, gian hàng bánh ngọt của Hội Các Bà Mẹ Công Giáo, và bữa trưa BBQ thơm ngon. Điểm nhấn của ngày là nghi thức Làm Phép Súc Vật lúc 14:00 tại quảng trường nhà thờ. Hãy mang theo thú cưng yêu quý của bạn (vui lòng xích hoặc để trong lồng) để nhận phép lành đặc biệt từ cha xứ.</p><p>Đây là một truyền thống tuyệt vời và là cách để tận hưởng một buổi chiều mùa thu cùng gia đình giáo xứ. Tất cả mọi người đều được chào đón!</p>"
     },
     {
-      "id": "knights-of-columbus-pancake-breakfast-2024",
-      "slug": "knights-of-columbus-pancake-breakfast-2024",
-      "title": "Knights of Columbus Pancake Breakfast",
+      "id": "huynh-truong-pancake-breakfast-2024",
+      "slug": "huynh-truong-pancake-breakfast-2024",
+      "title": "Bữa Sáng Gây Quỹ Của Xứ Đoàn Thiếu Nhi Thánh Thể",
       "date": "2024-10-20T08:30:00.000Z",
       "endTime": "2024-10-20T12:30:00.000Z",
-      "location": "Parish Hall",
+      "location": "Hội Trường Giáo Xứ",
       "image": "event-pancake-breakfast",
-      "category": "Fundraiser",
-      "excerpt": "Support our local Knights of Columbus council and enjoy a delicious breakfast of pancakes, sausage, and more. A great way to connect after Sunday Mass.",
-      "description": "<p>The Knights of Columbus Council #5821 invites you to their monthly Pancake Breakfast! Join us in the parish hall after the Sunday morning Masses for a delicious and hearty breakfast.</p><p>The menu features all-you-can-eat pancakes, sausage links, scrambled eggs, orange juice, and coffee. All proceeds go towards the Knights' many charitable activities, including support for local food banks, scholarships for parish youth, and aid for families in need.</p><p>Come for the food, stay for the fellowship! It's a perfect opportunity to catch up with friends and fellow parishioners while supporting a great cause. Cost is $8 for adults and $5 for children under 12.</p>"
+      "category": "Gây Quỹ",
+      "excerpt": "Ủng hộ Xứ Đoàn Thiếu Nhi Thánh Thể và thưởng thức bữa sáng ngon miệng với bánh pancake, xúc xích, và nhiều hơn nữa. Một cách tuyệt vời để kết nối sau Thánh lễ Chúa Nhật.",
+      "description": "<p>Xứ Đoàn TNTT trân trọng kính mời cộng đoàn đến tham dự Bữa Sáng Gây Quỹ hàng tháng! Cùng chúng tôi tại hội trường giáo xứ sau các Thánh lễ sáng Chúa Nhật để thưởng thức một bữa sáng ngon miệng và thịnh soạn.</p><p>Thực đơn bao gồm bánh pancake không giới hạn, xúc xích, trứng bác, nước cam và cà phê. Toàn bộ số tiền thu được sẽ được dùng cho các hoạt động bác ái của xứ đoàn, bao gồm hỗ trợ các ngân hàng thực phẩm địa phương, học bổng cho giới trẻ giáo xứ, và giúp đỡ các gia đình khó khăn.</p><p>Hãy đến vì món ăn, ở lại vì tình huynh đệ! Đây là một cơ hội hoàn hảo để gặp gỡ bạn bè và anh chị em giáo dân trong khi ủng hộ một mục đích cao đẹp. Giá vé: 80.000 VNĐ cho người lớn và 50.000 VNĐ cho trẻ em dưới 12 tuổi.</p>"
     },
     {
-      "id": "parish-advent-retreat-2024",
-      "slug": "parish-advent-retreat-2024",
-      "title": "Advent Retreat: Preparing Our Hearts for Christ",
+      "id": "tinh-tam-mua-vong-2024",
+      "slug": "tinh-tam-mua-vong-2024",
+      "title": "Tĩnh Tâm Mùa Vọng: Dọn Lòng Chờ Chúa Đến",
       "date": "2024-12-07T09:00:00.000Z",
       "endTime": "2024-12-07T12:00:00.000Z",
-      "location": "Main Church & Parish Hall",
+      "location": "Nhà Thờ Chính & Hội Trường",
       "image": "event-advent-retreat",
-      "category": "Spiritual Growth",
-      "excerpt": "Take a morning to step away from the holiday rush and enter into the quiet, prayerful spirit of Advent at our parish retreat.",
-      "description": "<p>In the midst of a busy season, our Advent Retreat offers a peaceful oasis to prepare our hearts for the coming of the Lord. This year's retreat, led by guest speaker Sister Mary Katherine from the Sisters of Mercy, will focus on the theme 'Watching and Waiting in Joyful Hope.'</p><p>The morning will include a reflection on the Advent scriptures, time for silent prayer and adoration, the opportunity for the Sacrament of Reconciliation, and fellowship with coffee and pastries. It is a time to slow down, reflect, and spiritually ready ourselves for the celebration of Christmas.</p><p>The retreat is open to all adult parishioners. There is no cost to attend, but please RSVP to the parish office so we can prepare accordingly.</p>"
+      "category": "Tăng Tiến Đời Sống Thiêng Liêng",
+      "excerpt": "Dành một buổi sáng để rời xa sự hối hả của dịp lễ và bước vào tinh thần thinh lặng, cầu nguyện của Mùa Vọng tại buổi tĩnh tâm của giáo xứ.",
+      "description": "<p>Giữa một mùa bận rộn, buổi Tĩnh Tâm Mùa Vọng của chúng ta mang đến một ốc đảo bình yên để chuẩn bị tâm hồn cho Chúa đến. Buổi tĩnh tâm năm nay, do Sơ Maria Katherine từ Dòng Nữ Tử Bác Ái Vinh Sơn hướng dẫn, sẽ tập trung vào chủ đề 'Tỉnh Thức và Chờ Đợi trong Niềm Vui Hy Vọng.'</p><p>Buổi sáng sẽ bao gồm suy niệm về các bài đọc Kinh Thánh Mùa Vọng, thời gian cho cầu nguyện thinh lặng và Chầu Thánh Thể, cơ hội lãnh nhận Bí tích Hòa giải, và hiệp thông bên tách cà phê và bánh ngọt. Đây là thời gian để sống chậm lại, suy ngẫm và chuẩn bị tinh thần cho việc cử hành Lễ Giáng Sinh.</p><p>Buổi tĩnh tâm dành cho tất cả giáo dân trưởng thành. Không thu phí tham dự, nhưng xin vui lòng đăng ký với văn phòng giáo xứ để chúng tôi chuẩn bị chu đáo.</p>"
     }
   ]
 }

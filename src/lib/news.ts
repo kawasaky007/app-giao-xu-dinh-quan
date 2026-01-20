@@ -7,7 +7,7 @@ export type NewsArticle = {
   title: string;
   date: string;
   author: string;
-  category: 'Parish Events' | 'Community Outreach' | 'Liturgy' | 'Education';
+  category: 'Sự Kiện Giáo Xứ' | 'Phục Vụ Cộng Đoàn' | 'Phụng Vụ' | 'Giáo Dục';
   image: string; // id from placeholder images
   excerpt: string;
   content: string; // HTML content
@@ -33,4 +33,3 @@ export async function getRecentArticles(limit: number): Promise<NewsArticle[]> {
     const articles = await getNewsArticles();
     return articles.slice(0, limit);
 }
-    

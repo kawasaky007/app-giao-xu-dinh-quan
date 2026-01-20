@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { getRecentArticles, NewsArticle } from '@/lib/news';
 import { getRecentEvents, Event } from '@/lib/events';
 import { format } from 'date-fns';
+import { vi } from 'date-fns/locale';
 
 
 export default async function Home() {
@@ -34,13 +35,13 @@ export default async function Home() {
           />}
           <div className="container px-4 z-10">
             <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-white drop-shadow-lg mb-4">
-              Welcome to Our Sacred Place
+              Chào Mừng đến Giáo Xứ Các Thánh Tử Đạo Việt Nam
             </h1>
             <p className="max-w-3xl mx-auto text-lg md:text-xl text-neutral-200 drop-shadow-md mb-8">
-              A beacon of faith, hope, and love in the heart of the community.
+              Ngọn hải đăng của đức tin, hy vọng và tình yêu thương giữa lòng cộng đoàn.
             </p>
             <Button size="lg" asChild>
-              <Link href="/about">Learn More About Us</Link>
+              <Link href="/about">Tìm Hiểu Về Giáo Xứ</Link>
             </Button>
           </div>
         </section>
@@ -54,13 +55,13 @@ export default async function Home() {
                   <div className="mx-auto bg-primary text-primary-foreground rounded-full p-3 w-fit mb-4">
                     <Clock className="w-8 h-8" />
                   </div>
-                  <CardTitle className="font-headline text-2xl">Mass Times</CardTitle>
+                  <CardTitle className="font-headline text-2xl">Giờ Lễ</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-2"><strong>Sunday:</strong> 8:00 AM, 10:30 AM</p>
-                  <p className="mb-4"><strong>Weekdays:</strong> 7:00 AM (Chapel)</p>
+                  <p className="mb-2"><strong>Chúa Nhật:</strong> 8:00, 10:30</p>
+                  <p className="mb-4"><strong>Ngày thường:</strong> 7:00 (Nhà nguyện)</p>
                   <Button variant="outline" asChild>
-                    <Link href="/schedule">View Full Schedule</Link>
+                    <Link href="/schedule">Xem Lịch Phụng Vụ</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -69,13 +70,13 @@ export default async function Home() {
                   <div className="mx-auto bg-primary text-primary-foreground rounded-full p-3 w-fit mb-4">
                     <MapPin className="w-8 h-8" />
                   </div>
-                  <CardTitle className="font-headline text-2xl">Parish Office</CardTitle>
+                  <CardTitle className="font-headline text-2xl">Văn Phòng Giáo Xứ</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-2"><strong>Hours:</strong> Mon-Fri, 9 AM - 4 PM</p>
-                  <p className="mb-4">123 Faith Street, Devotion, USA</p>
+                  <p className="mb-2"><strong>Giờ làm việc:</strong> T2-T6, 9:00 - 16:00</p>
+                  <p className="mb-4">123 Đường Đức Tin, TP. Tình Yêu</p>
                   <Button variant="outline" asChild>
-                    <Link href="/#contact">Get Directions</Link>
+                    <Link href="/#contact">Xem Bản Đồ</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -84,13 +85,13 @@ export default async function Home() {
                   <div className="mx-auto bg-primary text-primary-foreground rounded-full p-3 w-fit mb-4">
                     <Phone className="w-8 h-8" />
                   </div>
-                  <CardTitle className="font-headline text-2xl">Contact Us</CardTitle>
+                  <CardTitle className="font-headline text-2xl">Liên Hệ</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-2"><strong>Phone:</strong> (123) 456-7890</p>
-                  <p className="mb-4"><strong>Email:</strong> contact@oursacredplace.com</p>
+                  <p className="mb-2"><strong>Điện thoại:</strong> (028) 3456-7890</p>
+                  <p className="mb-4"><strong>Email:</strong> lienhe@giaoxu.com</p>
                   <Button variant="outline" asChild>
-                    <Link href="/#contact">Send a Message</Link>
+                    <Link href="/#contact">Gửi Tin Nhắn</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -103,9 +104,9 @@ export default async function Home() {
           <div className="container px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <Newspaper className="w-12 h-12 mx-auto text-primary mb-4" />
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Latest News</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Tin Tức Mới Nhất</h2>
               <p className="text-lg text-foreground/80">
-                Stay updated with the latest happenings and announcements from our parish.
+                Cập nhật những sự kiện và thông báo mới nhất từ giáo xứ.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -126,7 +127,7 @@ export default async function Home() {
                     <CardContent>
                       <p className="text-foreground/80 mb-4 line-clamp-3">{article.excerpt}</p>
                       <Button variant="link" className="p-0" asChild>
-                        <Link href={`/news/${article.slug}`}>Read More</Link>
+                        <Link href={`/news/${article.slug}`}>Đọc Thêm</Link>
                       </Button>
                     </CardContent>
                   </Card>
@@ -135,7 +136,7 @@ export default async function Home() {
             </div>
             <div className="text-center mt-12">
               <Button size="lg" asChild>
-                <Link href="/news">View All News</Link>
+                <Link href="/news">Xem Tất Cả Tin Tức</Link>
               </Button>
             </div>
           </div>
@@ -146,9 +147,9 @@ export default async function Home() {
           <div className="container px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <Calendar className="w-12 h-12 mx-auto text-primary mb-4" />
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Upcoming Events</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Sự Kiện Sắp Tới</h2>
               <p className="text-lg text-foreground/80">
-                Join us for fellowship and community. There's something for everyone.
+                Tham gia cùng chúng tôi để hiệp thông và sinh hoạt cộng đoàn.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -167,10 +168,10 @@ export default async function Home() {
                         </CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p className="text-sm text-foreground/80 mb-2"><strong>Date:</strong> {format(new Date(event.date), 'MMMM d, yyyy')}</p>
+                            <p className="text-sm text-foreground/80 mb-2"><strong>Thời gian:</strong> {format(new Date(event.date), 'dd MMMM, yyyy', { locale: vi })}</p>
                             <p className="text-foreground/80 mb-4 line-clamp-3">{event.excerpt}</p>
                             <Button variant="link" className="p-0" asChild>
-                                <Link href={`/events/${event.slug}`}>Event Details</Link>
+                                <Link href={`/events/${event.slug}`}>Chi Tiết Sự Kiện</Link>
                             </Button>
                         </CardContent>
                     </Card>
@@ -179,7 +180,7 @@ export default async function Home() {
             </div>
             <div className="text-center mt-12">
               <Button size="lg" asChild>
-                <Link href="/events">View Full Calendar</Link>
+                <Link href="/events">Xem Lịch Sự Kiện</Link>
               </Button>
             </div>
           </div>

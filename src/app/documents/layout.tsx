@@ -11,10 +11,10 @@ export default function DocumentsLayout({
         <div className="container px-4 text-center">
             <Archive className="w-12 h-12 mx-auto text-primary mb-4" />
             <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">
-              Resources & Documents
+              Tài Liệu & Thông Báo
             </h1>
             <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-              Find sermons, newsletters, and other important parish documents.
+              Tìm các bài giảng, bản tin và các tài liệu quan trọng khác của giáo xứ.
             </p>
         </div>
       </section>

@@ -1,93 +1,93 @@
 {
   "catechismLessons": [
     {
-      "category": "Children (Ages 6-10)",
+      "category": "Thiếu Nhi (6-10 tuổi)",
       "lessons": [
-        { "title": "Lesson 1: Who is God?", "summary": "An introduction to the concept of God as our loving creator." },
-        { "title": "Lesson 2: The Story of Creation", "summary": "Exploring the seven days of creation from the Book of Genesis." },
-        { "title": "Lesson 3: Learning the Lord's Prayer", "summary": "Understanding the meaning behind the words Jesus taught us." }
+        { "title": "Bài 1: Thiên Chúa là ai?", "summary": "Giới thiệu về khái niệm Thiên Chúa là Đấng Tạo Hóa yêu thương chúng ta." },
+        { "title": "Bài 2: Câu chuyện Sáng Thế", "summary": "Khám phá bảy ngày sáng tạo từ sách Sáng Thế Ký." },
+        { "title": "Bài 3: Học Kinh Lạy Cha", "summary": "Hiểu ý nghĩa đằng sau những lời Chúa Giêsu đã dạy chúng ta." }
       ]
     },
     {
-      "category": "Youth (Ages 11-15)",
+      "category": "Thanh Thiếu Niên (11-15 tuổi)",
       "lessons": [
-        { "title": "The Creed: What We Believe", "summary": "A deep dive into the articles of the Nicene Creed." },
-        { "title": "The Beatitudes: Blueprint for Happiness", "summary": "Studying Jesus' sermon on the mount." },
-        { "title": "Understanding the Mass", "summary": "Exploring the liturgy and the meaning of the Eucharist." }
+        { "title": "Kinh Tin Kính: Điều Chúng Ta Tin", "summary": "Tìm hiểu sâu về các điều trong Kinh Tin Kính Nicêa." },
+        { "title": "Bát Phúc: Con Đường Dẫn Đến Hạnh Phúc", "summary": "Nghiên cứu bài giảng trên núi của Chúa Giêsu." },
+        { "title": "Hiểu Về Thánh Lễ", "summary": "Khám phá phụng vụ và ý nghĩa của Bí tích Thánh Thể." }
       ]
     },
     {
-      "category": "Adults (RCIA)",
+      "category": "Dự Tòng (Người Lớn)",
       "lessons": [
-        { "title": "Introduction to Sacred Scripture", "summary": "How to read the Bible and understand its central message." },
-        { "title": "The Sacraments of Initiation", "summary": "Exploring Baptism, Confirmation, and the Eucharist." },
-        { "title": "Catholic Social Teaching", "summary": "Living out our faith in the world." }
+        { "title": "Giới Thiệu Kinh Thánh", "summary": "Cách đọc Kinh Thánh và hiểu thông điệp trung tâm của nó." },
+        { "title": "Các Bí Tích Khai Tâm", "summary": "Khám phá Bí tích Rửa Tội, Thêm Sức và Thánh Thể." },
+        { "title": "Giáo Huấn Xã Hội của Công Giáo", "summary": "Sống đức tin của chúng ta trong thế giới." }
       ]
     }
   ],
   "sacramentDocs": [
     {
-      "title": "Baptism Preparation",
-      "description": "Information and required forms for parents seeking to have their child baptized.",
+      "title": "Chuẩn Bị Rửa Tội",
+      "description": "Thông tin và các biểu mẫu cần thiết cho phụ huynh muốn cho con được Rửa Tội.",
       "icon": "Baby"
     },
     {
-      "title": "First Holy Communion",
-      "description": "Guidelines and schedule for children preparing to receive their First Eucharist.",
-      "icon": "GlassWater"
+      "title": "Rước Lễ Lần Đầu",
+      "description": "Hướng dẫn và lịch trình cho các em thiếu nhi chuẩn bị Rước Lễ Lần Đầu.",
+      "icon": "Cross"
     },
     {
-      "title": "Confirmation",
-      "description": "Details about the preparation program for young adults preparing for Confirmation.",
+      "title": "Thêm Sức",
+      "description": "Chi tiết về chương trình chuẩn bị cho các bạn trẻ lãnh nhận Bí tích Thêm Sức.",
       "icon": "Wind"
     },
     {
-      "title": "Holy Matrimony",
-      "description": "A guide for engaged couples preparing for the Sacrament of Marriage in our parish.",
+      "title": "Hôn Phối",
+      "description": "Hướng dẫn cho các cặp đôi sắp cưới chuẩn bị cho Bí tích Hôn Phối tại giáo xứ.",
       "icon": "HeartHandshake"
     }
   ],
   "sermons": [
     {
       "id": "sermon-2024-07-21",
-      "title": "The Parable of the Sower",
+      "title": "Dụ Ngôn Người Gieo Giống",
       "date": "2024-07-21T10:30:00.000Z",
-      "speaker": "Father Michael O'Connell",
+      "speaker": "Cha Xứ Gioan Baotixita",
       "audioUrl": "#",
       "videoUrl": "#"
     },
     {
       "id": "sermon-2024-07-14",
-      "title": "Love Your Neighbor",
+      "title": "Yêu Thương Tha Nhân",
       "date": "2024-07-14T10:30:00.000Z",
-      "speaker": "Father Michael O'Connell",
+      "speaker": "Cha Xứ Gioan Baotixita",
       "audioUrl": "#",
       "videoUrl": null
     },
     {
       "id": "sermon-2024-07-07",
-      "title": "On Humility",
+      "title": "Về Lòng Khiêm Nhường",
       "date": "2024-07-07T10:30:00.000Z",
-      "speaker": "Deacon Thomas",
+      "speaker": "Thầy Phó Tế Phêrô",
       "audioUrl": "#",
       "videoUrl": "#"
     }
   ],
   "documents": [
     {
-      "category": "Newsletters",
+      "category": "Bản tin",
       "items": [
-        { "title": "Monthly Newsletter - July 2024", "url": "#" },
-        { "title": "Monthly Newsletter - June 2024", "url": "#" },
-        { "title": "Monthly Newsletter - May 2024", "url": "#" }
+        { "title": "Bản Tin Tháng 7 - 2024", "url": "#" },
+        { "title": "Bản Tin Tháng 6 - 2024", "url": "#" },
+        { "title": "Bản Tin Tháng 5 - 2024", "url": "#" }
       ]
     },
     {
-      "category": "Parish Forms",
+      "category": "Biểu mẫu",
       "items": [
-        { "title": "New Parishioner Registration Form", "url": "#" },
-        { "title": "Facility Rental Request Form", "url": "#" },
-        { "title": "Ministry Volunteer Application", "url": "#" }
+        { "title": "Phiếu Đăng Ký Giáo Dân Mới", "url": "#" },
+        { "title": "Phiếu Yêu Cầu Thuê Cơ Sở", "url": "#" },
+        { "title": "Đơn Đăng Ký Tình Nguyện Viên", "url": "#" }
       ]
     }
   ]

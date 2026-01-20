@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, User, Search } from 'lucide-react';
 import { format } from 'date-fns';
+import { vi } from 'date-fns/locale';
 
 const ARTICLES_PER_PAGE = 6;
 
@@ -72,7 +73,7 @@ export default function NewsPage() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             <Input 
               type="search"
-              placeholder="Search by title..."
+              placeholder="Tìm kiếm theo tiêu đề..."
               className="pl-10"
               value={searchTerm}
               onChange={handleSearchChange}
@@ -80,10 +81,10 @@ export default function NewsPage() {
           </div>
           <Select value={selectedCategory} onValueChange={handleCategoryChange}>
             <SelectTrigger className="w-full md:w-[200px]">
-              <SelectValue placeholder="Filter by category" />
+              <SelectValue placeholder="Lọc theo chuyên mục" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All Categories</SelectItem>
+              <SelectItem value="all">Tất Cả Chuyên Mục</SelectItem>
               {categories.map(category => (
                 <SelectItem key={category} value={category}>{category}</SelectItem>
               ))}
@@ -127,7 +128,7 @@ export default function NewsPage() {
                         </div>
                         <div className="flex items-center gap-1.5">
                             <Calendar className="w-4 h-4" />
-                            <time dateTime={article.date}>{format(new Date(article.date), 'MMMM d, yyyy')}</time>
+                            <time dateTime={article.date}>{format(new Date(article.date), 'dd/MM/yyyy', { locale: vi })}</time>
                         </div>
                     </div>
                   </CardHeader>
@@ -136,7 +137,7 @@ export default function NewsPage() {
                   </CardContent>
                   <div className="p-6 pt-0">
                     <Button asChild variant="link" className="p-0">
-                      <Link href={`/news/${article.slug}`}>Read More →</Link>
+                      <Link href={`/news/${article.slug}`}>Đọc Thêm →</Link>
                     </Button>
                   </div>
                 </Card>
@@ -145,8 +146,8 @@ export default function NewsPage() {
           </div>
         ) : (
             <div className="text-center py-16 border-2 border-dashed rounded-lg">
-                <h3 className="text-xl font-semibold text-foreground">No Articles Found</h3>
-                <p className="text-muted-foreground mt-2">Try adjusting your search or filter.</p>
+                <h3 className="text-xl font-semibold text-foreground">Không Tìm Thấy Bài Viết</h3>
+                <p className="text-muted-foreground mt-2">Vui lòng thử điều chỉnh tìm kiếm hoặc bộ lọc của bạn.</p>
             </div>
         )}
 
@@ -158,17 +159,17 @@ export default function NewsPage() {
                     onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                     disabled={currentPage === 1}
                 >
-                    Previous
+                    Trang Trước
                 </Button>
                 <span className="text-sm text-muted-foreground">
-                    Page {currentPage} of {totalPages}
+                    Trang {currentPage} trên {totalPages}
                 </span>
                 <Button 
                     variant="outline"
                     onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                     disabled={currentPage === totalPages}
                 >
-                    Next
+                    Trang Kế
                 </Button>
             </div>
         )}
@@ -176,4 +177,3 @@ export default function NewsPage() {
     </main>
   );
 }
-    

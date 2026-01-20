@@ -27,10 +27,10 @@ export default async function SchedulePage() {
           />}
           <div className="container px-4 z-10">
             <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-white drop-shadow-lg">
-              Mass & Liturgy Schedule
+              Lịch Phụng Vụ
             </h1>
             <p className="mt-4 text-lg md:text-xl text-neutral-200 drop-shadow-md max-w-2xl mx-auto">
-              Join us in prayer and worship. All are welcome.
+              Mời cộng đoàn cùng tham dự các giờ cầu nguyện và thờ phượng.
             </p>
           </div>
         </section>
@@ -39,12 +39,12 @@ export default async function SchedulePage() {
           <div className="container px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <Clock className="w-12 h-12 mx-auto text-primary mb-4" />
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Regular Schedule</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Lịch Thường Lệ</h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card>
                 <CardHeader>
-                  <CardTitle className="font-headline text-2xl">Weekend Masses</CardTitle>
+                  <CardTitle className="font-headline text-2xl">Thánh Lễ Cuối Tuần</CardTitle>
                 </CardHeader>
                 <CardContent className="text-lg space-y-2">
                   {schedules.weekend.map(item => <p key={item.day}><strong>{item.day}:</strong> {item.time}</p>)}
@@ -52,7 +52,7 @@ export default async function SchedulePage() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle className="font-headline text-2xl">Weekday Masses</CardTitle>
+                  <CardTitle className="font-headline text-2xl">Thánh Lễ Hàng Ngày</CardTitle>
                 </CardHeader>
                 <CardContent className="text-lg space-y-2">
                   {schedules.weekday.map(item => <p key={item.day}><strong>{item.day}:</strong> {item.time}</p>)}
@@ -60,12 +60,12 @@ export default async function SchedulePage() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle className="font-headline text-2xl">Confessions</CardTitle>
-                  <CardDescription>Sacrament of Reconciliation</CardDescription>
+                  <CardTitle className="font-headline text-2xl">Giải Tội</CardTitle>
+                  <CardDescription>Bí tích Hòa giải</CardDescription>
                 </CardHeader>
                 <CardContent className="text-lg space-y-2">
                   {schedules.confession.map(item => <p key={item.day}><strong>{item.day}:</strong> {item.time}</p>)}
-                   <p className="text-sm text-muted-foreground pt-2">Or by appointment.</p>
+                   <p className="text-sm text-muted-foreground pt-2">Hoặc theo lịch hẹn.</p>
                 </CardContent>
               </Card>
             </div>
@@ -76,9 +76,9 @@ export default async function SchedulePage() {
           <div className="container px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <Calendar className="w-12 h-12 mx-auto text-primary mb-4" />
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Special & Holy Day Schedules</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Lịch Lễ Trọng & Đặc Biệt</h2>
               <p className="text-lg text-foreground/80">
-                Schedules for Christmas, Holy Week, and other solemnities will be posted here as they approach.
+                Lịch các Thánh lễ Giáng Sinh, Tuần Thánh và các ngày lễ trọng khác sẽ được đăng tải tại đây khi gần đến.
               </p>
             </div>
              <div className="max-w-3xl mx-auto grid gap-8">
