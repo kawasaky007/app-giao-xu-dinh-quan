@@ -105,28 +105,45 @@ export default function ArticleForm({ onSubmit, initialData }: ArticleFormProps)
         const sRef = storageRef(storage, `article-thumbnails/${Date.now()}-${file.name}`);
         const uploadTask = uploadBytesResumable(sRef, file);
 
-        // Listen for state changes to show progress
         uploadTask.on('state_changed',
             (snapshot) => {
                 const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                 setUploadProgress(progress);
+            },
+            (error) => {
+                setIsUploading(false);
+                let description = `Đã có lỗi xảy ra: ${error.message}`;
+                 switch (error.code) {
+                    case 'storage/unauthorized':
+                        description = 'Bạn không có quyền tải tệp lên. Hãy chắc chắn rằng bạn đã đăng nhập và có quyền phù hợp.';
+                        break;
+                    case 'storage/canceled':
+                        description = 'Quá trình tải lên đã bị hủy.';
+                        break;
+                    case 'storage/unknown':
+                        description = 'Đã xảy ra lỗi không xác định. Vui lòng kiểm tra kết nối mạng của bạn.';
+                        break;
+                }
+                toast({
+                    variant: "destructive",
+                    title: `Tải lên thất bại (${error.code})`,
+                    description: description,
+                });
+            },
+            () => {
+                getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+                    form.setValue('thumbnail', downloadURL, { shouldDirty: true });
+                    setIsUploading(false);
+                }).catch((urlError) => {
+                    setIsUploading(false);
+                    toast({
+                        variant: "destructive",
+                        title: "Lỗi sau khi tải lên",
+                        description: `Không thể lấy URL của tệp đã tải lên: ${urlError.message}`,
+                    });
+                });
             }
         );
-
-        // Use the promise-like behavior of uploadTask for completion and error
-        uploadTask.then(async (snapshot) => {
-            const downloadURL = await getDownloadURL(snapshot.ref);
-            form.setValue('thumbnail', downloadURL, { shouldDirty: true });
-            setIsUploading(false);
-        }).catch((error) => {
-            console.error("Upload failed:", error);
-            setIsUploading(false);
-            toast({
-                variant: "destructive",
-                title: "Tải lên thất bại",
-                description: `Đã có lỗi xảy ra: ${error.code} - ${error.message}`,
-            });
-        });
     };
     
     const handleRemoveImage = () => {

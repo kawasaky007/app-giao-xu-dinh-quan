@@ -1,9 +1,9 @@
 "use server";
-import data from './events-data.json';
 import { collection, getDocs, query, where, orderBy, doc, getDoc, addDoc, updateDoc, deleteDoc } from 'firebase/firestore';
 import { initializeFirebase } from '@/firebase';
 import { errorEmitter } from '@/firebase/error-emitter';
 import { FirestorePermissionError } from '@/firebase/errors';
+import staticData from './events-data.json';
 
 export type ScheduleItem = {
   day: string;
@@ -41,7 +41,7 @@ export type Event = {
   description: string; // HTML content
 };
 
-const { schedules, specialSchedules } = data;
+const { schedules, specialSchedules } = staticData;
 
 function getDb() {
     return initializeFirebase().firestore;
