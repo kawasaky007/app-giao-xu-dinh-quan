@@ -1,85 +1,54 @@
-/**
- * This ruleset enforces a strict Role-Based Access Control (RBAC) model centered around a global 'admin' role.
- *
- * Core Philosophy:
- * The security model operates on a "default deny" basis. Access is granted explicitly based on a user's role.
- * A public-facing contact form allows any user (including anonymous ones) to create a submission, but all other
- * access to this sensitive data is restricted to verified administrators.
- *
- * Data Structure:
- * The data is organized into two distinct, top-level collections:
- * 1. /contactSubmissions/{contactSubmissionId}: Stores all user-submitted contact form data.
- * 2. /roles_admin/{userId}: A lookup collection where the existence of a document signifies that the user is an administrator.
- *
- * Key Security Decisions:
- * - Public Creation: The /contactSubmissions collection is intentionally open for creation to allow any visitor to use the contact form.
- * - Admin-Only Access: Reading, updating, or deleting contact submissions is strictly limited to users who are designated as admins.
- * - No User Data Listing: Regular users cannot list or access any data created by others.
- * - Privilege Escalation Prevention: The /roles_admin collection is locked down. Client-side applications cannot grant or revoke admin privileges, which must be handled through a secure server-side process (e.g., Firebase Admin SDK in a Cloud Function).
- *
- * Denormalization for Authorization:
- * This ruleset uses a dedicated `/roles_admin` collection to manage permissions. This avoids costly `get()` calls to user profile documents and allows for efficient, scalable role checks using `exists()`. This is a classic and highly performant pattern for managing global roles.
- *
- * Structural Segregation:
- * Contact submissions are stored in a single collection because they all share the same security requirements (public create, admin-only read/write). This simplifies the rules and improves query performance for admins.
- */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // Helper Functions
-
-    /**
-     * Checks if the requesting user is authenticated.
-     */
+    // Helper functions
     function isSignedIn() {
       return request.auth != null;
     }
 
-    /**
-     * Checks if the user has an admin role document.
-     * This is the primary mechanism for granting privileged access.
-     */
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function getRole(uid) {
+      // Safely access role data. Returns null if document or field doesn't exist.
+      return get(/databases/$(database)/documents/roles/$(uid)).data.role;
+    }
+
     function isAdmin() {
-      return exists(/databases/$(database)/documents/roles_admin/$(request.auth.uid));
+      return isSignedIn() && getRole(request.auth.uid) == 'admin';
     }
 
-    /**
-     * A composite check for state-changing operations by an admin on an existing document.
-     * Ensures the user is an admin and the document they are trying to modify already exists.
-     */
-    function isAdminAndDocExists() {
-      return isAdmin() && exists(resource);
+    function isEditor() {
+      let userRole = getRole(request.auth.uid);
+      return isSignedIn() && (userRole == 'editor' || userRole == 'admin');
     }
 
-    /**
-     * @description Allows anyone to create (submit) a contact form message. Only authenticated admins can read, update, or delete submissions.
-     * @path /contactSubmissions/{contactSubmissionId}
-     * @allow (create) An anonymous or authenticated user successfully submitting the contact form.
-     * @deny (get) A non-admin user attempting to read a submission, even if they know the ID.
-     * @principle Enforces a "write-only" public dropbox pattern, with privileged read/update access for administrators.
-     */
+    function isAuthor() {
+      let userRole = getRole(request.auth.uid);
+      return isSignedIn() && (userRole == 'author' || userRole == 'editor' || userRole == 'admin');
+    }
+
+    // Collections
+    match /users/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow create, update: if isOwner(userId);
+      allow delete: if isAdmin();
+    }
+
+    match /roles/{userId} {
+      // Any authenticated user can read their own role. Admins can read any role.
+      allow get: if isOwner(userId) || isAdmin();
+      // Only admins can see a list of all roles.
+      allow list: if isAdmin();
+      // Only admins can create, update, or delete roles.
+      allow write: if isAdmin();
+    }
+
     match /contactSubmissions/{contactSubmissionId} {
-      allow get: if isAdmin();
-      allow list: if isAdmin();
-      allow create: if true;
-      allow update: if isAdmin() && exists(resource);
-      allow delete: if isAdmin() && exists(resource);
-    }
-
-    /**
-     * @description Locks down the admin role assignments. Only admins can read this data, and all write operations are forbidden from the client to prevent privilege escalation.
-     * @path /roles_admin/{userId}
-     * @allow (get) An admin user checking if another user (`userId`) is also an admin.
-     * @deny (create) Any user, including an existing admin, trying to make another user an admin via the client app.
-     * @principle Prevents client-side privilege escalation. Role management must be done via a trusted server environment.
-     */
-    match /roles_admin/{userId} {
-      allow get: if isAdmin();
-      allow list: if isAdmin();
-      allow create: if false;
-      allow update: if false;
-      allow delete: if false;
+      allow get, list, update, delete: if isAdmin();
+      allow create: if true; // Anyone can submit the contact form
     }
   }
 }
