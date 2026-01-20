@@ -37,6 +37,23 @@
         "submissionDate": { "type": "string", "description": "Date and time when the contact form was submitted.", "format": "date-time" }
       },
       "required": [ "id", "name", "email", "message", "submissionDate" ]
+    },
+    "NewsArticle": {
+      "title": "News Article",
+      "description": "Represents a single news article or announcement.",
+      "type": "object",
+      "properties": {
+        "slug": { "type": "string", "description": "The URL-friendly slug for the article." },
+        "title": { "type": "string", "description": "The title of the article." },
+        "date": { "type": "string", "format": "date-time", "description": "The publication date of the article." },
+        "author": { "type": "string", "description": "The author of the article." },
+        "category": { "type": "string", "description": "The category of the article." },
+        "image": { "type": "string", "description": "The ID of the placeholder image for the article." },
+        "excerpt": { "type": "string", "description": "A short summary of the article." },
+        "content": { "type": "string", "description": "The full HTML content of the article." },
+        "status": { "type": "string", "description": "The publication status of the article.", "enum": ["published", "draft"] }
+      },
+      "required": ["slug", "title", "date", "author", "category", "excerpt", "content", "status"]
     }
   },
   "auth": {
@@ -54,6 +71,10 @@
     "/contactSubmissions/{contactSubmissionId}": {
       "schema": { "$ref": "#/entities/ContactSubmission" },
       "description": "Stores contact form submissions. Only accessible by admins."
+    },
+    "/news/{articleId}": {
+        "schema": { "$ref": "#/entities/NewsArticle" },
+        "description": "Stores news articles. Publicly readable, but only writeable by editors and admins."
     }
   }
 }

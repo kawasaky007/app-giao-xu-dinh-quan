@@ -11,7 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, User, Search } from 'lucide-react';
+import { Calendar, User, Search, Loader2 } from 'lucide-react';
 import { format } from 'date-fns';
 import { vi } from 'date-fns/locale';
 
@@ -21,6 +21,7 @@ export default function NewsPage() {
   const searchParams = useSearchParams();
   const [articles, setArticles] = useState<NewsArticle[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   
   const [searchTerm, setSearchTerm] = useState(searchParams.get('q') || '');
   const [selectedCategory, setSelectedCategory] = useState(searchParams.get('category') || 'all');
@@ -28,12 +29,14 @@ export default function NewsPage() {
 
   useEffect(() => {
     async function fetchData() {
+      setIsLoading(true);
       const [fetchedArticles, fetchedCategories] = await Promise.all([
         getNewsArticles(),
         getCategories()
       ]);
       setArticles(fetchedArticles);
       setCategories(fetchedCategories);
+      setIsLoading(false);
     }
     fetchData();
   }, []);
@@ -93,7 +96,11 @@ export default function NewsPage() {
         </div>
 
         {/* Articles Grid */}
-        {paginatedArticles.length > 0 ? (
+        {isLoading ? (
+            <div className="flex justify-center items-center h-64">
+                <Loader2 className="w-8 h-8 animate-spin text-primary" />
+            </div>
+        ) : paginatedArticles.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {paginatedArticles.map(article => {
               const articleImage = PlaceHolderImages.find(p => p.id === article.image);

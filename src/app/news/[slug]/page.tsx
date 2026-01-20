@@ -14,15 +14,7 @@ type Props = {
   params: { slug: string }
 }
 
-// Generate static pages for all articles at build time
-export async function generateStaticParams() {
-  const articles = await getNewsArticles();
-  return articles.map((article) => ({
-    slug: article.slug,
-  }));
-}
-
-// Generate metadata for the page
+// This function is now for dynamic metadata generation, not static params
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = await getArticleBySlug(params.slug);
 
@@ -31,6 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: 'Không Tìm Thấy Bài Viết'
     }
   }
+
+  const articleImage = PlaceHolderImages.find(p => p.id === article.image);
 
   return {
     title: `${article.title} | Giáo Xứ Các Thánh Tử Đạo Việt Nam`,
@@ -44,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `/news/${article.slug}`,
       images: [
         {
-          url: PlaceHolderImages.find(p => p.id === article.image)?.imageUrl || '',
+          url: articleImage?.imageUrl || '',
           width: 1200,
           height: 630,
           alt: article.title,

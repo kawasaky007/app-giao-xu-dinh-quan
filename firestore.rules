@@ -50,5 +50,14 @@ service cloud.firestore {
       allow get, list, update, delete: if isAdmin();
       allow create: if true; // Anyone can submit the contact form
     }
+
+    match /news/{articleId} {
+      // Allow public read for published articles.
+      allow get: if resource.data.status == 'published';
+      // Allow public list for published articles (client will filter).
+      allow list: if true; 
+      // Allow editors and admins to create, update, and delete any article.
+      allow write: if isEditor();
+    }
   }
 }
