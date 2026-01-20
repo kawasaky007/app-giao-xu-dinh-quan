@@ -1,6 +1,6 @@
 'use client';
 
-import { Church, Menu, LogIn } from 'lucide-react';
+import { Church, Menu } from 'lucide-react';
 import Link from 'next/link';
 import { ThemeToggle } from './theme-toggle';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet';
@@ -92,13 +92,6 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
 
-          <Button asChild variant="ghost" size="icon" className='hidden md:inline-flex'>
-              <Link href="#">
-                <LogIn />
-                 <span className="sr-only">Đăng Nhập</span>
-              </Link>
-            </Button>
-
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
@@ -141,15 +134,6 @@ export default function Header() {
                         ))}
                     </Accordion>
                   </nav>
-                  <div className="border-t p-4 mt-auto">
-                    <SheetClose asChild>
-                      <Button asChild className='w-full'>
-                        <Link href="#">
-                          <LogIn className="mr-2 h-4 w-4" /> Đăng Nhập
-                        </Link>
-                      </Button>
-                    </SheetClose>
-                  </div>
                  </div>
               </SheetContent>
             </Sheet>

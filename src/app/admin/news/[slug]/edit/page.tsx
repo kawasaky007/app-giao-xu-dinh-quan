@@ -4,8 +4,12 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { useParams } from "next/navigation";
 
-export default function NewArticlePage() {
+export default function EditArticlePage() {
+  const params = useParams();
+  const { slug } = params;
+
   return (
     <div className="space-y-6">
         <div className="flex items-center gap-4">
@@ -15,8 +19,8 @@ export default function NewArticlePage() {
                 </Link>
             </Button>
             <div>
-                <h1 className="text-3xl font-bold tracking-tight">Tạo Bài Viết Mới</h1>
-                <p className="text-muted-foreground">Chức năng tạo bài viết mới đã bị vô hiệu hóa.</p>
+                <h1 className="text-3xl font-bold tracking-tight">Chỉnh Sửa Bài Viết</h1>
+                <p className="text-muted-foreground">Chức năng chỉnh sửa bài viết đã bị vô hiệu hóa.</p>
             </div>
         </div>
         <Card>
@@ -25,7 +29,7 @@ export default function NewArticlePage() {
             </CardHeader>
             <CardContent>
                 <p className="text-muted-foreground">
-                    Đây là phiên bản chỉ dành cho giao diện người dùng. Không thể tạo bài viết mới vì không có backend được kết nối.
+                    Đây là phiên bản chỉ dành cho giao diện người dùng. Không thể chỉnh sửa bài viết vì không có backend được kết nối.
                 </p>
             </CardContent>
         </Card>
