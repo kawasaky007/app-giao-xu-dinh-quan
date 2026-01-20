@@ -65,7 +65,7 @@
         "date": { "type": "string", "format": "date-time", "description": "The start date and time of the event." },
         "endTime": { "type": "string", "format": "date-time", "description": "The end date and time of the event." },
         "location": { "type": "string", "description": "The location of the event." },
-        "image": { "type": "string", "description": "The ID of the placeholder image for the event." },
+        "image": { "type": "string", "description": "The URL for the event's banner image." },
         "category": { "type": "string", "description": "The category of the event.", "enum": ["Sự Kiện Giáo Xứ", "Gây Quỹ", "Tăng Tiến Đời Sống Thiêng Liêng", "Phục Vụ Cộng Đoàn"] },
         "excerpt": { "type": "string", "description": "A short summary of the event." },
         "description": { "type": "string", "description": "The full HTML content of the event." }

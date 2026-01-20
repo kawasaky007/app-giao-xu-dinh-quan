@@ -1,6 +1,5 @@
 import { getEventBySlug, getEvents } from '@/lib/events';
 import { notFound } from 'next/navigation';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { format } from 'date-fns';
 import { vi } from 'date-fns/locale';
@@ -28,6 +27,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: 'Không Tìm Thấy Sự Kiện' }
   }
 
+  const images = event.image ? [{
+    url: event.image,
+    width: 1200,
+    height: 630,
+    alt: event.title,
+  }] : [];
+
   return {
     title: `${event.title} | Giáo Xứ Các Thánh Tử Đạo Việt Nam`,
     description: event.excerpt,
@@ -36,14 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: event.excerpt,
       type: 'article',
       url: `/events/${event.slug}`,
-      images: [
-        {
-          url: PlaceHolderImages.find(p => p.id === event.image)?.imageUrl || '',
-          width: 1200,
-          height: 630,
-          alt: event.title,
-        },
-      ],
+      images: images,
     },
   }
 }
@@ -60,7 +59,6 @@ export default async function EventPage({ params }: Props) {
     notFound();
   }
 
-  const eventImage = PlaceHolderImages.find(p => p.id === event.image);
   const startDate = new Date(event.date);
   const endDate = new Date(event.endTime);
 
@@ -89,9 +87,9 @@ export default async function EventPage({ params }: Props) {
             'addressCountry': 'VN'
         }
     },
-    'image': [
-        eventImage?.imageUrl
-     ],
+    'image': event.image ? [
+        event.image
+     ] : [],
     'description': event.excerpt,
     'organizer': {
         '@type': 'Organization',
@@ -107,22 +105,21 @@ export default async function EventPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {eventImage && (
+      {event.image && (
         <header className="relative h-[40vh] md:h-[50vh] w-full">
             <Image
-                src={eventImage.imageUrl}
+                src={event.image}
                 alt={event.title}
                 fill
                 style={{ objectFit: 'cover' }}
                 className="brightness-75"
                 priority
-                data-ai-hint={eventImage.imageHint}
             />
         </header>
       )}
 
       <div className="container px-4">
-        <div className="max-w-3xl mx-auto -mt-24 md:-mt-32 relative z-10">
+        <div className={`max-w-3xl mx-auto ${event.image ? '-mt-24 md:-mt-32' : 'pt-16'} relative z-10`}>
             <div className="bg-card shadow-xl rounded-lg p-6 md:p-10">
                 <div className="mb-4">
                     <Badge variant="default">{event.category}</Badge>

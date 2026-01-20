@@ -1,5 +1,4 @@
 import { getEvents } from '@/lib/events';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -18,23 +17,21 @@ export default async function EventsPage() {
         {events.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map(event => {
-              const eventImage = PlaceHolderImages.find(p => p.id === event.image);
               const eventDate = new Date(event.date);
               const eventTime = format(eventDate, 'h:mm a');
 
               return (
                 <Card key={event.id} className="overflow-hidden flex flex-col">
-                  {eventImage && (
+                  {event.image && (
                     <Link href={`/events/${event.slug}`}>
-                      <div className="aspect-video relative">
+                      <div className="aspect-video relative bg-secondary">
                         <Image 
-                          src={eventImage.imageUrl} 
+                          src={event.image} 
                           alt={event.title} 
                           fill
                           style={{ objectFit: 'cover' }}
                           className="w-full h-full object-cover"
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          data-ai-hint={eventImage.imageHint} 
                         />
                       </div>
                     </Link>

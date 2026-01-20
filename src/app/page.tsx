@@ -157,14 +157,17 @@ export default async function Home() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {recentEvents.map((event: Event) => {
-                const eventImage = PlaceHolderImages.find(p => p.id === event.image);
                 return (
                     <Card key={event.id} className="overflow-hidden">
-                        {eventImage && (
-                            <Link href={`/events/${event.slug}`}>
-                                <Image src={eventImage.imageUrl} alt={event.title} width={400} height={250} className="w-full h-48 object-cover" data-ai-hint={eventImage.imageHint} />
-                            </Link>
-                        )}
+                        <Link href={`/events/${event.slug}`} className="block aspect-video bg-secondary">
+                            {event.image ? (
+                                <Image src={event.image} alt={event.title} width={400} height={250} className="w-full h-48 object-cover" />
+                            ) : (
+                                <div className="w-full h-48 flex items-center justify-center">
+                                    <Calendar className="w-12 h-12 text-muted-foreground" />
+                                </div>
+                            )}
+                        </Link>
                         <CardHeader>
                         <CardTitle className="font-headline text-xl">
                             <Link href={`/events/${event.slug}`} className="hover:text-primary transition-colors">{event.title}</Link>

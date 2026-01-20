@@ -4,7 +4,7 @@ import { useCollection, useFirestore, useMemoFirebase } from '@/firebase';
 import { collection, query, orderBy } from 'firebase/firestore';
 import { NewsArticle } from '@/lib/news';
 import { columns } from './columns';
-import { DataTable } from './data-table';
+import { DataTable } from '@/components/admin/data-table';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { PlusCircle } from 'lucide-react';
@@ -36,7 +36,7 @@ export default function AdminNewsPage() {
 
             {isLoading && <p>Đang tải bài viết...</p>}
             {error && <p className="text-destructive">Lỗi khi tải bài viết: {error.message}</p>}
-            {articles && <DataTable columns={columns} data={articles} />}
+            {articles && <DataTable columns={columns} data={articles} filterColumnId="title" filterPlaceholder="Lọc theo tiêu đề..."/>}
         </div>
     );
 }

@@ -49,28 +49,10 @@
       "imageHint": "hòa tấu ca đoàn"
     },
     {
-      "id": "event-festival",
-      "description": "Một lễ hội giáo xứ ngoài trời với các trò chơi và gian hàng ẩm thực.",
-      "imageUrl": "https://images.unsplash.com/photo-1631179234473-f48fedffed9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxvdXRkb29yJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzY4ODU2Mzk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "lễ hội ngoài trời"
-    },
-    {
       "id": "event-dinner",
       "description": "Một bữa ăn tối cộng đồng đang được tổ chức tại hội trường giáo xứ.",
       "imageUrl": "https://images.unsplash.com/photo-1721180672417-81a4c8515ea5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb21tdW5pdHklMjBkaW5uZXJ8ZW58MHx8fHwxNzY4ODk5MjQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bữa tối cộng đồng"
-    },
-    {
-      "id": "event-pancake-breakfast",
-      "description": "Một chồng bánh pancake với xi-rô và bơ trên đĩa.",
-      "imageUrl": "https://images.unsplash.com/photo-1528207776546-365bb010ee93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYW5jYWtlcyUyMGJyZWFrZmFzdHxlbnwwfHx8fDE3MjE4MzYzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "bữa sáng pancake"
-    },
-    {
-      "id": "event-advent-retreat",
-      "description": "Một người đang ngồi một mình trên ghế nhà thờ, trong thinh lặng cầu nguyện.",
-      "imageUrl": "https://images.unsplash.com/photo-1484910292437-025d3a13a772?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxxdWlldCUyMHByYXllcnxlbnwwfHx8fDE3MjE4MzY0MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cầu nguyện thinh lặng"
     },
     {
       "id": "schedule-header",
