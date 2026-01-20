@@ -6,7 +6,6 @@ import { LogIn } from 'lucide-react';
 export default function LoginPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background font-body">
-      <Header />
       <main className="flex-1 flex items-center justify-center py-16 md:py-24">
         <div className="container px-4 max-w-md">
           <div className="text-center mb-8">
@@ -21,7 +20,6 @@ export default function LoginPage() {
           <LoginForm />
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
