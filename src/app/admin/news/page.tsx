@@ -1,6 +1,6 @@
 'use client';
 
-import { useCollection, useFirestore } from '@/firebase';
+import { useCollection, useFirestore, useMemoFirebase } from '@/firebase';
 import { collection, query, orderBy } from 'firebase/firestore';
 import { NewsArticle } from '@/lib/news';
 import { columns } from './columns';
@@ -8,12 +8,12 @@ import { DataTable } from './data-table';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { PlusCircle } from 'lucide-react';
-import { useMemo } from 'react';
 
 export default function AdminNewsPage() {
     const firestore = useFirestore();
     
-    const articlesQuery = useMemo(() => {
+    const articlesQuery = useMemoFirebase(() => {
+        if (!firestore) return null;
         return query(collection(firestore, 'news'), orderBy('date', 'desc'));
     }, [firestore]);
 
