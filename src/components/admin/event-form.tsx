@@ -19,12 +19,15 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Card, CardContent } from '@/components/ui/card';
 import { useState } from 'react';
 import type { Event } from '@/lib/events';
-import RichTextEditor from './rich-text-editor';
-import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { useStorage } from '@/firebase';
-import Image from 'next/image';
-import { Progress } from '@/components/ui/progress';
-import { useToast } from '@/hooks/use-toast';
+import dynamic from 'next/dynamic';
+import { Skeleton } from '../ui/skeleton';
+import FileUploadInput from './file-upload-input';
+
+
+const RichTextEditor = dynamic(() => import('./rich-text-editor'), {
+    ssr: false,
+    loading: () => <Skeleton className="h-[250px] w-full rounded-md" />,
+});
 
 const formSchema = z.object({
   title: z.string().min(3, { message: 'Tiêu đề phải có ít nhất 3 ký tự.' }),
@@ -33,8 +36,8 @@ const formSchema = z.object({
   description: z.string().min(50, { message: 'Nội dung phải có ít nhất 50 ký tự.' }),
   image: z.string().optional(),
   location: z.string().min(3, { message: "Địa điểm phải có ít nhất 3 ký tự."}),
-  date: z.string().refine((val) => !isNaN(Date.parse(val)), { message: "Ngày bắt đầu không hợp lệ"}),
-  endTime: z.string().refine((val) => !isNaN(Date.parse(val)), { message: "Ngày kết thúc không hợp lệ"}),
+  date: z.string().refine((val) => val && !isNaN(Date.parse(val)), { message: "Ngày bắt đầu không hợp lệ"}),
+  endTime: z.string().refine((val) => val && !isNaN(Date.parse(val)), { message: "Ngày kết thúc không hợp lệ"}),
   category: z.enum(['Sự Kiện Giáo Xứ', 'Gây Quỹ', 'Tăng Tiến Đời Sống Thiêng Liêng', 'Phục Vụ Cộng Đoàn']),
 });
 
@@ -60,17 +63,18 @@ const createSlug = (title: string) => {
 }
 
 const toDatetimeLocal = (isoString: string) => {
-    const date = new Date(isoString);
-    date.setMinutes(date.getMinutes() - date.getTimezoneOffset());
-    return date.toISOString().slice(0, 16);
+    if (!isoString) return '';
+    try {
+        const date = new Date(isoString);
+        date.setMinutes(date.getMinutes() - date.getTimezoneOffset());
+        return date.toISOString().slice(0, 16);
+    } catch (e) {
+        return '';
+    }
 };
 
 export default function EventForm({ onSubmit, initialData }: EventFormProps) {
-    const storage = useStorage();
-    const { toast } = useToast();
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isUploading, setIsUploading] = useState(false);
-    const [uploadProgress, setUploadProgress] = useState(0);
 
     const form = useForm<EventFormValues>({
         resolver: zodResolver(formSchema),
@@ -79,57 +83,13 @@ export default function EventForm({ onSubmit, initialData }: EventFormProps) {
             slug: initialData?.slug || '',
             excerpt: initialData?.excerpt || '',
             description: initialData?.description || '',
-            image: initialData?.image || '',
+            image: initialData?.image || undefined,
             location: initialData?.location || '',
             date: initialData?.date ? toDatetimeLocal(initialData.date) : '',
             endTime: initialData?.endTime ? toDatetimeLocal(initialData.endTime) : '',
             category: initialData?.category || 'Sự Kiện Giáo Xứ',
         },
     });
-
-    const imageUrl = form.watch('image');
-
-    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (!file) return;
-
-        if (!storage) {
-            toast({
-                variant: "destructive",
-                title: "Lỗi cấu hình",
-                description: "Dịch vụ lưu trữ Firebase không khả dụng. Vui lòng thử lại sau hoặc liên hệ quản trị viên.",
-            });
-            return;
-        }
-
-        setIsUploading(true);
-        setUploadProgress(0);
-
-        const sRef = storageRef(storage, `event-images/${Date.now()}-${file.name}`);
-        const uploadTask = uploadBytesResumable(sRef, file);
-
-        uploadTask.on('state_changed',
-            (snapshot) => {
-                const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                setUploadProgress(progress);
-            },
-            (error) => {
-                console.error("Upload failed:", error);
-                setIsUploading(false);
-                toast({
-                    variant: "destructive",
-                    title: "Tải lên thất bại",
-                    description: `Đã có lỗi xảy ra: ${error.message}`,
-                });
-            },
-            () => {
-                getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-                    form.setValue('image', downloadURL);
-                    setIsUploading(false);
-                });
-            }
-        );
-    };
 
     const handleFormSubmit = async (values: EventFormValues) => {
         setIsSubmitting(true);
@@ -207,27 +167,24 @@ export default function EventForm({ onSubmit, initialData }: EventFormProps) {
                                 </FormItem>
                             )}
                         />
-                        <FormItem>
-                            <FormLabel>Ảnh bìa sự kiện</FormLabel>
-                            <FormControl>
-                                <div>
-                                    <Input type="file" accept="image/*" onChange={handleFileChange} className="mb-2" disabled={isUploading} />
-                                    {isUploading && (
-                                        <div className="space-y-1">
-                                            <Progress value={uploadProgress} />
-                                            <p className="text-xs text-muted-foreground">{`Đang tải lên... ${Math.round(uploadProgress)}%`}</p>
-                                        </div>
-                                    )}
-                                    {imageUrl && !isUploading && (
-                                        <div className="mt-4 relative w-full max-w-sm aspect-video rounded-md overflow-hidden border">
-                                            <Image src={imageUrl} alt="Xem trước ảnh bìa" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    )}
-                                </div>
-                            </FormControl>
-                            <FormDescription>Chọn một ảnh để làm ảnh bìa cho sự kiện.</FormDescription>
-                            <FormMessage />
-                        </FormItem>
+                        <FormField
+                            control={form.control}
+                            name="image"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Ảnh bìa sự kiện</FormLabel>
+                                    <FormControl>
+                                        <FileUploadInput 
+                                            value={field.value}
+                                            onChange={field.onChange}
+                                            uploadPath="event-images"
+                                        />
+                                    </FormControl>
+                                    <FormDescription>Chọn một ảnh để làm ảnh bìa cho sự kiện.</FormDescription>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
                          <div className="grid md:grid-cols-2 gap-6">
                              <FormField
                                 control={form.control}
@@ -299,7 +256,7 @@ export default function EventForm({ onSubmit, initialData }: EventFormProps) {
 
                 <div className="flex justify-end gap-2">
                     <Button type="button" variant="outline" onClick={() => form.reset()}>Hủy</Button>
-                    <Button type="submit" disabled={isSubmitting || isUploading}>
+                    <Button type="submit" disabled={isSubmitting}>
                         {isSubmitting ? 'Đang lưu...' : 'Lưu Sự Kiện'}
                     </Button>
                 </div>

@@ -19,12 +19,16 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Card, CardContent } from '@/components/ui/card';
 import { useState } from 'react';
 import type { NewsArticle } from '@/lib/news';
-import RichTextEditor from './rich-text-editor';
-import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { useStorage } from '@/firebase';
-import Image from 'next/image';
-import { Progress } from '@/components/ui/progress';
-import { useToast } from '@/hooks/use-toast';
+import dynamic from 'next/dynamic';
+import { Skeleton } from '../ui/skeleton';
+import FileUploadInput from './file-upload-input';
+
+
+const RichTextEditor = dynamic(() => import('./rich-text-editor'), {
+    ssr: false,
+    loading: () => <Skeleton className="h-[250px] w-full rounded-md" />,
+});
+
 
 const formSchema = z.object({
   title: z.string().min(3, { message: 'Tiêu đề phải có ít nhất 3 ký tự.' }),
@@ -60,11 +64,7 @@ const createSlug = (title: string) => {
 }
 
 export default function ArticleForm({ onSubmit, initialData }: ArticleFormProps) {
-    const storage = useStorage();
-    const { toast } = useToast();
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isUploading, setIsUploading] = useState(false);
-    const [uploadProgress, setUploadProgress] = useState(0);
 
     const form = useForm<ArticleFormValues>({
         resolver: zodResolver(formSchema),
@@ -77,53 +77,9 @@ export default function ArticleForm({ onSubmit, initialData }: ArticleFormProps)
             content: initialData?.content || '',
             status: initialData?.status || 'draft',
             date: initialData?.date ? new Date(initialData.date).toISOString().substring(0, 10) : new Date().toISOString().substring(0, 10),
-            thumbnail: initialData?.thumbnail || '',
+            thumbnail: initialData?.thumbnail || undefined,
         },
     });
-
-    const thumbnailUrl = form.watch('thumbnail');
-
-    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (!file) return;
-
-        if (!storage) {
-            toast({
-                variant: "destructive",
-                title: "Lỗi cấu hình",
-                description: "Dịch vụ lưu trữ Firebase không khả dụng. Vui lòng thử lại sau hoặc liên hệ quản trị viên.",
-            });
-            return;
-        }
-
-        setIsUploading(true);
-        setUploadProgress(0);
-
-        const sRef = storageRef(storage, `article-thumbnails/${Date.now()}-${file.name}`);
-        const uploadTask = uploadBytesResumable(sRef, file);
-
-        uploadTask.on('state_changed',
-            (snapshot) => {
-                const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                setUploadProgress(progress);
-            },
-            (error) => {
-                console.error("Upload failed:", error);
-                setIsUploading(false);
-                toast({
-                    variant: "destructive",
-                    title: "Tải lên thất bại",
-                    description: `Đã có lỗi xảy ra: ${error.message}`,
-                });
-            },
-            () => {
-                getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-                    form.setValue('thumbnail', downloadURL);
-                    setIsUploading(false);
-                });
-            }
-        );
-    };
 
     const handleFormSubmit = async (values: ArticleFormValues) => {
         setIsSubmitting(true);
@@ -133,7 +89,9 @@ export default function ArticleForm({ onSubmit, initialData }: ArticleFormProps)
     
     const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         form.setValue('title', e.target.value);
-        form.setValue('slug', createSlug(e.target.value));
+        if (!form.formState.dirtyFields.slug) {
+            form.setValue('slug', createSlug(e.target.value));
+        }
     }
 
     return (
@@ -200,27 +158,24 @@ export default function ArticleForm({ onSubmit, initialData }: ArticleFormProps)
                                 </FormItem>
                             )}
                         />
-                        <FormItem>
-                            <FormLabel>Ảnh bìa (Thumbnail)</FormLabel>
-                            <FormControl>
-                                <div>
-                                    <Input type="file" accept="image/*" onChange={handleFileChange} className="mb-2" disabled={isUploading} />
-                                    {isUploading && (
-                                        <div className="space-y-1">
-                                            <Progress value={uploadProgress} />
-                                            <p className="text-xs text-muted-foreground">{`Đang tải lên... ${Math.round(uploadProgress)}%`}</p>
-                                        </div>
-                                    )}
-                                    {thumbnailUrl && !isUploading && (
-                                        <div className="mt-4 relative w-full max-w-sm aspect-video rounded-md overflow-hidden border">
-                                            <Image src={thumbnailUrl} alt="Xem trước ảnh bìa" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    )}
-                                </div>
-                            </FormControl>
-                            <FormDescription>Chọn một ảnh để làm ảnh bìa cho bài viết. Ảnh sẽ được hiển thị ở đầu trang bài viết và trên danh sách tin tức.</FormDescription>
-                            <FormMessage />
-                        </FormItem>
+                        <FormField
+                            control={form.control}
+                            name="thumbnail"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Ảnh bìa (Thumbnail)</FormLabel>
+                                    <FormControl>
+                                        <FileUploadInput
+                                            value={field.value}
+                                            onChange={field.onChange}
+                                            uploadPath="article-thumbnails"
+                                        />
+                                    </FormControl>
+                                    <FormDescription>Chọn một ảnh để làm ảnh bìa cho bài viết. Ảnh sẽ được hiển thị ở đầu trang bài viết và trên danh sách tin tức.</FormDescription>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
                          <div className="grid md:grid-cols-2 gap-6">
                             <FormField
                                 control={form.control}
@@ -301,7 +256,7 @@ export default function ArticleForm({ onSubmit, initialData }: ArticleFormProps)
 
                 <div className="flex justify-end gap-2">
                     <Button type="button" variant="outline" onClick={() => form.reset()}>Hủy</Button>
-                    <Button type="submit" disabled={isSubmitting || isUploading}>
+                    <Button type="submit" disabled={isSubmitting}>
                         {isSubmitting ? 'Đang lưu...' : 'Lưu Bài Viết'}
                     </Button>
                 </div>
