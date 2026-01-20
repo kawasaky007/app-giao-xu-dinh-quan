@@ -111,14 +111,17 @@ export default async function Home() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {recentArticles.map((article: NewsArticle) => {
-                const articleImage = PlaceHolderImages.find(p => p.id === article.image);
                 return (
                   <Card key={article.id} className="overflow-hidden">
-                    {articleImage && (
-                      <Link href={`/news/${article.slug}`}>
-                        <Image src={articleImage.imageUrl} alt={article.title} width={400} height={250} className="w-full h-48 object-cover" data-ai-hint={articleImage.imageHint} />
-                      </Link>
-                    )}
+                    <Link href={`/news/${article.slug}`} className="block aspect-video bg-secondary">
+                      {article.thumbnail ? (
+                        <Image src={article.thumbnail} alt={article.title} width={400} height={225} className="w-full h-full object-cover" />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                            <Newspaper className="w-12 h-12 text-muted-foreground" />
+                        </div>
+                      )}
+                    </Link>
                     <CardHeader>
                       <CardTitle className="font-headline text-xl">
                         <Link href={`/news/${article.slug}`} className="hover:text-primary transition-colors">{article.title}</Link>

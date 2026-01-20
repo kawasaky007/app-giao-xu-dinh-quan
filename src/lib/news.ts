@@ -13,7 +13,7 @@ export type NewsArticle = {
   date: string; // Should be ISO string
   author: string;
   category: 'Sự Kiện Giáo Xứ' | 'Phục Vụ Cộng Đoàn' | 'Phụng Vụ' | 'Giáo Dục';
-  image: string; // id from placeholder images
+  thumbnail?: string; // URL of the thumbnail image
   excerpt: string;
   content: string; // HTML content
   status: 'published' | 'draft';

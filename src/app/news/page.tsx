@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { getNewsArticles, getCategories, NewsArticle } from '@/lib/news';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,7 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, User, Search, Loader2 } from 'lucide-react';
+import { Calendar, User, Search, Loader2, Newspaper } from 'lucide-react';
 import { format } from 'date-fns';
 import { vi } from 'date-fns/locale';
 
@@ -103,24 +102,24 @@ export default function NewsPage() {
         ) : paginatedArticles.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {paginatedArticles.map(article => {
-              const articleImage = PlaceHolderImages.find(p => p.id === article.image);
               return (
                 <Card key={article.id} className="overflow-hidden flex flex-col">
-                  {articleImage && (
-                    <Link href={`/news/${article.slug}`}>
-                      <div className="aspect-video relative">
-                        <Image 
-                          src={articleImage.imageUrl} 
-                          alt={article.title} 
-                          fill
-                          style={{ objectFit: 'cover' }}
-                          className="w-full h-full object-cover"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          data-ai-hint={articleImage.imageHint} 
-                        />
-                      </div>
-                    </Link>
-                  )}
+                  <Link href={`/news/${article.slug}`} className="block aspect-video bg-secondary">
+                    {article.thumbnail ? (
+                      <Image 
+                        src={article.thumbnail} 
+                        alt={article.title} 
+                        fill
+                        style={{ objectFit: 'cover' }}
+                        className="w-full h-full object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                            <Newspaper className="w-16 h-16 text-muted-foreground" />
+                        </div>
+                    )}
+                  </Link>
                   <CardHeader>
                     <div className='mb-2'>
                         <Badge variant="secondary">{article.category}</Badge>
