@@ -25,14 +25,14 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { NewsArticle } from '@/lib/news';
 import dynamic from 'next/dynamic';
-import { useMemo } from 'react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Terminal } from 'lucide-react';
+import Link from 'next/link';
 
-const RichTextEditor = useMemo(() => dynamic(() => import('@/components/admin/rich-text-editor'), {
+const RichTextEditor = dynamic(() => import('@/components/admin/rich-text-editor'), {
     ssr: false,
     loading: () => <p>Đang tải trình soạn thảo...</p>
-}), []);
+});
 
 
 const formSchema = z.object({

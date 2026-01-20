@@ -34,10 +34,10 @@ import { cn } from '@/lib/utils';
 import { format } from 'date-fns';
 import Link from 'next/link';
 
-const RichTextEditor = useMemo(() => dynamic(() => import('@/components/admin/rich-text-editor'), {
+const RichTextEditor = dynamic(() => import('@/components/admin/rich-text-editor'), {
     ssr: false,
     loading: () => <p>Đang tải trình soạn thảo...</p>
-}), []);
+});
 
 
 const formSchema = z.object({
