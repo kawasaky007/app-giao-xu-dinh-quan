@@ -32,6 +32,9 @@ service cloud.firestore {
 
     // Collections
     match /users/{userId} {
+      // A user can create and update their own profile.
+      // They can read their own profile, or an admin can read it.
+      // Only an admin can delete a user profile document.
       allow read: if isOwner(userId) || isAdmin();
       allow create, update: if isOwner(userId);
       allow delete: if isAdmin();
@@ -47,36 +50,46 @@ service cloud.firestore {
     }
 
     match /contactSubmissions/{contactSubmissionId} {
-      allow get, list, update, delete: if isAdmin();
-      allow create: if true; // Anyone can submit the contact form
+      // Anyone can create a contact submission.
+      allow create: if true;
+      // Only admins can read or delete submissions.
+      allow read, update, delete: if isAdmin();
     }
 
     match /news/{articleId} {
-      // Allow public read for published articles.
-      allow get: if resource.data.status == 'published';
-      // Allow public list for published articles (client will filter).
-      allow list: if true; 
-      // Allow editors and admins to create, update, and delete any article.
+      // Public users can read published articles.
+      // Editors and admins can read any article (including drafts).
+      allow read: if (resource.data.status == 'published') || isEditor();
+      
+      // Editors and admins can create, update, and delete any article.
       allow write: if isEditor();
     }
 
     match /events/{eventId} {
+      // Publicly readable.
       allow read: if true;
+      // Writable only by editors and admins.
       allow write: if isEditor();
     }
 
     match /faq/{faqId} {
+      // Publicly readable.
       allow read: if true;
+      // Writable only by editors and admins.
       allow write: if isEditor();
     }
 
     match /albums/{albumId} {
+      // Publicly readable.
       allow read: if true;
+      // Writable only by editors and admins.
       allow write: if isEditor();
     }
     
     match /videos/{videoId} {
+      // Publicly readable.
       allow read: if true;
+      // Writable only by editors and admins.
       allow write: if isEditor();
     }
   }
