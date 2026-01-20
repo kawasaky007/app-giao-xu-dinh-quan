@@ -32,7 +32,7 @@ export default async function Home() {
             data-ai-hint={heroImage.imageHint}
             priority
           />}
-          <div className="container px-4 z-10">
+          <div className="container mx-auto px-4 z-10">
             <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-white drop-shadow-lg mb-4">
               Chào Mừng đến Giáo Xứ Các Thánh Tử Đạo Việt Nam
             </h1>
@@ -47,7 +47,7 @@ export default async function Home() {
 
         {/* Quick Info Cards Section */}
         <section id="quick-info" className="py-16 md:py-24 bg-secondary/50">
-          <div className="container px-4">
+          <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
@@ -100,7 +100,7 @@ export default async function Home() {
 
         {/* Latest News Section */}
         <section id="news" className="py-16 md:py-24 bg-background">
-          <div className="container px-4">
+          <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <Newspaper className="w-12 h-12 mx-auto text-primary mb-4" />
               <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Tin Tức Mới Nhất</h2>
@@ -146,7 +146,7 @@ export default async function Home() {
 
         {/* Upcoming Events Section */}
         <section id="events" className="py-16 md:py-24 bg-secondary/50">
-          <div className="container px-4">
+          <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <Calendar className="w-12 h-12 mx-auto text-primary mb-4" />
               <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Sự Kiện Sắp Tới</h2>
