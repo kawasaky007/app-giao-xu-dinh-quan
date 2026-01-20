@@ -1,0 +1,48 @@
+{
+  "albums": [
+    {
+      "id": "parish-picnic-2024",
+      "slug": "parish-picnic-2024",
+      "title": "Annual Parish Picnic 2024",
+      "description": "A wonderful day of fellowship, food, and fun under the sun. See our community come together.",
+      "coverImage": "gallery-picnic-cover",
+      "images": ["gallery-picnic-1", "gallery-picnic-2", "gallery-picnic-3", "gallery-picnic-4", "gallery-picnic-5", "gallery-picnic-6"]
+    },
+    {
+      "id": "christmas-2023",
+      "slug": "christmas-2023",
+      "title": "Christmas at Our Sacred Place 2023",
+      "description": "Celebrating the birth of our Lord. Moments from the Midnight Mass and Christmas Day services.",
+      "coverImage": "gallery-christmas-cover",
+      "images": ["gallery-christmas-1", "gallery-christmas-2", "gallery-christmas-3", "gallery-christmas-4", "gallery-christmas-5", "gallery-christmas-6"]
+    },
+    {
+        "id": "easter-vigil-2024",
+        "slug": "easter-vigil-2024",
+        "title": "Easter Vigil 2024",
+        "description": "The holiest night of the year, as we celebrate the Resurrection of the Lord.",
+        "coverImage": "gallery-easter-cover",
+        "images": ["gallery-easter-1", "gallery-easter-2", "gallery-easter-3", "gallery-easter-4", "gallery-easter-5", "gallery-easter-6"]
+    }
+  ],
+  "videos": [
+    {
+      "id": "christmas-message-2023",
+      "title": "A Christmas Message from Father Michael",
+      "description": "Father Michael shares a message of hope and joy for the Christmas season.",
+      "youtubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "id": "easter-homily-2024",
+      "title": "Easter Sunday Homily",
+      "description": "Deacon Thomas delivers a powerful message on the meaning of the Resurrection.",
+      "youtubeId": "y6120QOlsfU"
+    },
+    {
+        "id": "parish-history-video",
+        "title": "The History of Our Sacred Place",
+        "description": "A short documentary exploring the rich history and founding of our parish.",
+        "youtubeId": "3tmd-ClpJxA"
+    }
+  ]
+}

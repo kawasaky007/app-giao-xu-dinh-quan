@@ -161,6 +161,138 @@
       "description": "A person speaking at a lectern inside a church.",
       "imageUrl": "https://images.unsplash.com/photo-1543888879-81eac85d512e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsZWN0ZXJuJTIwY2h1cmNofGVufDB8fHx8MTcyMTg1NTEzMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "lectern church"
+    },
+    {
+      "id": "gallery-header",
+      "description": "A collection of framed photos on a wall, representing a media gallery.",
+      "imageUrl": "https://images.unsplash.com/photo-1542038784-56eD854435AF?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaG90byUyMGdhbGxlcnl8ZW58MHx8fHwxNzIyMjcwMjk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "photo gallery"
+    },
+    {
+      "id": "gallery-picnic-cover",
+      "description": "A wide shot of a sunny park with people having a picnic.",
+      "imageUrl": "https://images.unsplash.com/photo-1646171058093-db337d1ee840?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBwaWNuaWN8ZW58MHx8fHwxNzY4ODI4NDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "community picnic"
+    },
+    {
+      "id": "gallery-picnic-1",
+      "description": "Kids playing a game on the grass.",
+      "imageUrl": "https://images.unsplash.com/photo-1533222481259-ce20eda1e20b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjaGlsZHJlbiUyMHBsYXlpbmd8ZW58MHx8fHwxNzY4ODY1NDg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "children playing"
+    },
+    {
+      "id": "gallery-picnic-2",
+      "description": "A close-up of a potluck food table.",
+      "imageUrl": "https://images.unsplash.com/photo-1761051970492-0d54d728e3e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwb3RsdWNrJTIwZm9vZHxlbnwwfHx8fDE3Njg5MDA3MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "potluck food"
+    },
+    {
+      "id": "gallery-picnic-3",
+      "description": "A group of adults chatting and laughing.",
+      "imageUrl": "https://images.unsplash.com/photo-1590650046871-92c887180603?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZW9wbGUlMjB0YWxraW5nfGVufDB8fHx8MTc2ODg4MDEwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "people talking"
+    },
+    {
+      "id": "gallery-picnic-4",
+      "description": "A volunteer grilling hamburgers.",
+      "imageUrl": "https://images.unsplash.com/photo-1662027920098-574dfe41dbc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncmlsbGluZyUyMGZvb2R8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "grilling food"
+    },
+    {
+      "id": "gallery-picnic-5",
+      "description": "A wide shot of the crowd.",
+      "imageUrl": "https://images.unsplash.com/photo-1560439514-4e9645039924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjcm93ZCUyMGV2ZW50fGVufDB8fHx8MTc2ODkwMDcwOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "crowd event"
+    },
+    {
+      "id": "gallery-picnic-6",
+      "description": "A child's face painted with a design.",
+      "imageUrl": "https://images.unsplash.com/photo-1662057525233-9a68a3e7449a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmYWNlJTIwcGFpbnR8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "face paint"
+    },
+    {
+      "id": "gallery-christmas-cover",
+      "description": "The church altar decorated for Christmas with poinsettias.",
+      "imageUrl": "https://images.unsplash.com/photo-1672190099996-d68681f49f4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaHVyY2glMjBjaHJpc3RtYXN8ZW58MHx8fHwxNzY4ODgzNTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "church christmas"
+    },
+    {
+      "id": "gallery-christmas-1",
+      "description": "The choir singing during Midnight Mass.",
+      "imageUrl": "https://images.unsplash.com/photo-1610254449353-5698372fa83b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaG9pciUyMHNpbmdpbmd8ZW58MHx8fHwxNzY4ODgwNzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "choir singing"
+    },
+    {
+      "id": "gallery-christmas-2",
+      "description": "The priest giving a homily.",
+      "imageUrl": "https://images.unsplash.com/photo-1639092390330-89abd3e6024a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcmllc3QlMjBob21pbHl8ZW58MHx8fHwxNzY4OTAwNzEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "priest homily"
+    },
+    {
+      "id": "gallery-christmas-3",
+      "description": "A close-up of the nativity scene in the church.",
+      "imageUrl": "https://images.unsplash.com/photo-1672479327199-3490e6e1600b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuYXRpdml0eSUyMHNjZW5lfGVufDB8fHx8MTc2ODg4MzUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nativity scene"
+    },
+    {
+      "id": "gallery-christmas-4",
+      "description": "Parishioners receiving communion.",
+      "imageUrl": "https://images.unsplash.com/photo-1610131635230-9c4afb6238b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxob2x5JTIwY29tbXVuaW9ufGVufDB8fHx8MTc2ODg4Mjg5MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "holy communion"
+    },
+    {
+      "id": "gallery-christmas-5",
+      "description": "The church exterior lit up at night.",
+      "imageUrl": "https://images.unsplash.com/photo-1702761235637-918977918bc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2h1cmNoJTIwbmlnaHR8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "church night"
+    },
+    {
+      "id": "gallery-christmas-6",
+      "description": "A family lighting a candle.",
+      "imageUrl": "https://images.unsplash.com/photo-1727118797443-344ed5d2c16e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsaWdodGluZyUyMGNhbmRsZXxlbnwwfHx8fDE3Njg5MDA3MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lighting candle"
+    },
+    {
+      "id": "gallery-easter-cover",
+      "description": "The paschal candle lit in a dark church during the Easter Vigil.",
+      "imageUrl": "https://images.unsplash.com/photo-1634779846593-ad47a8f98b5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwYXNjaGFsJTIwY2FuZGxlfGVufDB8fHx8MTc2ODkwMDcwOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "paschal candle"
+    },
+    {
+      "id": "gallery-easter-1",
+      "description": "Catechumens being baptized.",
+      "imageUrl": "https://images.unsplash.com/photo-1765267566923-4ce452dd9b02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiYXB0aXNtJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "baptism ceremony"
+    },
+    {
+      "id": "gallery-easter-2",
+      "description": "The congregation holding lit candles.",
+      "imageUrl": "https://images.unsplash.com/photo-1623808427896-c682eef40c3d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjYW5kbGVzJTIwdmlnaWx8ZW58MHx8fHwxNzY4OTAwNzEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "candles vigil"
+    },
+    {
+      "id": "gallery-easter-3",
+      "description": "The reading of the Exsultet.",
+      "imageUrl": "https://images.unsplash.com/photo-1622294763041-40e2e4932eda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsaXR1cmd5JTIwcmVhZGluZ3xlbnwwfHx8fDE3Njg5MDA3MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "liturgy reading"
+    },
+    {
+      "id": "gallery-easter-4",
+      "description": "The church decorated with Easter lilies.",
+      "imageUrl": "https://images.unsplash.com/photo-1675807729108-c14b02afd08b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxlYXN0ZXIlMjBsaWxpZXN8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "easter lilies"
+    },
+    {
+      "id": "gallery-easter-5",
+      "description": "The 'Alleluia' being sung for the first time since Lent began.",
+      "imageUrl": "https://images.unsplash.com/photo-1759874685095-8378bf6e7f57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2hvaXIlMjBzaW5naW5nfGVufDB8fHx8MTc2ODg4MDc0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "choir singing"
+    },
+    {
+      "id": "gallery-easter-6",
+      "description": "The final blessing at the end of the Vigil Mass.",
+      "imageUrl": "https://images.unsplash.com/photo-1765947385186-9d3c7897481c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcmllc3QlMjBibGVzc2luZ3xlbnwwfHx8fDE3Njg5MDA3MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "priest blessing"
     }
   ]
 }
