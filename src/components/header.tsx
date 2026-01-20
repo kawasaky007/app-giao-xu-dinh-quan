@@ -20,16 +20,23 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="w-full sticky top-0 z-50 border-b shadow-sm bg-background/90 backdrop-blur-sm">
-      <div className="container mx-auto flex items-center justify-between h-20 px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-3 text-primary font-headline font-bold text-xl md:text-2xl">
-          <Church className="w-8 h-8" />
-          <span className='hidden sm:inline'>Giáo Xứ Các Thánh TĐVN</span>
-          <span className='sm:hidden'>GX Các Thánh TĐVN</span>
+    <header className="w-full sticky top-0 z-50 border-b bg-background/95 backdrop-blur-sm shadow-sm">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+        <Link
+          href="/"
+          className="flex items-center gap-2 font-headline text-lg font-bold text-primary md:text-xl"
+        >
+          <Church className="h-7 w-7 shrink-0" />
+          <span className="hidden lg:inline">Giáo Xứ Các Thánh TĐVN</span>
+          <span className="lg:hidden">GX Các Thánh TĐVN</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="text-lg font-medium text-foreground/80 hover:text-primary transition-colors">
+            <Link
+              key={link.href}
+              href={link.href}
+              className="font-medium text-foreground/70 transition-colors hover:text-primary"
+            >
               {link.label}
             </Link>
           ))}
@@ -46,13 +53,20 @@ export default function Header() {
               </SheetTrigger>
               <SheetContent side="right">
                 <div className="grid gap-6 p-6">
-                  <Link href="/" className="flex items-center gap-3 text-primary font-headline font-bold text-2xl">
-                    <Church className="w-8 h-8" />
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 font-headline text-xl font-bold text-primary"
+                  >
+                    <Church className="h-8 w-8" />
                     <span>Giáo Xứ</span>
                   </Link>
                   <nav className="grid gap-4">
                     {navLinks.map((link) => (
-                      <Link key={link.href} href={link.href} className="text-xl font-medium text-foreground hover:text-primary transition-colors">
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+                      >
                         {link.label}
                       </Link>
                     ))}
