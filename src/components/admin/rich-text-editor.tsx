@@ -2,7 +2,7 @@
 
 import 'react-quill/dist/quill.snow.css';
 import dynamic from 'next/dynamic';
-import React, { useMemo, useRef, useState, useCallback } from 'react';
+import React, { useMemo, useRef, useState, useCallback, forwardRef } from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Progress } from '@/components/ui/progress';
 import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
@@ -16,7 +16,7 @@ interface RichTextEditorProps {
   placeholder?: string;
 }
 
-const RichTextEditor = ({ value, onChange, placeholder }: RichTextEditorProps) => {
+const RichTextEditor = forwardRef<HTMLDivElement, RichTextEditorProps>(({ value, onChange, placeholder }, ref) => {
   const ReactQuill = useMemo(() => dynamic(() => import('react-quill'), { 
     ssr: false,
     loading: () => <Skeleton className="h-[250px] w-full rounded-md" />,
@@ -32,6 +32,15 @@ const RichTextEditor = ({ value, onChange, placeholder }: RichTextEditorProps) =
     const editor = quillRef.current?.getEditor();
     if (!editor) return;
 
+    if (!storage) {
+        toast({
+            variant: "destructive",
+            title: "Lỗi cấu hình",
+            description: "Dịch vụ lưu trữ Firebase không khả dụng.",
+        });
+        return;
+    }
+
     const input = document.createElement('input');
     input.setAttribute('type', 'file');
     input.setAttribute('accept', 'image/*, video/*, audio/*, .pdf, .doc, .docx, .ppt, .pptx, .xls, .xlsx');
@@ -39,7 +48,7 @@ const RichTextEditor = ({ value, onChange, placeholder }: RichTextEditorProps) =
 
     input.onchange = async () => {
       const file = input.files?.[0];
-      if (!file || !storage) return;
+      if (!file) return;
 
       setUploading(true);
       setUploadProgress(0);
@@ -102,7 +111,7 @@ const RichTextEditor = ({ value, onChange, placeholder }: RichTextEditorProps) =
   }), [fileUploadHandler]);
 
   return (
-    <div className="rich-text-editor bg-card rounded-md border border-input">
+    <div className="rich-text-editor bg-card rounded-md border border-input" ref={ref}>
       <ReactQuill
         ref={quillRef}
         theme="snow"
@@ -119,6 +128,8 @@ const RichTextEditor = ({ value, onChange, placeholder }: RichTextEditorProps) =
       )}
     </div>
   );
-};
+});
+
+RichTextEditor.displayName = 'RichTextEditor';
 
 export default RichTextEditor;
