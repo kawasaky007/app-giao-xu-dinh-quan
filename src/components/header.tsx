@@ -1,3 +1,4 @@
+
 import { Church, Menu } from 'lucide-react';
 import Link from 'next/link';
 import { ThemeToggle } from './theme-toggle';
@@ -5,7 +6,8 @@ import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Button } from './ui/button';
 
 const navLinks = [
-  { href: '#quick-info', label: 'Visit' },
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About Us' },
   { href: '#news', label: 'News' },
   { href: '#events', label: 'Events' },
   { href: '#contact', label: 'Contact' },
