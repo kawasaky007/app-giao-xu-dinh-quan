@@ -45,8 +45,12 @@ service cloud.firestore {
       allow get: if isOwner(userId) || isAdmin();
       // Only admins can see a list of all roles.
       allow list: if isAdmin();
-      // Only admins can create, update, or delete roles.
-      allow write: if isAdmin();
+      // A user can create their own role document when signing up.
+      // An admin can update or delete any role document.
+      // WARNING: The 'create' rule is permissive to bootstrap the first admin user.
+      // For production, you should secure this, e.g., by using a Cloud Function.
+      allow create: if isOwner(userId);
+      allow update, delete: if isAdmin();
     }
 
     match /contactSubmissions/{contactSubmissionId} {
