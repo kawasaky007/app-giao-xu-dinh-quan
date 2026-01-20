@@ -97,6 +97,18 @@
       "imageHint": "chân dung người"
     },
     {
+      "id": "finance-council-1",
+      "description": "Chân dung chuyên nghiệp của một người đàn ông đáng tin cậy ở độ tuổi 50.",
+      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzIyMzgxNTc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chân dung người"
+    },
+    {
+      "id": "youth-lead-1",
+      "description": "Chân dung chuyên nghiệp của một phụ nữ trẻ năng động, mỉm cười.",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmZW1hbGUlMjBwb3J0cmFpdHxlbnwwfHx8fDE3MjIzODE2MjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chân dung người"
+    },
+    {
       "id": "news-picnic-large",
       "description": "Một đám đông lớn người tại một buổi picnic ngoài trời vào một ngày nắng.",
       "imageUrl": "https://images.unsplash.com/photo-1756281957679-ae18e1aafcad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb21tdW5pdHklMjBwaWNuaWN8ZW58MHx8fHwxNzY4ODI4NDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -128,18 +140,6 @@
     },
     {
       "id": "news-guest-speaker",
-      "description": "Một diễn giả tại bục giảng đang nói chuyện với khán giả ngồi.",
-      "imageUrl": "https://images.unsplash.com/photo-1764330100532-610a822708ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxndWVzdCUyMHNwZWFrZXJ8ZW58MHx8fHwxNzY4ODE5NzAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "diễn giả khách mời"
-    },
-    {
-      "id": "catechism-header",
-      "description": "Một cuốn kinh thánh mở và một chuỗi tràng hạt trên bàn gỗ, với ánh sáng dịu nhẹ.",
-      "imageUrl": "https://images.unsplash.com/photo-1593340093863-45942420a7b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxCaWJsZSUyMGFuZCUyMHJvc2FyeXxlbnwwfHx8fDE3MjE4NTUwOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "kinh thánh và tràng hạt"
-    },
-    {
-      "id": "documents-header",
       "description": "Một người đang nói chuyện tại bục giảng bên trong một nhà thờ.",
       "imageUrl": "https://images.unsplash.com/photo-1543888879-81eac85d512e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsZWN0ZXJuJTIwY2h1cmNofGVufDB8fHx8MTcyMTg1NTEzMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bục giảng nhà thờ"

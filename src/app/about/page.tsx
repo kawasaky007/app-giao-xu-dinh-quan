@@ -4,7 +4,7 @@ import Header from '@/components/header';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Building, Eye, Heart, Target, Users, Music, BookOpen, User } from 'lucide-react';
+import { Building, Eye, Heart, Target, Users, Music, BookOpen, User, Landmark, Users2 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -41,7 +41,24 @@ export default function AboutPage() {
       description: 'Phụ trách các chương trình giáo lý đức tin cho thiếu nhi và tân tòng.',
       icon: BookOpen,
     },
+    {
+      id: 'finance-council-1',
+      name: 'Ông Phaolô Đinh Quang Dũng',
+      role: 'Trưởng Ban Tài Chính',
+      description: 'Quản lý và giám sát tình hình tài chính của giáo xứ, đảm bảo sự minh bạch và trách nhiệm.',
+      icon: Landmark,
+    },
+    {
+      id: 'youth-lead-1',
+      name: 'Chị Anna Trần Ngọc Diệp',
+      role: 'Trưởng Giới Trẻ',
+      description: 'Tổ chức các buổi sinh hoạt và sự kiện cho giới trẻ, giúp các em lớn lên trong đức tin.',
+      icon: Users2,
+    }
   ]
+
+  const councilPresident = orgMembers[0];
+  const ministryLeads = orgMembers.slice(1);
 
   return (
     <div className="flex flex-col min-h-screen bg-background font-body">
@@ -153,25 +170,58 @@ export default function AboutPage() {
                 Giáo xứ chúng ta được chúc phúc với những vị lãnh đạo giáo dân tận tụy, những người quảng đại cống hiến thời gian và tài năng để phục vụ cộng đoàn.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {orgMembers.map((member) => {
-                const memberImage = PlaceHolderImages.find(p => p.id === member.id);
-                return (
-                  <Card key={member.id} className="text-center flex flex-col items-center">
-                    <CardHeader>
-                      <Avatar className="w-24 h-24 mb-4">
-                        {memberImage && <AvatarImage src={memberImage.imageUrl} alt={member.name} data-ai-hint={memberImage.imageHint}/>}
-                        <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
-                      </Avatar>
-                      <CardTitle className="font-headline text-xl">{member.name}</CardTitle>
-                      <p className="text-sm font-medium text-primary">{member.role}</p>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-foreground/80 text-sm">{member.description}</p>
-                    </CardContent>
-                  </Card>
-                );
-              })}
+            
+            <div className="flex flex-col items-center gap-8 md:gap-12">
+              {/* Top Level: Parish Council President */}
+              <div className="flex justify-center">
+                {(() => {
+                  const member = councilPresident;
+                  const memberImage = PlaceHolderImages.find(p => p.id === member.id);
+                  return (
+                    <Card key={member.id} className="text-center flex flex-col items-center max-w-sm shadow-lg">
+                      <CardHeader>
+                        <Avatar className="w-24 h-24 mb-4">
+                          {memberImage && <AvatarImage src={memberImage.imageUrl} alt={member.name} data-ai-hint={memberImage.imageHint} />}
+                          <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+                        </Avatar>
+                        <CardTitle className="font-headline text-xl">{member.name}</CardTitle>
+                        <p className="text-sm font-medium text-primary">{member.role}</p>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-foreground/80 text-sm">{member.description}</p>
+                      </CardContent>
+                    </Card>
+                  );
+                })()}
+              </div>
+
+              {/* Connecting Line */}
+              <div className="w-px h-12 bg-border self-center"></div>
+
+              {/* Second Level: Ministry Leads */}
+              <div className="w-full max-w-5xl mx-auto">
+                <h3 className="text-center text-2xl font-headline font-bold text-primary mb-8">Các Trưởng Ban Ngành & Đoàn Thể</h3>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+                  {ministryLeads.map((member) => {
+                    const memberImage = PlaceHolderImages.find(p => p.id === member.id);
+                    return (
+                      <Card key={member.id} className="text-center flex flex-col items-center">
+                        <CardHeader>
+                          <Avatar className="w-24 h-24 mb-4">
+                            {memberImage && <AvatarImage src={memberImage.imageUrl} alt={member.name} data-ai-hint={memberImage.imageHint} />}
+                            <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+                          </Avatar>
+                          <CardTitle className="font-headline text-xl">{member.name}</CardTitle>
+                          <p className="text-sm font-medium text-primary">{member.role}</p>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-foreground/80 text-sm">{member.description}</p>
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </section>
