@@ -1,0 +1,84 @@
+{
+  "entities": {
+    "ContactSubmission": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ContactSubmission",
+      "type": "object",
+      "description": "Represents a contact form submission.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the contact submission."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the person submitting the form."
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the person submitting the form.",
+          "format": "email"
+        },
+        "message": {
+          "type": "string",
+          "description": "The message content from the contact form."
+        },
+        "submissionDate": {
+          "type": "string",
+          "description": "Date and time when the contact form was submitted.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "email",
+        "message",
+        "submissionDate"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/contactSubmissions/{contactSubmissionId}",
+        "definition": {
+          "entityName": "ContactSubmission",
+          "schema": {
+            "$ref": "#/backend/entities/ContactSubmission"
+          },
+          "description": "Stores contact form submissions. Only accessible by admins.",
+          "params": [
+            {
+              "name": "contactSubmissionId",
+              "description": "Unique identifier for the contact submission."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/roles_admin/{userId}",
+        "definition": {
+          "entityName": "adminRole",
+          "schema": {
+            "$ref": "#/backend/entities/adminRole"
+          },
+          "description": "Documents in this collection indicate admin privileges. Existence determines admin status.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The Firebase UID of the user."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "This Firestore structure is designed to store contact form submissions securely and efficiently. It uses a single collection, `/contactSubmissions`, to store all submissions.  This approach centralizes the data and simplifies security rules. Since all documents in this collection will have the same access requirements (only admins can read), it aligns with the principle of Structural Segregation. There is no user-specific data involved, so user-based path ownership is not applicable here.\n\n**Authorization Independence:** Authorization is based on the principle that only authenticated admins can access the contact submission data. The structure inherently supports Authorization Independence because the security rules will check for admin roles existence in `/roles_admin/{uid}` without depending on data inside `/contactSubmissions`.\n\n**QAPs:** The structure supports secure `list` operations because the security rules will simply check if the requesting user has the 'admin' role. If they do, they are allowed to list all documents. This fulfills the QAPs requirement as the rules are not used as filters; all data in the collection is protected by the same role-based access control."
+  }
+}
