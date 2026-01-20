@@ -38,5 +38,42 @@
       ]
     }
   ],
-  "events": []
+  "events": [
+    {
+      "id": "tiec-tra-sau-le",
+      "slug": "tiec-tra-sau-le",
+      "title": "Tiệc Trà & Cà Phê Sau Thánh Lễ",
+      "date": "2099-08-04T11:30:00.000Z",
+      "endTime": "2099-08-04T12:30:00.000Z",
+      "location": "Hội trường giáo xứ",
+      "category": "Sự Kiện Giáo Xứ",
+      "excerpt": "Cùng ở lại sau Thánh lễ 10:30 để giao lưu với các giáo dân khác bên tách cà phê và bánh ngọt. Đây là cơ hội tuyệt vời để gặp gỡ những người bạn mới.",
+      "description": "<p>Cùng ở lại sau Thánh lễ 10:30 để giao lưu với các giáo dân khác bên tách cà phê và bánh ngọt. Đây là cơ hội tuyệt vời để gặp gỡ những người bạn mới.</p>",
+      "image": "https://images.unsplash.com/photo-1590650046871-92c887180603?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZW9wbGUlMjB0YWxraW5nfGVufDB8fHx8MTc2ODg4MDEwMXww&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "id": "buoi-hoa-nhac-tu-thien",
+      "slug": "buoi-hoa-nhac-tu-thien",
+      "title": "Buổi Hòa Nhạc Gây Quỹ Mùa Hè",
+      "date": "2099-08-17T19:00:00.000Z",
+      "endTime": "2099-08-17T21:00:00.000Z",
+      "location": "Nhà thờ",
+      "category": "Gây Quỹ",
+      "excerpt": "Thưởng thức một buổi tối với những bản nhạc thánh ca và cổ điển do ca đoàn và các nhạc sĩ khách mời trình diễn. Mọi số tiền thu được sẽ dành cho quỹ bác ái của giáo xứ.",
+      "description": "<p>Thưởng thức một buổi tối với những bản nhạc thánh ca và cổ điển do ca đoàn và các nhạc sĩ khách mời trình diễn. Mọi số tiền thu được sẽ dành cho quỹ bác ái của giáo xứ.</p>",
+      "image": "https://images.unsplash.com/photo-1761901219072-491a18f3ccd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaG9pciUyMGNvbmNlcnR8ZW58MHx8fHwxNzY4ODk5MjQyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "id": "tinh-tam-mua-thu",
+      "slug": "tinh-tam-mua-thu",
+      "title": "Ngày Tĩnh Tâm Mùa Thu",
+      "date": "2099-09-21T09:00:00.000Z",
+      "endTime": "2099-09-21T15:00:00.000Z",
+      "location": "Trung tâm tĩnh tâm giáo phận",
+      "category": "Tăng Tiến Đời Sống Thiêng Liêng",
+      "excerpt": "Dành một ngày để cầu nguyện, suy niệm và tĩnh lặng với Chúa. Chủ đề năm nay là 'Lòng Thương Xót Chúa trong thế giới hôm nay'. Có xe buýt đưa đón từ giáo xứ.",
+      "description": "<p>Dành một ngày để cầu nguyện, suy niệm và tĩnh lặng với Chúa. Chủ đề năm nay là 'Lòng Thương Xót Chúa trong thế giới hôm nay'. Có xe buýt đưa đón từ giáo xứ.</p>",
+      "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyZXRyZWF0JTIwY2VudGVyfGVufDB8fHx8MTcyMjI3MDQwMXww&ixlib=rb-4.1.0&q=80&w=1080"
+    }
+  ]
 }
