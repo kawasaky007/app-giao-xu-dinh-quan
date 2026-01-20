@@ -59,5 +59,25 @@ service cloud.firestore {
       // Allow editors and admins to create, update, and delete any article.
       allow write: if isEditor();
     }
+
+    match /events/{eventId} {
+      allow read: if true;
+      allow write: if isEditor();
+    }
+
+    match /faq/{faqId} {
+      allow read: if true;
+      allow write: if isEditor();
+    }
+
+    match /albums/{albumId} {
+      allow read: if true;
+      allow write: if isEditor();
+    }
+    
+    match /videos/{videoId} {
+      allow read: if true;
+      allow write: if isEditor();
+    }
   }
 }

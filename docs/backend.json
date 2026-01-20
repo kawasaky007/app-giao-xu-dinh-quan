@@ -54,6 +54,57 @@
         "status": { "type": "string", "description": "The publication status of the article.", "enum": ["published", "draft"] }
       },
       "required": ["slug", "title", "date", "author", "category", "excerpt", "content", "status"]
+    },
+    "Event": {
+      "title": "Event",
+      "description": "Represents a parish event.",
+      "type": "object",
+      "properties": {
+        "slug": { "type": "string", "description": "The URL-friendly slug for the event." },
+        "title": { "type": "string", "description": "The title of the event." },
+        "date": { "type": "string", "format": "date-time", "description": "The start date and time of the event." },
+        "endTime": { "type": "string", "format": "date-time", "description": "The end date and time of the event." },
+        "location": { "type": "string", "description": "The location of the event." },
+        "image": { "type": "string", "description": "The ID of the placeholder image for the event." },
+        "category": { "type": "string", "description": "The category of the event.", "enum": ["Sự Kiện Giáo Xứ", "Gây Quỹ", "Tăng Tiến Đời Sống Thiêng Liêng", "Phục Vụ Cộng Đoàn"] },
+        "excerpt": { "type": "string", "description": "A short summary of the event." },
+        "description": { "type": "string", "description": "The full HTML content of the event." }
+      },
+      "required": ["slug", "title", "date", "endTime", "location", "category", "excerpt", "description"]
+    },
+    "FAQ": {
+      "title": "FAQ",
+      "description": "Represents a frequently asked question and its answer.",
+      "type": "object",
+      "properties": {
+        "question": { "type": "string", "description": "The question." },
+        "answer": { "type": "string", "description": "The answer in HTML format." }
+      },
+      "required": ["question", "answer"]
+    },
+    "PhotoAlbum": {
+      "title": "Photo Album",
+      "description": "Represents a collection of photos.",
+      "type": "object",
+      "properties": {
+        "slug": { "type": "string", "description": "The URL-friendly slug for the album." },
+        "title": { "type": "string", "description": "The title of the album." },
+        "description": { "type": "string", "description": "A description of the album." },
+        "coverImage": { "type": "string", "description": "The ID of the cover image." },
+        "images": { "type": "array", "items": { "type": "string" }, "description": "An array of image IDs." }
+      },
+      "required": ["slug", "title", "description", "coverImage"]
+    },
+    "Video": {
+        "title": "Video",
+        "description": "Represents a video, usually linked from YouTube.",
+        "type": "object",
+        "properties": {
+            "title": { "type": "string", "description": "The title of the video." },
+            "description": { "type": "string", "description": "A description of the video." },
+            "youtubeId": { "type": "string", "description": "The YouTube video ID." }
+        },
+        "required": ["title", "description", "youtubeId"]
     }
   },
   "auth": {
@@ -75,6 +126,22 @@
     "/news/{articleId}": {
         "schema": { "$ref": "#/entities/NewsArticle" },
         "description": "Stores news articles. Publicly readable, but only writeable by editors and admins."
+    },
+    "/events/{eventId}": {
+      "schema": { "$ref": "#/entities/Event" },
+      "description": "Stores parish events. Publicly readable, but only writeable by editors and admins."
+    },
+    "/faq/{faqId}": {
+      "schema": { "$ref": "#/entities/FAQ" },
+      "description": "Stores frequently asked questions. Publicly readable, but only writeable by editors and admins."
+    },
+    "/albums/{albumId}": {
+      "schema": { "$ref": "#/entities/PhotoAlbum" },
+      "description": "Stores photo albums for the media gallery. Publicly readable, but only writeable by editors and admins."
+    },
+    "/videos/{videoId}": {
+      "schema": { "$ref": "#/entities/Video" },
+      "description": "Stores video metadata for the media gallery. Publicly readable, but only writeable by editors and admins."
     }
   }
 }
