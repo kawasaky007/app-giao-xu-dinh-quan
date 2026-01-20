@@ -1,5 +1,4 @@
 import { MapPin, Phone, Mailbox } from 'lucide-react';
-import ContactForm from './contact-form';
 
 export default function ContactPage() {
     return (
@@ -47,7 +46,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                          <h2 className="text-2xl md:text-3xl font-headline font-bold text-primary mb-6">Gửi Tin Nhắn Cho Chúng Tôi</h2>
-                         <ContactForm />
+                         <p className="text-muted-foreground">Chức năng biểu mẫu liên hệ hiện không khả dụng. Vui lòng liên hệ với chúng tôi qua điện thoại hoặc email.</p>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,4 @@
-'use client';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import withAuth from "@/components/auth/withAuth";
 
 function AdminMediaPage() {
   return (
@@ -19,4 +17,4 @@ function AdminMediaPage() {
   );
 }
 
-export default withAuth(AdminMediaPage, ['admin', 'editor']);
+export default AdminMediaPage;

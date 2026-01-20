@@ -1,6 +1,4 @@
-'use client';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import withAuth from "@/components/auth/withAuth";
 
 function AdminFaqPage() {
   return (
@@ -19,4 +17,4 @@ function AdminFaqPage() {
   );
 }
 
-export default withAuth(AdminFaqPage, ['admin', 'editor']);
+export default AdminFaqPage;

@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Merriweather', 'serif'],
+        body: ['"PT Sans"', 'sans-serif'],
         headline: ['Alegreya', 'serif'],
         code: ['monospace'],
       },

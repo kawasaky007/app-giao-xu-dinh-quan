@@ -1,8 +1,7 @@
 'use client';
 
-import withAuth from "@/components/auth/withAuth";
-import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar";
-import { Home, Newspaper, Calendar, HelpCircle, Image as ImageIcon, Users, Settings } from 'lucide-react';
+import { Sidebar, SidebarContent, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar";
+import { Home, Newspaper, Calendar, HelpCircle, Image as ImageIcon } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -15,7 +14,6 @@ function AdminLayout({ children }: { children: React.ReactNode }) {
         { href: '/admin/events', label: 'Sự Kiện', icon: Calendar },
         { href: '/admin/faq', label: 'Hỏi Đáp', icon: HelpCircle },
         { href: '/admin/media', label: 'Thư Viện', icon: ImageIcon },
-        { href: '/admin/users', label: 'Người Dùng', icon: Users },
     ]
 
     return (
@@ -58,5 +56,4 @@ function AdminLayout({ children }: { children: React.ReactNode }) {
     );
 }
 
-// Protect the whole admin section
-export default withAuth(AdminLayout, ['admin', 'editor']);
+export default AdminLayout;

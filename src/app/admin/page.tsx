@@ -1,6 +1,5 @@
 'use client';
 
-import withAuth from '@/components/auth/withAuth';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { BarChart, LineChart } from 'lucide-react';
 import { Bar, BarChart as RechartsBarChart, Line, LineChart as RechartsLineChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from 'recharts';
@@ -97,5 +96,4 @@ function AdminDashboardPage() {
   );
 }
 
-// Protect this page, allowing access for admins and editors
-export default withAuth(AdminDashboardPage, ['admin', 'editor']);
+export default AdminDashboardPage;

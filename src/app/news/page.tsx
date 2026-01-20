@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect, useMemo, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
 import { getNewsArticles, getCategories, NewsArticle } from '@/lib/news';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,45 +6,31 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, User, Search, Loader2, Newspaper } from 'lucide-react';
+import { Calendar, User, Search, Newspaper } from 'lucide-react';
 import { format } from 'date-fns';
 import { vi } from 'date-fns/locale';
 
 const ARTICLES_PER_PAGE = 6;
 
-export default function NewsPage() {
-  const searchParams = useSearchParams();
-  const [articles, setArticles] = useState<NewsArticle[]>([]);
-  const [categories, setCategories] = useState<string[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+type NewsPageProps = {
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export default async function NewsPage({ searchParams }: NewsPageProps) {
+  const allArticles = await getNewsArticles();
+  const categories = await getCategories();
   
-  const [searchTerm, setSearchTerm] = useState(searchParams.get('q') || '');
-  const [selectedCategory, setSelectedCategory] = useState(searchParams.get('category') || 'all');
-  const [currentPage, setCurrentPage] = useState(1);
+  const searchTerm = typeof searchParams.q === 'string' ? searchParams.q : '';
+  const selectedCategory = typeof searchParams.category === 'string' ? searchParams.category : 'all';
+  const currentPage = typeof searchParams.page === 'string' ? Number(searchParams.page) : 1;
 
-  useEffect(() => {
-    async function fetchData() {
-      setIsLoading(true);
-      const [fetchedArticles, fetchedCategories] = await Promise.all([
-        getNewsArticles(),
-        getCategories()
-      ]);
-      setArticles(fetchedArticles);
-      setCategories(fetchedCategories);
-      setIsLoading(false);
-    }
-    fetchData();
-  }, []);
-
-  const filteredArticles = useMemo(() => {
-    return articles
+  const filteredArticles = allArticles
       .filter(article => 
         selectedCategory === 'all' || article.category === selectedCategory
       )
       .filter(article => 
         article.title.toLowerCase().includes(searchTerm.toLowerCase())
       );
-  }, [articles, selectedCategory, searchTerm]);
 
   const totalPages = Math.ceil(filteredArticles.length / ARTICLES_PER_PAGE);
   const paginatedArticles = filteredArticles.slice(
@@ -56,32 +38,22 @@ export default function NewsPage() {
     currentPage * ARTICLES_PER_PAGE
   );
 
-  function handleCategoryChange(category: string) {
-    setSelectedCategory(category);
-    setCurrentPage(1);
-  }
-
-  function handleSearchChange(event: React.ChangeEvent<HTMLInputElement>) {
-    setSearchTerm(event.target.value);
-    setCurrentPage(1);
-  }
-
   return (
     <main className="py-16 md:py-24 bg-background">
       <div className="container px-4">
         {/* Filtering and Search Controls */}
-        <div className="mb-12 flex flex-col md:flex-row gap-4">
+        <form className="mb-12 flex flex-col md:flex-row gap-4">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             <Input 
               type="search"
+              name="q"
               placeholder="Tìm kiếm theo tiêu đề..."
               className="pl-10"
-              value={searchTerm}
-              onChange={handleSearchChange}
+              defaultValue={searchTerm}
             />
           </div>
-          <Select value={selectedCategory} onValueChange={handleCategoryChange}>
+          <Select name="category" defaultValue={selectedCategory}>
             <SelectTrigger className="w-full md:w-[200px]">
               <SelectValue placeholder="Lọc theo chuyên mục" />
             </SelectTrigger>
@@ -92,14 +64,11 @@ export default function NewsPage() {
               ))}
             </SelectContent>
           </Select>
-        </div>
+          <Button type="submit">Lọc</Button>
+        </form>
 
         {/* Articles Grid */}
-        {isLoading ? (
-            <div className="flex justify-center items-center h-64">
-                <Loader2 className="w-8 h-8 animate-spin text-primary" />
-            </div>
-        ) : paginatedArticles.length > 0 ? (
+        {paginatedArticles.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {paginatedArticles.map(article => {
               return (
@@ -160,22 +129,18 @@ export default function NewsPage() {
         {/* Pagination Controls */}
         {totalPages > 1 && (
             <div className="flex justify-center items-center gap-4 mt-16">
-                <Button 
-                    variant="outline"
-                    onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                    disabled={currentPage === 1}
-                >
-                    Trang Trước
+                <Button asChild variant="outline" disabled={currentPage <= 1}>
+                    <Link href={`?page=${currentPage - 1}&q=${searchTerm}&category=${selectedCategory}`}>
+                      Trang Trước
+                    </Link>
                 </Button>
                 <span className="text-sm text-muted-foreground">
                     Trang {currentPage} trên {totalPages}
                 </span>
-                <Button 
-                    variant="outline"
-                    onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                    disabled={currentPage === totalPages}
-                >
-                    Trang Kế
+                <Button asChild variant="outline" disabled={currentPage >= totalPages}>
+                    <Link href={`?page=${currentPage + 1}&q=${searchTerm}&category=${selectedCategory}`}>
+                      Trang Kế
+                    </Link>
                 </Button>
             </div>
         )}
