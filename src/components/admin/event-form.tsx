@@ -19,12 +19,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Card, CardContent } from '@/components/ui/card';
 import { useState } from 'react';
 import type { Event } from '@/lib/events';
-import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useStorage } from '@/firebase';
 import Image from 'next/image';
 import { Progress } from '@/components/ui/progress';
 import { useToast } from '@/hooks/use-toast';
 import dynamic from 'next/dynamic';
+import { UploadCloud } from 'lucide-react';
 
 const RichTextEditor = dynamic(() => import('./rich-text-editor'), { ssr: false });
 
@@ -126,12 +127,16 @@ export default function EventForm({ onSubmit, initialData }: EventFormProps) {
             },
             () => {
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-                    form.setValue('image', downloadURL);
+                    form.setValue('image', downloadURL, { shouldDirty: true });
                     setIsUploading(false);
                 });
             }
         );
     };
+
+    const handleRemoveImage = () => {
+        form.setValue('image', '', { shouldDirty: true });
+    }
 
     const handleFormSubmit = async (values: EventFormValues) => {
         setIsSubmitting(true);
@@ -209,27 +214,51 @@ export default function EventForm({ onSubmit, initialData }: EventFormProps) {
                                 </FormItem>
                             )}
                         />
-                        <FormItem>
-                            <FormLabel>Ảnh bìa sự kiện</FormLabel>
-                            <FormControl>
-                                <div>
-                                    <Input type="file" accept="image/*" onChange={handleFileChange} className="mb-2" disabled={isUploading} />
-                                    {isUploading && (
-                                        <div className="space-y-1">
-                                            <Progress value={uploadProgress} />
-                                            <p className="text-xs text-muted-foreground">{`Đang tải lên... ${Math.round(uploadProgress)}%`}</p>
+                        <FormField
+                            control={form.control}
+                            name="image"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Ảnh bìa sự kiện</FormLabel>
+                                    <FormControl>
+                                        <div className="w-full">
+                                            {imageUrl && !isUploading ? (
+                                                <div className="relative w-full max-w-sm">
+                                                    <div className="aspect-video rounded-md overflow-hidden border">
+                                                        <Image src={imageUrl} alt="Xem trước ảnh bìa" fill style={{ objectFit: 'cover' }} />
+                                                    </div>
+                                                    <Button variant="destructive" size="sm" onClick={handleRemoveImage} className="mt-2" disabled={isUploading}>
+                                                        Xóa ảnh
+                                                    </Button>
+                                                </div>
+                                            ) : (
+                                                <div 
+                                                    className="relative flex justify-center items-center w-full max-w-sm h-64 rounded-lg border-2 border-dashed border-muted-foreground/40 hover:border-primary transition-colors cursor-pointer bg-secondary/40"
+                                                    onClick={() => !isUploading && document.getElementById('event-image-upload')?.click()}
+                                                >
+                                                    <Input id="event-image-upload" type="file" accept="image/*" onChange={handleFileChange} className="hidden" disabled={isUploading} />
+                                                    {isUploading ? (
+                                                        <div className="w-full h-full flex flex-col items-center justify-center">
+                                                            <Progress value={uploadProgress} className="w-3/4 mb-4" />
+                                                            <p className="text-sm text-muted-foreground">{`Đang tải lên: ${Math.round(uploadProgress)}%`}</p>
+                                                        </div>
+                                                    ) : (
+                                                        <div className="text-center p-4">
+                                                            <UploadCloud className="mx-auto h-12 w-12 text-muted-foreground/60" />
+                                                            <p className="mt-2 font-semibold text-foreground">Kéo thả hoặc nhấn để tải ảnh lên</p>
+                                                            <p className="mt-1 text-xs text-muted-foreground/80">PNG, JPG, GIF (tối đa 50MB)</p>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            )}
                                         </div>
-                                    )}
-                                    {imageUrl && !isUploading && (
-                                        <div className="mt-4 relative w-full max-w-sm aspect-video rounded-md overflow-hidden border">
-                                            <Image src={imageUrl} alt="Xem trước ảnh bìa" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    )}
-                                </div>
-                            </FormControl>
-                            <FormDescription>Chọn một ảnh để làm ảnh bìa cho sự kiện.</FormDescription>
-                            <FormMessage />
-                        </FormItem>
+                                    </FormControl>
+                                    <FormDescription>Chọn một ảnh để làm ảnh bìa cho sự kiện.</FormDescription>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+
                          <div className="grid md:grid-cols-2 gap-6">
                              <FormField
                                 control={form.control}

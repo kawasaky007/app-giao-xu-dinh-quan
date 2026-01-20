@@ -19,12 +19,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Card, CardContent } from '@/components/ui/card';
 import { useState } from 'react';
 import type { NewsArticle } from '@/lib/news';
-import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useStorage } from '@/firebase';
 import Image from 'next/image';
 import { Progress } from '@/components/ui/progress';
 import { useToast } from '@/hooks/use-toast';
 import dynamic from 'next/dynamic';
+import { UploadCloud } from 'lucide-react';
 
 const RichTextEditor = dynamic(() => import('./rich-text-editor'), { ssr: false });
 
@@ -120,12 +121,17 @@ export default function ArticleForm({ onSubmit, initialData }: ArticleFormProps)
             },
             () => {
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-                    form.setValue('thumbnail', downloadURL);
+                    form.setValue('thumbnail', downloadURL, { shouldDirty: true });
                     setIsUploading(false);
                 });
             }
         );
     };
+    
+    const handleRemoveImage = () => {
+        form.setValue('thumbnail', '', { shouldDirty: true });
+    }
+
 
     const handleFormSubmit = async (values: ArticleFormValues) => {
         setIsSubmitting(true);
@@ -135,7 +141,9 @@ export default function ArticleForm({ onSubmit, initialData }: ArticleFormProps)
     
     const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         form.setValue('title', e.target.value);
-        form.setValue('slug', createSlug(e.target.value));
+        if (!form.formState.dirtyFields.slug) {
+            form.setValue('slug', createSlug(e.target.value));
+        }
     }
 
     return (
@@ -202,27 +210,51 @@ export default function ArticleForm({ onSubmit, initialData }: ArticleFormProps)
                                 </FormItem>
                             )}
                         />
-                        <FormItem>
-                            <FormLabel>Ảnh bìa (Thumbnail)</FormLabel>
-                            <FormControl>
-                                <div>
-                                    <Input type="file" accept="image/*" onChange={handleFileChange} className="mb-2" disabled={isUploading} />
-                                    {isUploading && (
-                                        <div className="space-y-1">
-                                            <Progress value={uploadProgress} />
-                                            <p className="text-xs text-muted-foreground">{`Đang tải lên... ${Math.round(uploadProgress)}%`}</p>
+                        <FormField
+                            control={form.control}
+                            name="thumbnail"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Ảnh bìa</FormLabel>
+                                    <FormControl>
+                                        <div className="w-full">
+                                            {thumbnailUrl && !isUploading ? (
+                                                <div className="relative w-full max-w-sm">
+                                                    <div className="aspect-video rounded-md overflow-hidden border">
+                                                        <Image src={thumbnailUrl} alt="Xem trước ảnh bìa" fill style={{ objectFit: 'cover' }} />
+                                                    </div>
+                                                    <Button variant="destructive" size="sm" onClick={handleRemoveImage} className="mt-2" disabled={isUploading}>
+                                                        Xóa ảnh
+                                                    </Button>
+                                                </div>
+                                            ) : (
+                                                <div 
+                                                    className="relative flex justify-center items-center w-full max-w-sm h-64 rounded-lg border-2 border-dashed border-muted-foreground/40 hover:border-primary transition-colors cursor-pointer bg-secondary/40"
+                                                    onClick={() => !isUploading && document.getElementById('thumbnail-upload')?.click()}
+                                                >
+                                                    <Input id="thumbnail-upload" type="file" accept="image/*" onChange={handleFileChange} className="hidden" disabled={isUploading} />
+                                                    {isUploading ? (
+                                                        <div className="w-full h-full flex flex-col items-center justify-center">
+                                                            <Progress value={uploadProgress} className="w-3/4 mb-4" />
+                                                            <p className="text-sm text-muted-foreground">{`Đang tải lên: ${Math.round(uploadProgress)}%`}</p>
+                                                        </div>
+                                                    ) : (
+                                                        <div className="text-center p-4">
+                                                            <UploadCloud className="mx-auto h-12 w-12 text-muted-foreground/60" />
+                                                            <p className="mt-2 font-semibold text-foreground">Kéo thả hoặc nhấn để tải ảnh lên</p>
+                                                            <p className="mt-1 text-xs text-muted-foreground/80">PNG, JPG, GIF (tối đa 50MB)</p>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            )}
                                         </div>
-                                    )}
-                                    {thumbnailUrl && !isUploading && (
-                                        <div className="mt-4 relative w-full max-w-sm aspect-video rounded-md overflow-hidden border">
-                                            <Image src={thumbnailUrl} alt="Xem trước ảnh bìa" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    )}
-                                </div>
-                            </FormControl>
-                            <FormDescription>Chọn một ảnh để làm ảnh bìa cho bài viết. Ảnh sẽ được hiển thị ở đầu trang bài viết và trên danh sách tin tức.</FormDescription>
-                            <FormMessage />
-                        </FormItem>
+                                    </FormControl>
+                                    <FormDescription>Chọn một ảnh để làm ảnh bìa cho bài viết.</FormDescription>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+
                          <div className="grid md:grid-cols-2 gap-6">
                             <FormField
                                 control={form.control}
