@@ -1,7 +1,8 @@
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { LogIn } from 'lucide-react';
+import LoginForm from './login-form';
 
 export default function LoginPage() {
   return (
@@ -14,14 +15,10 @@ export default function LoginPage() {
                     <div className="mx-auto bg-primary text-primary-foreground rounded-full p-3 w-fit mb-4">
                         <LogIn className="w-8 h-8" />
                     </div>
-                    <CardTitle className="font-headline text-2xl">Đăng Nhập</CardTitle>
-                    <CardDescription>Chức năng đăng nhập đã bị vô hiệu hóa.</CardDescription>
+                    <CardTitle className="font-headline text-2xl">Đăng Nhập Quản Trị</CardTitle>
+                    <CardDescription>Nhập thông tin đăng nhập của bạn để truy cập trang quản trị.</CardDescription>
                 </CardHeader>
-                <CardContent>
-                    <p className="text-center text-muted-foreground">
-                        Đây là phiên bản chỉ dành cho giao diện người dùng. Không có backend hoặc chức năng xác thực nào được kết nối.
-                    </p>
-                </CardContent>
+                <LoginForm />
             </Card>
         </div>
       </main>

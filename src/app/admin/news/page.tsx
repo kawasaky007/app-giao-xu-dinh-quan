@@ -15,9 +15,11 @@ export default async function AdminNewsPage() {
                     <h1 className="text-3xl font-bold tracking-tight">Quản Lý Tin Tức</h1>
                     <p className="text-muted-foreground">Tạo, chỉnh sửa và quản lý các bài viết tin tức.</p>
                 </div>
-                <Button disabled>
-                    <PlusCircle className="mr-2 h-4 w-4" />
-                    Tạo Bài Viết Mới
+                <Button asChild>
+                    <Link href="/admin/news/new">
+                        <PlusCircle className="mr-2 h-4 w-4" />
+                        Tạo Bài Viết Mới
+                    </Link>
                 </Button>
             </div>
             

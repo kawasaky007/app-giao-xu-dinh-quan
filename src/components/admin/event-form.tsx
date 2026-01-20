@@ -23,11 +23,16 @@ import {
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { NewsArticle } from '@/lib/news';
+import { Event } from '@/lib/events';
 import dynamic from 'next/dynamic';
 import { useMemo } from 'react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Terminal } from 'lucide-react';
+import { Terminal, Calendar as CalendarIcon } from 'lucide-react';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Calendar } from '@/components/ui/calendar';
+import { cn } from '@/lib/utils';
+import { format } from 'date-fns';
+import Link from 'next/link';
 
 const RichTextEditor = useMemo(() => dynamic(() => import('@/components/admin/rich-text-editor'), {
     ssr: false,
@@ -38,36 +43,65 @@ const RichTextEditor = useMemo(() => dynamic(() => import('@/components/admin/ri
 const formSchema = z.object({
   title: z.string().min(1, 'Tiêu đề không được để trống.'),
   slug: z.string().min(1, 'Slug không được để trống.'),
-  author: z.string().min(1, 'Tác giả không được để trống.'),
-  category: z.enum(['Sự Kiện Giáo Xứ', 'Phục Vụ Cộng Đoàn', 'Phụng Vụ', 'Giáo Dục']),
-  status: z.enum(['published', 'draft']),
+  date: z.date({
+    required_error: "Ngày diễn ra là bắt buộc.",
+  }),
+  endTime: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/, "Phải là định dạng HH:mm"),
+  location: z.string().min(1, 'Địa điểm không được để trống.'),
+  category: z.enum(['Sự Kiện Giáo Xứ', 'Gây Quỹ', 'Tăng Tiến Đời Sống Thiêng Liêng', 'Phục Vụ Cộng Đoàn']),
   excerpt: z.string().min(10, 'Tóm tắt phải có ít nhất 10 ký tự.'),
-  content: z.string().min(20, 'Nội dung phải có ít nhất 20 ký tự.'),
-  thumbnail: z.string().url({message: "Phải là một URL hợp lệ."}).optional().or(z.literal('')),
+  description: z.string().min(20, 'Nội dung phải có ít nhất 20 ký tự.'),
+  image: z.string().url({message: "Phải là một URL hợp lệ."}).optional().or(z.literal('')),
 });
 
-type ArticleFormProps = {
-  article?: NewsArticle;
+type EventFormProps = {
+  event?: Event;
 };
 
-export default function ArticleForm({ article }: ArticleFormProps) {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: article || {
+export default function EventForm({ event }: EventFormProps) {
+    
+  const defaultValues = useMemo(() => {
+    if (event) {
+        const startDate = new Date(event.date);
+        const endDate = new Date(event.endTime);
+        return {
+            ...event,
+            date: startDate,
+            endTime: format(endDate, 'HH:mm'),
+        }
+    }
+    return {
       title: '',
       slug: '',
-      author: 'Ban Truyền Thông',
-      category: 'Sự Kiện Giáo Xứ',
-      status: 'draft',
+      date: new Date(),
+      endTime: '19:00',
+      location: 'Nhà Thờ Giáo Xứ',
+      category: 'Sự Kiện Giáo Xứ' as const,
       excerpt: '',
-      content: '',
-      thumbnail: '',
-    },
+      description: '',
+      image: '',
+    }
+  }, [event]);
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues,
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
+    const { date, endTime, ...rest } = values;
+    const [hours, minutes] = endTime.split(':');
+    const endDate = new Date(date);
+    endDate.setHours(parseInt(hours), parseInt(minutes));
+
+    const finalValues = {
+        ...rest,
+        date: date.toISOString(),
+        endTime: endDate.toISOString(),
+    };
+    
     // This is a mock function, it doesn't do anything.
-    console.log(values);
+    console.log(finalValues);
   }
 
   return (
@@ -77,8 +111,8 @@ export default function ArticleForm({ article }: ArticleFormProps) {
           <div className="lg:col-span-2 space-y-8">
             <Card>
               <CardHeader>
-                <CardTitle>Chi Tiết Bài Viết</CardTitle>
-                <CardDescription>Điền thông tin chính cho bài viết của bạn.</CardDescription>
+                <CardTitle>Chi Tiết Sự Kiện</CardTitle>
+                <CardDescription>Điền thông tin chính cho sự kiện của bạn.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <FormField
@@ -88,7 +122,7 @@ export default function ArticleForm({ article }: ArticleFormProps) {
                     <FormItem>
                       <FormLabel>Tiêu đề</FormLabel>
                       <FormControl>
-                        <Input placeholder="Tiêu đề bài viết" {...field} />
+                        <Input placeholder="Tên sự kiện" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -102,7 +136,7 @@ export default function ArticleForm({ article }: ArticleFormProps) {
                       <FormLabel>Tóm tắt</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Một đoạn tóm tắt ngắn gọn về bài viết"
+                          placeholder="Một đoạn tóm tắt ngắn gọn về sự kiện"
                           className="resize-none"
                           {...field}
                         />
@@ -113,10 +147,10 @@ export default function ArticleForm({ article }: ArticleFormProps) {
                 />
                  <FormField
                     control={form.control}
-                    name="content"
+                    name="description"
                     render={({ field }) => (
                         <FormItem>
-                        <FormLabel>Nội dung</FormLabel>
+                        <FormLabel>Mô tả chi tiết</FormLabel>
                         <FormControl>
                             <RichTextEditor {...field} />
                         </FormControl>
@@ -136,36 +170,68 @@ export default function ArticleForm({ article }: ArticleFormProps) {
                     <CardTitle>Thuộc tính</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
+                     <FormField
+                        control={form.control}
+                        name="date"
+                        render={({ field }) => (
+                            <FormItem className="flex flex-col">
+                            <FormLabel>Ngày bắt đầu</FormLabel>
+                            <Popover>
+                                <PopoverTrigger asChild>
+                                <FormControl>
+                                    <Button
+                                    variant={"outline"}
+                                    className={cn(
+                                        "pl-3 text-left font-normal",
+                                        !field.value && "text-muted-foreground"
+                                    )}
+                                    >
+                                    {field.value ? (
+                                        format(field.value, "PPP")
+                                    ) : (
+                                        <span>Chọn ngày</span>
+                                    )}
+                                    <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                                    </Button>
+                                </FormControl>
+                                </PopoverTrigger>
+                                <PopoverContent className="w-auto p-0" align="start">
+                                <Calendar
+                                    mode="single"
+                                    selected={field.value}
+                                    onSelect={field.onChange}
+                                    disabled={(date) => date < new Date("1900-01-01")}
+                                    initialFocus
+                                />
+                                </PopoverContent>
+                            </Popover>
+                            <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
                     <FormField
-                    control={form.control}
-                    name="slug"
-                    render={({ field }) => (
-                        <FormItem>
-                        <FormLabel>Slug (URL)</FormLabel>
-                        <FormControl>
-                            <Input placeholder="vi-du-slug-bai-viet" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                        </FormItem>
-                    )}
+                        control={form.control}
+                        name="endTime"
+                        render={({ field }) => (
+                            <FormItem>
+                            <FormLabel>Thời gian kết thúc (HH:mm)</FormLabel>
+                            <FormControl>
+                                <Input type="time" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                            </FormItem>
+                        )}
                     />
                     <FormField
                     control={form.control}
-                    name="status"
+                    name="location"
                     render={({ field }) => (
                         <FormItem>
-                        <FormLabel>Trạng thái</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
-                            <FormControl>
-                            <SelectTrigger>
-                                <SelectValue placeholder="Chọn trạng thái" />
-                            </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                            <SelectItem value="published">Đã xuất bản</SelectItem>
-                            <SelectItem value="draft">Bản nháp</SelectItem>
-                            </SelectContent>
-                        </Select>
+                        <FormLabel>Địa điểm</FormLabel>
+                        <FormControl>
+                            <Input placeholder="Địa điểm diễn ra sự kiện" {...field} />
+                        </FormControl>
                         <FormMessage />
                         </FormItem>
                     )}
@@ -184,23 +250,23 @@ export default function ArticleForm({ article }: ArticleFormProps) {
                             </FormControl>
                             <SelectContent>
                                 <SelectItem value="Sự Kiện Giáo Xứ">Sự Kiện Giáo Xứ</SelectItem>
+                                <SelectItem value="Gây Quỹ">Gây Quỹ</SelectItem>
+                                <SelectItem value="Tăng Tiến Đời Sống Thiêng Liêng">Tăng Tiến Đời Sống Thiêng Liêng</SelectItem>
                                 <SelectItem value="Phục Vụ Cộng Đoàn">Phục Vụ Cộng Đoàn</SelectItem>
-                                <SelectItem value="Phụng Vụ">Phụng Vụ</SelectItem>
-                                <SelectItem value="Giáo Dục">Giáo Dục</SelectItem>
                             </SelectContent>
                         </Select>
                         <FormMessage />
                         </FormItem>
                     )}
                     />
-                    <FormField
+                     <FormField
                     control={form.control}
-                    name="author"
+                    name="slug"
                     render={({ field }) => (
                         <FormItem>
-                        <FormLabel>Tác giả</FormLabel>
+                        <FormLabel>Slug (URL)</FormLabel>
                         <FormControl>
-                            <Input {...field} />
+                            <Input placeholder="vi-du-slug-su-kien" {...field} />
                         </FormControl>
                         <FormMessage />
                         </FormItem>
@@ -215,7 +281,7 @@ export default function ArticleForm({ article }: ArticleFormProps) {
                 <CardContent>
                     <FormField
                         control={form.control}
-                        name="thumbnail"
+                        name="image"
                         render={({ field }) => (
                             <FormItem>
                                 <FormLabel>URL Ảnh Bìa</FormLabel>
@@ -243,8 +309,8 @@ export default function ArticleForm({ article }: ArticleFormProps) {
         </Alert>
 
         <div className="flex justify-end gap-2">
-            <Button type="button" variant="outline" asChild><Link href="/admin/news">Hủy</Link></Button>
-            <Button type="submit" disabled>Lưu Bài Viết</Button>
+            <Button type="button" variant="outline" asChild><Link href="/admin/events">Hủy</Link></Button>
+            <Button type="submit" disabled>Lưu Sự Kiện</Button>
         </div>
       </form>
     </Form>

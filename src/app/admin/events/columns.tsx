@@ -7,6 +7,13 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { format } from 'date-fns';
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuTrigger,
+  } from "@/components/ui/dropdown-menu"
 
 export const columns: ColumnDef<Event>[] = [
   {
@@ -52,5 +59,29 @@ export const columns: ColumnDef<Event>[] = [
         const date = row.getValue("date") as string;
         return <div>{format(new Date(date), 'dd/MM/yyyy HH:mm')}</div>
     }
+  },
+  {
+    id: "actions",
+    cell: ({ row }) => {
+      const event = row.original
+
+      return (
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" className="h-8 w-8 p-0">
+              <span className="sr-only">Mở menu</span>
+              <MoreHorizontal className="h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuLabel>Hành động</DropdownMenuLabel>
+            <DropdownMenuItem asChild>
+                <Link href={`/admin/events/${event.slug}/edit`}>Chỉnh sửa</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem disabled>Xóa</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      )
+    },
   },
 ]

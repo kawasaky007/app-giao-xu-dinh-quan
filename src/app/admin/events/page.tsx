@@ -15,9 +15,11 @@ export default async function AdminEventsPage() {
                     <h1 className="text-3xl font-bold tracking-tight">Quản Lý Sự Kiện</h1>
                     <p className="text-muted-foreground">Tạo, chỉnh sửa và quản lý các sự kiện của giáo xứ.</p>
                 </div>
-                 <Button disabled>
-                    <PlusCircle className="mr-2 h-4 w-4" />
-                    Tạo Sự Kiện Mới
+                 <Button asChild>
+                    <Link href="/admin/events/new">
+                        <PlusCircle className="mr-2 h-4 w-4" />
+                        Tạo Sự Kiện Mới
+                    </Link>
                 </Button>
             </div>
 
