@@ -6,7 +6,7 @@ import React, { useMemo, useRef, useState, useCallback } from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Progress } from '@/components/ui/progress';
 import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { useFirebase } from '@/firebase';
+import { useStorage } from '@/firebase';
 import type ReactQuillType from 'react-quill';
 
 interface RichTextEditorProps {
@@ -22,7 +22,7 @@ const RichTextEditor = ({ value, onChange, placeholder }: RichTextEditorProps) =
   }), []);
 
   const quillRef = useRef<ReactQuillType>(null);
-  const { storage } = useFirebase();
+  const storage = useStorage();
   const [uploading, setUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
 
@@ -37,7 +37,7 @@ const RichTextEditor = ({ value, onChange, placeholder }: RichTextEditorProps) =
 
     input.onchange = async () => {
       const file = input.files?.[0];
-      if (!file) return;
+      if (!file || !storage) return;
 
       setUploading(true);
       setUploadProgress(0);
