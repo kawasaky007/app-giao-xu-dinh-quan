@@ -19,12 +19,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Card, CardContent } from '@/components/ui/card';
 import { useState } from 'react';
 import type { Event } from '@/lib/events';
-import RichTextEditor from './rich-text-editor';
 import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useStorage } from '@/firebase';
 import Image from 'next/image';
 import { Progress } from '@/components/ui/progress';
 import { useToast } from '@/hooks/use-toast';
+import dynamic from 'next/dynamic';
+
+const RichTextEditor = dynamic(() => import('./rich-text-editor'), { ssr: false });
 
 const formSchema = z.object({
   title: z.string().min(3, { message: 'Tiêu đề phải có ít nhất 3 ký tự.' }),
