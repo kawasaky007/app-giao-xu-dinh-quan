@@ -11,6 +11,8 @@ const navLinks = [
   { href: '/schedule', label: 'Schedule' },
   { href: '/news', label: 'News' },
   { href: '/events', label: 'Events' },
+  { href: '/catechism', label: 'Catechism' },
+  { href: '/documents', label: 'Documents' },
   { href: '/#contact', label: 'Contact' },
 ];
 
@@ -61,5 +63,3 @@ export default function Header() {
     </header>
   );
 }
-
-    

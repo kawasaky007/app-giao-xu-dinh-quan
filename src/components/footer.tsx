@@ -23,6 +23,8 @@ export default function Footer() {
             <li><Link href="/schedule" className="hover:text-primary transition-colors">Schedule</Link></li>
             <li><Link href="/news" className="hover:text-primary transition-colors">News</Link></li>
             <li><Link href="/events" className="hover:text-primary transition-colors">Events</Link></li>
+            <li><Link href="/catechism" className="hover:text-primary transition-colors">Catechism</Link></li>
+            <li><Link href="/documents" className="hover:text-primary transition-colors">Documents</Link></li>
             <li><Link href="#" className="hover:text-primary transition-colors">Giving</Link></li>
           </ul>
         </div>
@@ -51,5 +53,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-    

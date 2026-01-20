@@ -1,0 +1,94 @@
+{
+  "catechismLessons": [
+    {
+      "category": "Children (Ages 6-10)",
+      "lessons": [
+        { "title": "Lesson 1: Who is God?", "summary": "An introduction to the concept of God as our loving creator." },
+        { "title": "Lesson 2: The Story of Creation", "summary": "Exploring the seven days of creation from the Book of Genesis." },
+        { "title": "Lesson 3: Learning the Lord's Prayer", "summary": "Understanding the meaning behind the words Jesus taught us." }
+      ]
+    },
+    {
+      "category": "Youth (Ages 11-15)",
+      "lessons": [
+        { "title": "The Creed: What We Believe", "summary": "A deep dive into the articles of the Nicene Creed." },
+        { "title": "The Beatitudes: Blueprint for Happiness", "summary": "Studying Jesus' sermon on the mount." },
+        { "title": "Understanding the Mass", "summary": "Exploring the liturgy and the meaning of the Eucharist." }
+      ]
+    },
+    {
+      "category": "Adults (RCIA)",
+      "lessons": [
+        { "title": "Introduction to Sacred Scripture", "summary": "How to read the Bible and understand its central message." },
+        { "title": "The Sacraments of Initiation", "summary": "Exploring Baptism, Confirmation, and the Eucharist." },
+        { "title": "Catholic Social Teaching", "summary": "Living out our faith in the world." }
+      ]
+    }
+  ],
+  "sacramentDocs": [
+    {
+      "title": "Baptism Preparation",
+      "description": "Information and required forms for parents seeking to have their child baptized.",
+      "icon": "Baby"
+    },
+    {
+      "title": "First Holy Communion",
+      "description": "Guidelines and schedule for children preparing to receive their First Eucharist.",
+      "icon": "GlassWater"
+    },
+    {
+      "title": "Confirmation",
+      "description": "Details about the preparation program for young adults preparing for Confirmation.",
+      "icon": "Wind"
+    },
+    {
+      "title": "Holy Matrimony",
+      "description": "A guide for engaged couples preparing for the Sacrament of Marriage in our parish.",
+      "icon": "HeartHandshake"
+    }
+  ],
+  "sermons": [
+    {
+      "id": "sermon-2024-07-21",
+      "title": "The Parable of the Sower",
+      "date": "2024-07-21T10:30:00.000Z",
+      "speaker": "Father Michael O'Connell",
+      "audioUrl": "#",
+      "videoUrl": "#"
+    },
+    {
+      "id": "sermon-2024-07-14",
+      "title": "Love Your Neighbor",
+      "date": "2024-07-14T10:30:00.000Z",
+      "speaker": "Father Michael O'Connell",
+      "audioUrl": "#",
+      "videoUrl": null
+    },
+    {
+      "id": "sermon-2024-07-07",
+      "title": "On Humility",
+      "date": "2024-07-07T10:30:00.000Z",
+      "speaker": "Deacon Thomas",
+      "audioUrl": "#",
+      "videoUrl": "#"
+    }
+  ],
+  "documents": [
+    {
+      "category": "Newsletters",
+      "items": [
+        { "title": "Monthly Newsletter - July 2024", "url": "#" },
+        { "title": "Monthly Newsletter - June 2024", "url": "#" },
+        { "title": "Monthly Newsletter - May 2024", "url": "#" }
+      ]
+    },
+    {
+      "category": "Parish Forms",
+      "items": [
+        { "title": "New Parishioner Registration Form", "url": "#" },
+        { "title": "Facility Rental Request Form", "url": "#" },
+        { "title": "Ministry Volunteer Application", "url": "#" }
+      ]
+    }
+  ]
+}
