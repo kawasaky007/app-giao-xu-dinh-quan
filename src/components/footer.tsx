@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer id="contact" className="w-full py-12 px-4 md:px-6 border-t bg-secondary/30">
+    <footer className="w-full py-12 px-4 md:px-6 border-t bg-secondary/30">
       <div className="container mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
         <div className="flex flex-col items-center md:items-start">
           <Link href="/" className="flex items-center gap-3 text-primary font-headline font-bold text-2xl mb-4">
@@ -27,7 +27,7 @@ export default function Footer() {
             <li><Link href="/catechism" className="hover:text-primary transition-colors">Giáo Lý</Link></li>
             <li><Link href="/documents" className="hover:text-primary transition-colors">Tài Liệu</Link></li>
             <li><Link href="/faq" className="hover:text-primary transition-colors">Hỏi Đáp</Link></li>
-            <li><Link href="#" className="hover:text-primary transition-colors">Dâng Cúng</Link></li>
+            <li><Link href="/contact" className="hover:text-primary transition-colors">Liên Hệ</Link></li>
           </ul>
         </div>
         <div>

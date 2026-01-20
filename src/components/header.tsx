@@ -15,7 +15,7 @@ const navLinks = [
   { href: '/catechism', label: 'Giáo Lý' },
   { href: '/documents', label: 'Tài Liệu' },
   { href: '/faq', label: 'Hỏi Đáp' },
-  { href: '/#contact', label: 'Liên Hệ' },
+  { href: '/contact', label: 'Liên Hệ' },
 ];
 
 export default function Header() {

@@ -76,7 +76,7 @@ export default async function Home() {
                   <p className="mb-2"><strong>Giờ làm việc:</strong> T2-T6, 9:00 - 16:00</p>
                   <p className="mb-4">123 Đường Đức Tin, TP. Tình Yêu</p>
                   <Button variant="outline" asChild>
-                    <Link href="/#contact">Xem Bản Đồ</Link>
+                    <Link href="/contact">Xem Bản Đồ</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -91,7 +91,7 @@ export default async function Home() {
                   <p className="mb-2"><strong>Điện thoại:</strong> (028) 3456-7890</p>
                   <p className="mb-4"><strong>Email:</strong> lienhe@giaoxu.com</p>
                   <Button variant="outline" asChild>
-                    <Link href="/#contact">Gửi Tin Nhắn</Link>
+                    <Link href="/contact">Gửi Tin Nhắn</Link>
                   </Button>
                 </CardContent>
               </Card>
