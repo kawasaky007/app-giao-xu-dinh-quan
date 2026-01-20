@@ -182,7 +182,7 @@ export default function AboutPage() {
                   const priestImage = PlaceHolderImages.find(p => p.id === priest.id);
                   return (
                     <Card key={priest.id} className="text-center flex flex-col items-center max-w-sm shadow-lg">
-                      <CardHeader>
+                      <CardHeader className="items-center text-center">
                         <Avatar className="w-24 h-24 mb-4">
                           {priestImage && <AvatarImage src={priestImage.imageUrl} alt={priest.name} data-ai-hint={priestImage.imageHint} />}
                           <AvatarFallback>{priest.name.charAt(0)}</AvatarFallback>
@@ -209,7 +209,7 @@ export default function AboutPage() {
                       const priestImage = PlaceHolderImages.find(p => p.id === priest.id);
                       return (
                         <Card key={priest.id} className="text-center flex flex-col items-center">
-                          <CardHeader>
+                          <CardHeader className="items-center text-center">
                             <Avatar className="w-24 h-24 mb-4">
                               {priestImage && <AvatarImage src={priestImage.imageUrl} alt={priest.name} data-ai-hint={priestImage.imageHint} />}
                               <AvatarFallback>{priest.name.charAt(0)}</AvatarFallback>
@@ -248,7 +248,7 @@ export default function AboutPage() {
                 const memberImage = PlaceHolderImages.find(p => p.id === member.id);
                 return (
                   <Card key={member.id} className="text-center flex flex-col items-center max-w-sm shadow-lg">
-                    <CardHeader>
+                    <CardHeader className="items-center text-center">
                       <Avatar className="w-24 h-24 mb-4">
                         {memberImage && <AvatarImage src={memberImage.imageUrl} alt={member.name} data-ai-hint={memberImage.imageHint} />}
                         <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
@@ -274,7 +274,7 @@ export default function AboutPage() {
                     const memberImage = PlaceHolderImages.find(p => p.id === member.id);
                     return (
                       <Card key={member.id} className="text-center flex flex-col items-center">
-                        <CardHeader>
+                        <CardHeader className="items-center text-center">
                           <Avatar className="w-24 h-24 mb-4">
                             {memberImage && <AvatarImage src={memberImage.imageUrl} alt={member.name} data-ai-hint={memberImage.imageHint} />}
                             <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
