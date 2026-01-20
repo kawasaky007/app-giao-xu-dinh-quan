@@ -1,16 +1,59 @@
-import { Church } from 'lucide-react';
+import { Church, Menu } from 'lucide-react';
 import Link from 'next/link';
 import { ThemeToggle } from './theme-toggle';
+import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import { Button } from './ui/button';
+
+const navLinks = [
+  { href: '#quick-info', label: 'Visit' },
+  { href: '#news', label: 'News' },
+  { href: '#events', label: 'Events' },
+  { href: '#contact', label: 'Contact' },
+];
 
 export default function Header() {
   return (
-    <header className="w-full sticky top-0 z-50 border-b shadow-sm bg-background/80 backdrop-blur-sm">
+    <header className="w-full sticky top-0 z-50 border-b shadow-sm bg-background/90 backdrop-blur-sm">
       <div className="container mx-auto flex items-center justify-between h-20 px-4 md:px-6">
         <Link href="/" className="flex items-center gap-3 text-primary font-headline font-bold text-2xl">
           <Church className="w-8 h-8" />
           <span>Our Sacred Place</span>
         </Link>
-        <ThemeToggle />
+        <nav className="hidden md:flex items-center gap-6">
+          {navLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="text-lg font-medium text-foreground/80 hover:text-primary transition-colors">
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right">
+                <div className="grid gap-6 p-6">
+                  <Link href="/" className="flex items-center gap-3 text-primary font-headline font-bold text-2xl">
+                    <Church className="w-8 h-8" />
+                    <span>Our Sacred Place</span>
+                  </Link>
+                  <nav className="grid gap-4">
+                    {navLinks.map((link) => (
+                      <Link key={link.href} href={link.href} className="text-xl font-medium text-foreground hover:text-primary transition-colors">
+                        {link.label}
+                      </Link>
+                    ))}
+                  </nav>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
       </div>
     </header>
   );

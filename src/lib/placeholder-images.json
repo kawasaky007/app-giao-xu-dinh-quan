@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-church-interior",
+      "description": "The sunlit interior of a grand, classic church, with light streaming through stained glass windows onto rows of pews.",
+      "imageUrl": "https://images.unsplash.com/photo-1699830506478-af7b3f5e6cc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaHVyY2glMjBpbnRlcmlvcnxlbnwwfHx8fDE3Njg4MTUyNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "church interior"
+    },
+    {
+      "id": "worship-service",
+      "description": "A congregation during a worship service, with a priest at the altar.",
+      "imageUrl": "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b3JzaGlwJTIwc2VydmljZXxlbnwwfHx8fDE3Njg4OTkyNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "worship service"
+    },
+    {
+      "id": "community-gathering",
+      "description": "A diverse group of parishioners talking and laughing together after a service.",
+      "imageUrl": "https://images.unsplash.com/photo-1542315099045-93937d70c67a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb21tdW5pdHklMjBwZW9wbGV8ZW58MHx8fHwxNzY4ODY3MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "community people"
+    },
+    {
+      "id": "volunteer-service",
+      "description": "Parish volunteers working together at a local food bank.",
+      "imageUrl": "https://images.unsplash.com/photo-1761666507437-9fb5a6ef7b0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaGFyaXR5JTIwdm9sdW50ZWVyfGVufDB8fHx8MTc2ODg5OTI0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "charity volunteer"
+    },
+    {
+      "id": "news-community-event",
+      "description": "A vibrant community event held on the church grounds.",
+      "imageUrl": "https://images.unsplash.com/photo-1528605105345-5344ea20e269?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29tbXVuaXR5JTIwZXZlbnR8ZW58MHx8fHwxNzY4ODI4NDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "community event"
+    },
+    {
+      "id": "news-bible-study",
+      "description": "A small group of people engaged in a bible study session.",
+      "imageUrl": "https://images.unsplash.com/photo-1559534703-e191bce0d946?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiaWJsZSUyMHN0dWR5fGVufDB8fHx8MTc2ODg2MTIxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bible study"
+    },
+    {
+      "id": "news-church-exterior",
+      "description": "The exterior of the church building on a sunny day.",
+      "imageUrl": "https://images.unsplash.com/photo-1608569569089-5d2e3e644ea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBleHRlcmlvcnxlbnwwfHx8fDE3Njg4MTMyNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "church exterior"
+    },
+    {
+      "id": "event-concert",
+      "description": "A choir performing a concert inside the church.",
+      "imageUrl": "https://images.unsplash.com/photo-1761901219072-491a18f3ccd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaG9pciUyMGNvbmNlcnR8ZW58MHx8fHwxNzY4ODk5MjQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "choir concert"
+    },
+    {
+      "id": "event-festival",
+      "description": "An outdoor parish festival with games and food stalls.",
+      "imageUrl": "https://images.unsplash.com/photo-1631179234473-f48fedffed9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxvdXRkb29yJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzY4ODU2Mzk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "outdoor festival"
+    },
+    {
+      "id": "event-dinner",
+      "description": "A community dinner being held in the parish hall.",
+      "imageUrl": "https://images.unsplash.com/photo-1721180672417-81a4c8515ea5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb21tdW5pdHklMjBkaW5uZXJ8ZW58MHx8fHwxNzY4ODk5MjQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "community dinner"
+    }
+  ]
 }
