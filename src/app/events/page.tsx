@@ -59,7 +59,7 @@ export default async function EventsPage() {
                     </div>
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <p className="text-foreground/80 text-sm">{event.excerpt}</p>
+                    <p className="text-foreground/80 text-sm line-clamp-3">{event.excerpt}</p>
                   </CardContent>
                   <div className="p-6 pt-0">
                     <Button asChild variant="link" className="p-0">

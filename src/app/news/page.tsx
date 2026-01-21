@@ -108,7 +108,7 @@ export default async function NewsPage({ searchParams }: NewsPageProps) {
                     </div>
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <p className="text-foreground/80 text-sm">{article.excerpt}</p>
+                    <p className="text-foreground/80 text-sm line-clamp-3">{article.excerpt}</p>
                   </CardContent>
                   <div className="p-6 pt-0">
                     <Button asChild variant="link" className="p-0">
