@@ -37,7 +37,7 @@ export default async function FaqPage() {
               <AccordionTrigger className="text-xl text-left font-headline text-primary">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="prose prose-lg max-w-none text-foreground/80">
+              <AccordionContent className="prose prose-lg dark:prose-invert max-w-none text-foreground/80">
                  <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
               </AccordionContent>
             </AccordionItem>

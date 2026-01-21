@@ -145,7 +145,7 @@ export default async function EventPage({ params }: Props) {
                 </div>
 
                 <div 
-                    className="prose prose-lg max-w-none text-foreground/90 prose-p:text-justify"
+                    className="prose prose-lg dark:prose-invert max-w-none"
                     dangerouslySetInnerHTML={{ __html: event.description }} 
                 />
 

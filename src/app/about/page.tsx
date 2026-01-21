@@ -112,7 +112,7 @@ export default function AboutPage() {
               <Building className="w-12 h-12 mx-auto text-primary mb-4" />
               <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Lược Sử Giáo Xứ</h2>
             </div>
-            <div className="prose prose-lg max-w-none text-foreground/80 text-justify">
+            <div className="prose prose-lg dark:prose-invert max-w-none text-foreground/80">
               <p>
                 Được thành lập vào năm 1954 bởi một nhóm các gia đình đạo đức di cư, Giáo xứ Các Thánh Tử Đạo Việt Nam đã đứng vững như một nền tảng đức tin trong cộng đồng suốt nhiều thập kỷ. Ngôi nhà nguyện gỗ ban đầu, được xây dựng bằng chính đôi tay của các vị tiền nhân, đã phục vụ giáo xứ trong hai mươi năm trước khi ngôi nhà thờ đá hiện tại được dựng lên vào năm 1974.
               </p>
