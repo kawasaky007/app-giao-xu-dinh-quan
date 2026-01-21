@@ -2,7 +2,6 @@ import Footer from '@/components/footer';
 import Header from '@/components/header';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Clock, Phone, MapPin, Calendar, Newspaper } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,10 +9,10 @@ import { getRecentArticles, NewsArticle } from '@/lib/news';
 import { getRecentEvents, Event } from '@/lib/events';
 import { format } from 'date-fns';
 import { vi } from 'date-fns/locale';
+import { HeroCarousel } from '@/components/hero-carousel';
 
 
 export default async function Home() {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-church-interior');
   const recentArticles = await getRecentArticles(3);
   const recentEvents = await getRecentEvents(3);
   
@@ -22,28 +21,7 @@ export default async function Home() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[70vh] flex items-center justify-center text-center text-white">
-          {heroImage && <Image 
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            style={{ objectFit: 'cover' }}
-            className="absolute inset-0 w-full h-full -z-10 brightness-75"
-            data-ai-hint={heroImage.imageHint}
-            priority
-          />}
-          <div className="container mx-auto px-4 z-10">
-            <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-white drop-shadow-lg mb-4">
-              Chào Mừng đến Giáo xứ Định Quán
-            </h1>
-            <p className="max-w-3xl mx-auto text-lg md:text-xl text-neutral-200 drop-shadow-md mb-8">
-              Ngọn hải đăng của đức tin, hy vọng và tình yêu thương giữa lòng cộng đoàn.
-            </p>
-            <Button size="lg" asChild>
-              <Link href="/about">Tìm Hiểu Về Giáo Xứ</Link>
-            </Button>
-          </div>
-        </section>
+        <HeroCarousel />
 
         {/* Quick Info Cards Section */}
         <section id="quick-info" className="py-16 md:py-24 bg-secondary/50">

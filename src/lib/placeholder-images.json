@@ -7,6 +7,18 @@
       "imageHint": "nội thất nhà thờ"
     },
     {
+      "id": "hero-church-exterior-slide",
+      "description": "Bên ngoài một nhà thờ Công giáo lớn ở Việt Nam với kiến trúc Gothic.",
+      "imageUrl": "https://images.unsplash.com/photo-1629657410313-2d2c1df87858?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2aWV0bmFtJTIwY2h1cmNofGVufDB8fHx8fDE3MjI0MDQxMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nhà thờ Việt Nam"
+    },
+    {
+      "id": "hero-community-slide",
+      "description": "Một nhóm người Việt Nam thuộc nhiều thế hệ đang cười và nói chuyện vui vẻ.",
+      "imageUrl": "https://images.unsplash.com/photo-1523624244249-c18933b91185?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyMHx8dmlldG5hbWVzZSUyMGZhbWlseXxlbnwwfHx8fDE3MjI0MDI2MDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cộng đoàn"
+    },
+    {
       "id": "worship-service",
       "description": "Một cộng đoàn trong một buổi lễ thờ phượng, với một linh mục tại bàn thờ.",
       "imageUrl": "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b3JzaGlwJTIwc2VydmljZXxlbnwwfHx8fDE3Njg4OTkyNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -171,7 +183,7 @@
     {
       "id": "gallery-picnic-1",
       "description": "Trẻ em Việt Nam đang chơi một trò chơi dân gian trên cỏ.",
-      "imageUrl": "https://images.unsplash.com/photo-1533222481259-ce20eda1e20b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjaGlsZHJlbiUyMHBsYXlpbmd8ZW58MHx8fHwxNzY4ODY1NDg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1533222481259-ce20eda1e20b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjbmhpbGRyZW4lMjBwbGF5aW5nfGVufDB8fHx8MTc2ODg2NTQ4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "trẻ em chơi"
     },
     {

@@ -29,7 +29,7 @@ export default async function SchedulePage() {
             <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-white drop-shadow-lg">
               Lịch Phụng Vụ
             </h1>
-            <p className="mt-4 text-lg md:text-xl text-neutral-200 drop-shadow-md max-w-2xl mx-auto">
+            <p className="mt-4 text-lg md:text-xl text-gray-200 drop-shadow-md max-w-2xl mx-auto">
               Mời cộng đoàn cùng tham dự các giờ cầu nguyện và thờ phượng.
             </p>
           </div>
