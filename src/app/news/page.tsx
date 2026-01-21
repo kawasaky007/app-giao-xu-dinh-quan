@@ -73,7 +73,7 @@ export default async function NewsPage({ searchParams }: NewsPageProps) {
             {paginatedArticles.map(article => {
               return (
                 <Card key={article.id} className="overflow-hidden flex flex-col">
-                  <Link href={`/news/${article.slug}`} className="block aspect-video bg-secondary">
+                  <Link href={`/news/${article.slug}`} className="block aspect-video relative bg-secondary">
                     {article.thumbnail ? (
                       <Image 
                         src={article.thumbnail} 
