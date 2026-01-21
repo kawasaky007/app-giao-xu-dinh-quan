@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start">
           <Link href="/" className="flex items-center gap-3 text-primary font-headline font-bold text-2xl mb-4">
             <Church className="w-8 h-8" />
-            <span>Giáo Xứ Các Thánh TĐVN</span>
+            <span>Giáo xứ Định Quán</span>
           </Link>
           <p className="text-foreground/80 max-w-sm">
             Một cộng đoàn đức tin, hy vọng và tình yêu. Mời bạn đến tham dự và hiệp thông.
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container mx-auto text-center text-sm text-foreground/60 mt-12 border-t pt-8">
-        <p>&copy; {new Date().getFullYear()} Giáo Xứ Các Thánh Tử Đạo Việt Nam. Mọi quyền được bảo lưu.</p>
+        <p>&copy; {new Date().getFullYear()} Giáo xứ Định Quán. Mọi quyền được bảo lưu.</p>
         <p className="mt-1">Xây dựng với Firebase và Next.js</p>
       </div>
     </footer>

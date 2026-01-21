@@ -3,7 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Hỏi Đáp | Giáo Xứ Các Thánh Tử Đạo Việt Nam',
+    title: 'Hỏi Đáp | Giáo xứ Định Quán',
     description: 'Tìm câu trả lời cho các câu hỏi thường gặp về giáo xứ, bao gồm giờ Lễ, đăng ký giáo xứ, các bí tích, và làm thế nào để tham gia.',
 };
 

@@ -34,7 +34,7 @@ export default async function Home() {
           />}
           <div className="container mx-auto px-4 z-10">
             <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-white drop-shadow-lg mb-4">
-              Chào Mừng đến Giáo Xứ Các Thánh Tử Đạo Việt Nam
+              Chào Mừng đến Giáo xứ Định Quán
             </h1>
             <p className="max-w-3xl mx-auto text-lg md:text-xl text-neutral-200 drop-shadow-md mb-8">
               Ngọn hải đăng của đức tin, hy vọng và tình yêu thương giữa lòng cộng đoàn.

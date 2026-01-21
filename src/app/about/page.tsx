@@ -113,7 +113,7 @@ export default function AboutPage() {
             </div>
             <div className="prose prose-lg dark:prose-invert max-w-none text-foreground/80">
               <p>
-                Được thành lập vào năm 1954 bởi một nhóm các gia đình đạo đức di cư từ miền Bắc, Giáo xứ Các Thánh Tử Đạo Việt Nam đã đứng vững như một nền tảng đức tin trong cộng đồng suốt nhiều thập kỷ. Ngôi nhà nguyện tạm bằng gỗ ban đầu, được xây dựng bằng chính đôi tay của các vị tiền nhân, đã phục vụ giáo xứ trong hai mươi năm trước khi ngôi nhà thờ kiên cố, khang trang như hiện nay được dựng lên vào năm 1974.
+                Được thành lập vào năm 1954 bởi một nhóm các gia đình đạo đức di cư từ miền Bắc, Giáo xứ Định Quán đã đứng vững như một nền tảng đức tin trong cộng đồng suốt nhiều thập kỷ. Ngôi nhà nguyện tạm bằng gỗ ban đầu, được xây dựng bằng chính đôi tay của các vị tiền nhân, đã phục vụ giáo xứ trong hai mươi năm trước khi ngôi nhà thờ kiên cố, khang trang như hiện nay được dựng lên vào năm 1974.
               </p>
               <p>
                 Công trình kiến trúc mang phong cách Gothic Phục hưng này, với trần nhà cao vút và những cửa sổ kính màu tuyệt đẹp, là thành quả của tình yêu thương và là một minh chứng cho lòng sùng kính kiên định của cha ông chúng ta. Qua những thời kỳ bình an và những giai đoạn thử thách, giáo xứ của chúng ta đã phát triển từ một nhóm nhỏ thành một cộng đoàn sôi động, đa dạng, luôn được neo giữ bởi những giá trị bền vững của Tin Mừng. Chúng ta trân trọng di sản phong phú và tiếp tục xây dựng trên nền tảng đức tin và tình huynh đệ đã được trao phó.

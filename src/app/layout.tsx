@@ -3,7 +3,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: 'Giáo Xứ Các Thánh Tử Đạo Việt Nam',
+  title: 'Giáo xứ Định Quán',
   description: 'Một cộng đoàn của đức tin, hy vọng và tình yêu.',
 };
 

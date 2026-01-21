@@ -8,8 +8,6 @@ import type { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import Header from '@/components/header';
-import Footer from '@/components/footer';
 
 type Props = {
   params: { slug: string }
@@ -37,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }] : [];
 
   return {
-    title: `${event.title} | Giáo Xứ Các Thánh Tử Đạo Việt Nam`,
+    title: `${event.title} | Giáo xứ Định Quán`,
     description: event.excerpt,
     openGraph: {
       title: event.title,
@@ -81,7 +79,7 @@ export default async function EventPage({ params }: Props) {
     'eventStatus': 'https://schema.org/EventScheduled',
     'location': {
         '@type': 'Place',
-        'name': 'Giáo Xứ Các Thánh Tử Đạo Việt Nam',
+        'name': 'Giáo xứ Định Quán',
         'address': {
             '@type': 'PostalAddress',
             'streetAddress': '1 Công xã Paris, Phường Bến Nghé, Quận 1',
@@ -95,82 +93,76 @@ export default async function EventPage({ params }: Props) {
     'description': event.excerpt,
     'organizer': {
         '@type': 'Organization',
-        'name': 'Giáo Xứ Các Thánh Tử Đạo Việt Nam',
+        'name': 'Giáo xứ Định Quán',
         'url': 'https://giaoxu-demo.web.app' // Replace with actual URL
     }
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-1">
-        <article className="bg-background">
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          />
+    <article className="bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
-          {event.image && (
-            <header className="relative h-[40vh] md:h-[50vh] w-full">
-                <Image
-                    src={event.image}
-                    alt={event.title}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    className="brightness-75"
-                    priority
-                />
-            </header>
-          )}
+      {event.image && (
+        <header className="relative h-[40vh] md:h-[50vh] w-full">
+            <Image
+                src={event.image}
+                alt={event.title}
+                fill
+                style={{ objectFit: 'cover' }}
+                className="brightness-75"
+                priority
+            />
+        </header>
+      )}
 
-          <div className="container mx-auto px-4">
-            <div className={`max-w-3xl mx-auto ${event.image ? '-mt-24 md:-mt-32' : 'pt-16'} relative z-10`}>
-                <div className="bg-card shadow-xl rounded-lg p-6 md:p-10">
-                    <div className="mb-4">
-                        <Badge variant="default">{event.category}</Badge>
+      <div className="container mx-auto px-4">
+        <div className={`max-w-3xl mx-auto ${event.image ? '-mt-24 md:-mt-32' : 'pt-16'} relative z-10`}>
+            <div className="bg-card shadow-xl rounded-lg p-6 md:p-10">
+                <div className="mb-4">
+                    <Badge variant="default">{event.category}</Badge>
+                </div>
+
+                <h1 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">
+                    {event.title}
+                </h1>
+                
+                <div className="flex flex-col text-muted-foreground gap-4 mb-8 border-y py-6">
+                    <div className="flex items-center gap-3 text-lg">
+                        <Calendar className="w-5 h-5 text-primary" />
+                        <span className='font-semibold'>{format(startDate, 'EEEE, dd MMMM, yyyy', { locale: vi })}</span>
                     </div>
-
-                    <h1 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">
-                        {event.title}
-                    </h1>
-                    
-                    <div className="flex flex-col text-muted-foreground gap-4 mb-8 border-y py-6">
-                        <div className="flex items-center gap-3 text-lg">
-                            <Calendar className="w-5 h-5 text-primary" />
-                            <span className='font-semibold'>{format(startDate, 'EEEE, dd MMMM, yyyy', { locale: vi })}</span>
-                        </div>
-                        <div className="flex items-center gap-3 text-lg">
-                            <Clock className="w-5 h-5 text-primary" />
-                            <span className='font-semibold'>{`${format(startDate, 'h:mm a')} - ${format(endDate, 'h:mm a')}`}</span>
-                        </div>
-                        <div className="flex items-center gap-3 text-lg">
-                            <MapPin className="w-5 h-5 text-primary" />
-                            <span className='font-semibold'>{event.location}</span>
-                        </div>
+                    <div className="flex items-center gap-3 text-lg">
+                        <Clock className="w-5 h-5 text-primary" />
+                        <span className='font-semibold'>{`${format(startDate, 'h:mm a')} - ${format(endDate, 'h:mm a')}`}</span>
                     </div>
-
-                    <div 
-                        className="prose prose-lg dark:prose-invert max-w-none"
-                        dangerouslySetInnerHTML={{ __html: event.description }} 
-                    />
-
-                    <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button asChild size="lg">
-                            <Link href={googleCalendarUrl.toString()} target="_blank" rel="noopener noreferrer">
-                                <ExternalLink className="mr-2 h-4 w-4" /> Thêm vào Lịch Google
-                            </Link>
-                        </Button>
-                        <Button asChild variant="outline" size="lg">
-                            <Link href="/events">← Quay lại Sự kiện</Link>
-                        </Button>
+                    <div className="flex items-center gap-3 text-lg">
+                        <MapPin className="w-5 h-5 text-primary" />
+                        <span className='font-semibold'>{event.location}</span>
                     </div>
                 </div>
+
+                <div 
+                    className="prose prose-lg dark:prose-invert max-w-none"
+                    dangerouslySetInnerHTML={{ __html: event.description }} 
+                />
+
+                <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button asChild size="lg">
+                        <Link href={googleCalendarUrl.toString()} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="mr-2 h-4 w-4" /> Thêm vào Lịch Google
+                        </Link>
+                    </Button>
+                    <Button asChild variant="outline" size="lg">
+                        <Link href="/events">← Quay lại Sự kiện</Link>
+                    </Button>
+                </div>
             </div>
-          </div>
-          <div className="h-24 bg-background"></div>
-        </article>
-      </main>
-      <Footer />
-    </div>
+        </div>
+      </div>
+      <div className="h-24 bg-background"></div>
+    </article>
   );
 }

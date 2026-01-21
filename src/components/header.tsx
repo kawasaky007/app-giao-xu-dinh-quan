@@ -55,8 +55,8 @@ export default function Header() {
           className="flex items-center gap-2 font-headline text-lg font-bold text-primary md:text-xl"
         >
           <Church className="h-7 w-7 shrink-0" />
-          <span className="hidden lg:inline">Giáo Xứ Các Thánh TĐVN</span>
-          <span className="lg:hidden">GX Các Thánh TĐVN</span>
+          <span className="hidden lg:inline">Giáo xứ Định Quán</span>
+          <span className="lg:hidden">GX Định Quán</span>
         </Link>
         
         <NavigationMenu className="hidden md:flex">
