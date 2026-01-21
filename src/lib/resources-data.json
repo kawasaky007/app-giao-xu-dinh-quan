@@ -45,6 +45,21 @@
       "title": "Hôn Phối",
       "description": "Hướng dẫn cho các cặp đôi sắp cưới chuẩn bị cho Bí tích Hôn Phối tại giáo xứ.",
       "icon": "HeartHandshake"
+    },
+    {
+      "title": "Hòa Giải",
+      "description": "Thông tin về lịch giải tội và chuẩn bị tâm hồn cho Bí tích Hòa Giải.",
+      "icon": "KeyRound"
+    },
+    {
+      "title": "Xức Dầu Bệnh Nhân",
+      "description": "Liên hệ với văn phòng giáo xứ để sắp xếp việc xức dầu cho người bệnh hoặc người già yếu.",
+      "icon": "Droplets"
+    },
+    {
+      "title": "Truyền Chức Thánh",
+      "description": "Dành cho những ai đang tìm hiểu ơn gọi linh mục hoặc tu sĩ. Liên hệ cha xứ để được hướng dẫn.",
+      "icon": "GraduationCap"
     }
   ],
   "sermons": [

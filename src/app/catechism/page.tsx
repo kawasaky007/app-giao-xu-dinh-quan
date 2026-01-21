@@ -11,6 +11,9 @@ const iconMap: { [key: string]: React.ComponentType<any> } = {
   Cross: lucide.Cross,
   Wind: lucide.Wind,
   HeartHandshake: lucide.HeartHandshake,
+  KeyRound: lucide.KeyRound,
+  Droplets: lucide.Droplets,
+  GraduationCap: lucide.GraduationCap,
 };
 
 export default async function CatechismPage() {
@@ -54,7 +57,7 @@ export default async function CatechismPage() {
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Chuẩn Bị Lãnh Nhận Các Bí Tích</h2>
             <p className="text-lg text-foreground/80">Thông tin và tài liệu dành cho việc lãnh nhận các bí tích tại Giáo xứ.</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sacramentDocs.map((doc) => {
               const IconComponent = iconMap[doc.icon] || lucide.FileText;
               return (
