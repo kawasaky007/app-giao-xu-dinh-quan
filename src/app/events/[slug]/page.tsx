@@ -84,8 +84,8 @@ export default async function EventPage({ params }: Props) {
         'name': 'Giáo Xứ Các Thánh Tử Đạo Việt Nam',
         'address': {
             '@type': 'PostalAddress',
-            'streetAddress': '123 Đường Đức Tin',
-            'addressLocality': 'Thành Phố Tình Yêu',
+            'streetAddress': '1 Công xã Paris, Phường Bến Nghé, Quận 1',
+            'addressLocality': 'Thành Phố Hồ Chí Minh',
             'addressCountry': 'VN'
         }
     },
@@ -96,7 +96,7 @@ export default async function EventPage({ params }: Props) {
     'organizer': {
         '@type': 'Organization',
         'name': 'Giáo Xứ Các Thánh Tử Đạo Việt Nam',
-        'url': 'https://example.com' // Replace with actual URL
+        'url': 'https://giaoxu-demo.web.app' // Replace with actual URL
     }
   };
 

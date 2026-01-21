@@ -1,4 +1,3 @@
-
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -14,19 +13,19 @@ export default function AboutPage() {
   const priests = [
       {
         id: 'priest-main',
-        name: 'Linh mục Gioan Baotixita Trần Văn Minh',
+        name: 'Linh mục Phêrô Trần Tuấn Khải',
         role: 'Linh Mục Chánh Xứ',
-        description: 'Được thụ phong linh mục năm 1995, Cha Gioan Baotixita đã phục vụ tại ba giáo xứ trước khi được bổ nhiệm về Giáo xứ chúng ta vào năm 2015. Với tình yêu sâu sắc dành cho Kinh Thánh và các Bí tích, ngài luôn tận tâm xây dựng một giáo xứ chào đón và sống động về mặt tâm linh.',
+        description: 'Được thụ phong linh mục năm 1995, Cha Phêrô đã phục vụ tại ba giáo xứ trước khi được bổ nhiệm về Giáo xứ chúng ta vào năm 2015. Với tình yêu sâu sắc dành cho Kinh Thánh và các Bí tích, ngài luôn tận tâm xây dựng một giáo xứ chào đón và sống động về mặt tâm linh.',
       },
       {
         id: 'priest-associate-1',
-        name: 'Linh mục Phêrô Nguyễn Văn An',
+        name: 'Linh mục Anrê Nguyễn Lộc',
         role: 'Linh Mục Phó Xứ',
         description: 'Chịu trách nhiệm mục vụ cho giới trẻ và các chương trình giáo lý, giúp các thế hệ tương lai lớn lên trong đức tin.',
       },
       {
         id: 'priest-associate-2',
-        name: 'Linh mục Anrê Lê Hoàng Dũng',
+        name: 'Linh mục Giuse Đinh Công Huynh',
         role: 'Linh Mục Phó Xứ',
         description: 'Phụ trách các hoạt động bác ái xã hội và thăm viếng bệnh nhân, mang tình yêu thương của Chúa đến cho những người cần giúp đỡ nhất.',
       }
@@ -38,42 +37,42 @@ export default function AboutPage() {
   const orgMembers = [
     {
       id: 'council-member-1',
-      name: 'Ông Giuse Trần Văn Hùng',
+      name: 'Ông Giuse Phạm Văn Mạnh',
       role: 'Chủ Tịch Hội Đồng Mục Vụ',
       description: 'Dẫn dắt Hội đồng Mục vụ trong việc cố vấn cho cha xứ về các nhu cầu của cộng đoàn.',
       icon: Users,
     },
     {
       id: 'ministry-lead-1',
-      name: 'Bà Maria Nguyễn Thị Lan',
+      name: 'Bà Maria Nguyễn An Hoà',
       role: 'Trưởng Ban Bác Ái Xã Hội',
       description: 'Điều phối các hoạt động thiện nguyện và công tác từ thiện trong cộng đoàn địa phương.',
       icon: Heart,
     },
     {
       id: 'choir-director-1',
-      name: 'Anh Phêrô Lê Hoàng Anh',
+      name: 'Anh Phêrô Lê Minh Quân',
       role: 'Ca Trưởng Ca Đoàn Cêcilia',
       description: 'Điều khiển ca đoàn, mang lại những bài thánh ca tuyệt vời cho mỗi buổi lễ.',
       icon: Music,
     },
     {
       id: 'catechism-teacher-1',
-      name: 'Chị Têrêsa Hoàng Mai',
+      name: 'Chị Têrêsa Vũ Thị Diễm',
       role: 'Trưởng Ban Giáo Lý',
       description: 'Phụ trách các chương trình giáo lý đức tin cho thiếu nhi và tân tòng.',
       icon: BookOpen,
     },
     {
       id: 'finance-council-1',
-      name: 'Ông Phaolô Đinh Quang Dũng',
+      name: 'Ông Phaolô Nguyễn Hữu Trí',
       role: 'Trưởng Ban Tài Chính',
       description: 'Quản lý và giám sát tình hình tài chính của giáo xứ, đảm bảo sự minh bạch và trách nhiệm.',
       icon: Landmark,
     },
     {
       id: 'youth-lead-1',
-      name: 'Chị Anna Trần Ngọc Diệp',
+      name: 'Chị Anna Lê Ngọc Trâm',
       role: 'Trưởng Giới Trẻ',
       description: 'Tổ chức các buổi sinh hoạt và sự kiện cho giới trẻ, giúp các em lớn lên trong đức tin.',
       icon: Users2,
@@ -114,10 +113,10 @@ export default function AboutPage() {
             </div>
             <div className="prose prose-lg dark:prose-invert max-w-none text-foreground/80">
               <p>
-                Được thành lập vào năm 1954 bởi một nhóm các gia đình đạo đức di cư, Giáo xứ Các Thánh Tử Đạo Việt Nam đã đứng vững như một nền tảng đức tin trong cộng đồng suốt nhiều thập kỷ. Ngôi nhà nguyện gỗ ban đầu, được xây dựng bằng chính đôi tay của các vị tiền nhân, đã phục vụ giáo xứ trong hai mươi năm trước khi ngôi nhà thờ đá hiện tại được dựng lên vào năm 1974.
+                Được thành lập vào năm 1954 bởi một nhóm các gia đình đạo đức di cư từ miền Bắc, Giáo xứ Các Thánh Tử Đạo Việt Nam đã đứng vững như một nền tảng đức tin trong cộng đồng suốt nhiều thập kỷ. Ngôi nhà nguyện tạm bằng gỗ ban đầu, được xây dựng bằng chính đôi tay của các vị tiền nhân, đã phục vụ giáo xứ trong hai mươi năm trước khi ngôi nhà thờ kiên cố, khang trang như hiện nay được dựng lên vào năm 1974.
               </p>
               <p>
-                Công trình kiến trúc mang phong cách hiện đại này, với trần nhà cao vút và những cửa sổ kính màu tuyệt đẹp, là thành quả của tình yêu thương và là một minh chứng cho lòng sùng kính kiên định của cha ông chúng ta. Qua những thời kỳ bình an và những giai đoạn thử thách, giáo xứ của chúng ta đã phát triển từ một nhóm nhỏ thành một cộng đoàn sôi động, đa dạng, luôn được neo giữ bởi những giá trị bền vững của Tin Mừng. Chúng ta trân trọng di sản phong phú và tiếp tục xây dựng trên nền tảng đức tin và tình huynh đệ đã được trao phó.
+                Công trình kiến trúc mang phong cách Gothic Phục hưng này, với trần nhà cao vút và những cửa sổ kính màu tuyệt đẹp, là thành quả của tình yêu thương và là một minh chứng cho lòng sùng kính kiên định của cha ông chúng ta. Qua những thời kỳ bình an và những giai đoạn thử thách, giáo xứ của chúng ta đã phát triển từ một nhóm nhỏ thành một cộng đoàn sôi động, đa dạng, luôn được neo giữ bởi những giá trị bền vững của Tin Mừng. Chúng ta trân trọng di sản phong phú và tiếp tục xây dựng trên nền tảng đức tin và tình huynh đệ đã được trao phó.
               </p>
             </div>
           </div>
@@ -184,7 +183,7 @@ export default function AboutPage() {
                     <Card key={priest.id} className="text-center flex flex-col items-center max-w-sm shadow-lg">
                       <CardHeader className="items-center text-center">
                         <Avatar className="w-24 h-24 mb-4">
-                          {priestImage && <AvatarImage src={priestImage.imageUrl} alt={priest.name} data-ai-hint={priestImage.imageHint} />}
+                          {priestImage && <AvatarImage src={priestImage.imageUrl} alt={priest.name} data-ai-hint={priestImage.imageHint} className='object-cover'/>}
                           <AvatarFallback>{priest.name.charAt(0)}</AvatarFallback>
                         </Avatar>
                         <CardTitle className="font-headline text-xl">{priest.name}</CardTitle>
@@ -211,7 +210,7 @@ export default function AboutPage() {
                         <Card key={priest.id} className="text-center flex flex-col items-center">
                           <CardHeader className="items-center text-center">
                             <Avatar className="w-24 h-24 mb-4">
-                              {priestImage && <AvatarImage src={priestImage.imageUrl} alt={priest.name} data-ai-hint={priestImage.imageHint} />}
+                              {priestImage && <AvatarImage src={priestImage.imageUrl} alt={priest.name} data-ai-hint={priestImage.imageHint} className='object-cover' />}
                               <AvatarFallback>{priest.name.charAt(0)}</AvatarFallback>
                             </Avatar>
                             <CardTitle className="font-headline text-xl">{priest.name}</CardTitle>
@@ -250,7 +249,7 @@ export default function AboutPage() {
                   <Card key={member.id} className="text-center flex flex-col items-center max-w-sm shadow-lg">
                     <CardHeader className="items-center text-center">
                       <Avatar className="w-24 h-24 mb-4">
-                        {memberImage && <AvatarImage src={memberImage.imageUrl} alt={member.name} data-ai-hint={memberImage.imageHint} />}
+                        {memberImage && <AvatarImage src={memberImage.imageUrl} alt={member.name} data-ai-hint={memberImage.imageHint} className='object-cover' />}
                         <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
                       </Avatar>
                       <CardTitle className="font-headline text-xl">{member.name}</CardTitle>
@@ -276,7 +275,7 @@ export default function AboutPage() {
                       <Card key={member.id} className="text-center flex flex-col items-center">
                         <CardHeader className="items-center text-center">
                           <Avatar className="w-24 h-24 mb-4">
-                            {memberImage && <AvatarImage src={memberImage.imageUrl} alt={member.name} data-ai-hint={memberImage.imageHint} />}
+                            {memberImage && <AvatarImage src={memberImage.imageUrl} alt={member.name} data-ai-hint={memberImage.imageHint} className='object-cover' />}
                             <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
                           </Avatar>
                           <CardTitle className="font-headline text-xl">{member.name}</CardTitle>
@@ -299,4 +298,3 @@ export default function AboutPage() {
     </div>
   );
 }
-

@@ -68,7 +68,7 @@ export default async function ArticlePage({ params }: Props) {
       'name': 'Giáo Xứ Các Thánh Tử Đạo Việt Nam',
       'logo': {
         '@type': 'ImageObject',
-        'url': 'https://example.com/logo.png' // Replace with actual logo URL
+        'url': 'https://giaoxu-demo.web.app/logo.png' // Replace with actual logo URL
       }
     },
     'datePublished': article.date,

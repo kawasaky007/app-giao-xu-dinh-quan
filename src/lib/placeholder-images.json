@@ -2,8 +2,8 @@
   "placeholderImages": [
     {
       "id": "hero-church-interior",
-      "description": "Nội thất bên trong một nhà thờ cổ điển, lớn, với ánh sáng chiếu qua cửa sổ kính màu xuống các hàng ghế.",
-      "imageUrl": "https://images.unsplash.com/photo-1699830506478-af7b3f5e6cc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaHVyY2glMjBpbnRlcmlvcnxlbnwwfHx8fDE3Njg4MTUyNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Bên trong một nhà thờ hiện đại, ngập tràn ánh sáng, với các hàng ghế gỗ dài và kiến trúc tối giản.",
+      "imageUrl": "https://images.unsplash.com/photo-1508345151594-173a1136c34a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBwZXdzfGVufDB8fHx8MTcyMjQwMjEyMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "nội thất nhà thờ"
     },
     {
@@ -15,7 +15,7 @@
     {
       "id": "community-gathering",
       "description": "Một nhóm giáo dân đa dạng đang nói chuyện và cười đùa cùng nhau sau buổi lễ.",
-      "imageUrl": "https://images.unsplash.com/photo-1542315099045-93937d70c67a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb21tdW5pdHklMjBwZW9wbGV8ZW58MHx8fHwxNzY4ODY3MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1523624244249-c18933b91185?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyMHx8dmlldG5hbWVzZSUyMGZhbWlseXxlbnwwfHx8fDE3MjI0MDI2MDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cộng đoàn"
     },
     {
@@ -27,7 +27,7 @@
     {
       "id": "news-community-event",
       "description": "Một sự kiện cộng đồng sôi động được tổ chức trên sân nhà thờ.",
-      "imageUrl": "https://images.unsplash.com/photo-1528605105345-5344ea20e269?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29tbXVuaXR5JTIwZXZlbnR8ZW58MHx8fHwxNzY4ODI4NDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1589928230522-83563889759e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx2aWV0bmFtJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzIyNDAzOTY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sự kiện cộng đồng"
     },
     {
@@ -38,9 +38,9 @@
     },
     {
       "id": "news-church-exterior",
-      "description": "Bên ngoài tòa nhà nhà thờ vào một ngày nắng đẹp.",
-      "imageUrl": "https://images.unsplash.com/photo-1608569569089-5d2e3e644ea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBleHRlcmlvcnxlbnwwfHx8fDE3Njg4MTMyNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "nhà thờ bên ngoài"
+      "description": "Bên ngoài nhà thờ Phát Diệm, một công trình kiến trúc độc đáo kết hợp phong cách Âu-Á.",
+      "imageUrl": "https://images.unsplash.com/photo-1587163417134-28105c065a20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2aWV0bmFtJTIwY2h1cmNofGVufDB8fHx8fDE3MjI0MDQxMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nhà thờ Việt Nam"
     },
     {
       "id": "event-concert",
@@ -56,9 +56,9 @@
     },
     {
       "id": "schedule-header",
-      "description": "Cận cảnh một cuốn lịch phụng vụ hoặc sách lễ trang trí công phu.",
-      "imageUrl": "https://images.unsplash.com/photo-1518778642335-a63475c7b396?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBjYWxlbmRhcnxlbnwwfHx8fDE3MjE4MzY0NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "lịch nhà thờ"
+      "description": "Bên trong nhà thờ Huyền Sỹ, một nhà thờ cổ kính tại TP.HCM, với những hàng cột và vòm trần trang trí công phu.",
+      "imageUrl": "https://images.unsplash.com/photo-1542882294-297d2699a21a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2aWV0bmFtJTIwY2h1cmNoJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzIyNDA1MDgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nhà thờ Việt Nam"
     },
     {
       "id": "about-hero",
@@ -68,44 +68,44 @@
     },
     {
       "id": "priest-main",
-      "description": "Chân dung ấm áp và thân thiện của một linh mục Công giáo lớn tuổi trong trang phục giáo sĩ.",
-      "imageUrl": "https://images.unsplash.com/photo-1620616149265-7169408a29d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcmllc3QlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njg5MDczNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Chân dung một linh mục lớn tuổi, phúc hậu trong trang phục giáo sĩ.",
+      "imageUrl": "https://images.unsplash.com/photo-1615751638324-7729f23ac5c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2aWV0bmFtZXNlJTIwb2xkJTIwbWFufGVufDB8fHx8MTcyMjQwNTY4MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chân dung linh mục"
     },
     {
       "id": "priest-associate-1",
-      "description": "Chân dung một linh mục trẻ, tốt bụng đang mỉm cười.",
-      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzIyMzgxNTc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Chân dung một linh mục trẻ tuổi, thân thiện.",
+      "imageUrl": "https://images.unsplash.com/photo-1598002225883-3668a6d45b4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx2aWV0bmFtZXNlJTIwbWFufGVufDB8fHx8MTcyMjQwNTY4MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chân dung nam"
     },
     {
       "id": "priest-associate-2",
-      "description": "Chân dung một linh mục trung niên có kinh nghiệm với vẻ ngoài thân thiện.",
-      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzIyMzgxNTc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Chân dung một linh mục trung niên, nhiều kinh nghiệm.",
+      "imageUrl": "https://images.unsplash.com/photo-1531384441138-2736e62e0919?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2aWV0bmFtZXNlJTIwbWFufGVufDB8fHx8MTcyMjQwNTY4MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chân dung nam"
     },
     {
       "id": "council-member-1",
-      "description": "Chân dung chuyên nghiệp của một người đàn ông mỉm cười ở độ tuổi 50.",
-      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njg5MDc0MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Chân dung chuyên nghiệp của một người đàn ông Việt Nam mỉm cười ở độ tuổi 50.",
+      "imageUrl": "https://images.unsplash.com/photo-1560759828-867f7ba55bd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNHx8dmlldG5hbWVzZSUyMG1hbnxlbnwwfHx8fDE3MjI0MDU2ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chân dung người"
     },
     {
       "id": "ministry-lead-1",
-      "description": "Chân dung chuyên nghiệp của một người phụ nữ mỉm cười ở độ tuổi 40.",
-      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njg5MDc0MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Chân dung chuyên nghiệp của một phụ nữ Việt Nam mỉm cười ở độ tuổi 40.",
+      "imageUrl": "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2aWV0bmFtZXNlJTIwd29tYW58ZW58MHx8fHwxNzIyNDA1ODc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chân dung người"
     },
     {
       "id": "choir-director-1",
       "description": "Chân dung chuyên nghiệp của một người đàn ông có vẻ ngoài sáng tạo và nghệ thuật.",
-      "imageUrl": "https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY4OTA3NDA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzIyMzgxNTc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chân dung người"
     },
     {
       "id": "catechism-teacher-1",
-      "description": "Chân dung chuyên nghiệp của một phụ nữ tốt bụng ở độ tuổi 60.",
-      "imageUrl": "https://images.unsplash.com/photo-1542384992-7d098a50404a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNnx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY4OTA3NDA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Chân dung chuyên nghiệp của một phụ nữ Việt Nam lớn tuổi tốt bụng.",
+      "imageUrl": "https://images.unsplash.com/photo-1623091961448-f618d3319a2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx2aWV0bmFtZXNlJTIwZWxkZXJseSUyMHdvbWFufGVufDB8fHx8MTcyMjQwNTk1OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chân dung người"
     },
     {
@@ -116,8 +116,8 @@
     },
     {
       "id": "youth-lead-1",
-      "description": "Chân dung chuyên nghiệp của một phụ nữ trẻ năng động, mỉm cười.",
-      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmZW1hbGUlMjBwb3J0cmFpdHxlbnwwfHx8fDE3MjIzODE2MjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Chân dung chuyên nghiệp của một phụ nữ trẻ Việt Nam năng động, mỉm cười.",
+      "imageUrl": "https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx2aWV0bmFtZXNlJTIweW91bmd8ZW58MHx8fHwxNzIyNDA2MDQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chân dung người"
     },
     {
@@ -164,50 +164,50 @@
     },
     {
       "id": "gallery-picnic-cover",
-      "description": "Một cảnh rộng của một công viên đầy nắng với mọi người đang đi dã ngoại.",
-      "imageUrl": "https://images.unsplash.com/photo-1646171058093-db337d1ee840?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBwaWNuaWN8ZW58MHx8fHwxNzY4ODI4NDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "dã ngoại cộng đồng"
+      "description": "Bàn ăn thịnh soạn với nhiều món ăn Việt Nam truyền thống.",
+      "imageUrl": "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2aWV0bmFtZXNlJTIwZm9vZHxlbnwwfHx8fDE3MjI0MDYzMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ẩm thực Việt Nam"
     },
     {
       "id": "gallery-picnic-1",
-      "description": "Trẻ em đang chơi một trò chơi trên cỏ.",
+      "description": "Trẻ em Việt Nam đang chơi một trò chơi dân gian trên cỏ.",
       "imageUrl": "https://images.unsplash.com/photo-1533222481259-ce20eda1e20b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjaGlsZHJlbiUyMHBsYXlpbmd8ZW58MHx8fHwxNzY4ODY1NDg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "trẻ em chơi"
     },
     {
       "id": "gallery-picnic-2",
-      "description": "Cận cảnh một bàn ăn potluck.",
+      "description": "Cận cảnh một bàn ăn ngoài trời với các món ăn Việt Nam.",
       "imageUrl": "https://images.unsplash.com/photo-1761051970492-0d54d728e3e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwb3RsdWNrJTIwZm9vZHxlbnwwfHx8fDE3Njg5MDA3MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "đồ ăn potluck"
     },
     {
       "id": "gallery-picnic-3",
       "description": "Một nhóm người lớn đang trò chuyện và cười đùa.",
-      "imageUrl": "https://images.unsplash.com/photo-1590650046871-92c887180603?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZW9wbGUlMjB0YWxraW5nfGVufDB8fHx8MTc2ODg4MDEwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1523624244249-c18933b91185?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyMHx8dmlldG5hbWVzZSUyMGZhbWlseXxlbnwwfHx8fDE3MjI0MDI2MDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mọi người nói chuyện"
     },
     {
       "id": "gallery-picnic-4",
-      "description": "Một tình nguyện viên đang nướng hamburger.",
+      "description": "Một tình nguyện viên đang nướng thịt trên bếp than hoa.",
       "imageUrl": "https://images.unsplash.com/photo-1662027920098-574dfe41dbc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncmlsbGluZyUyMGZvb2R8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "nướng đồ ăn"
     },
     {
       "id": "gallery-picnic-5",
-      "description": "Một cảnh rộng của đám đông.",
+      "description": "Một cảnh rộng của đám đông tham gia lễ hội.",
       "imageUrl": "https://images.unsplash.com/photo-1560439514-4e9645039924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjcm93ZCUyMGV2ZW50fGVufDB8fHx8MTc2ODkwMDcwOXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sự kiện đông người"
     },
     {
       "id": "gallery-picnic-6",
-      "description": "Mặt một đứa trẻ được vẽ mặt.",
+      "description": "Mặt một đứa trẻ được vẽ hình các nhân vật hoạt hình.",
       "imageUrl": "https://images.unsplash.com/photo-1662057525233-9a68a3e7449a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmYWNlJTIwcGFpbnR8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "vẽ mặt"
     },
     {
       "id": "gallery-christmas-cover",
-      "description": "Bàn thờ nhà thờ được trang trí cho Giáng sinh với hoa trạng nguyên.",
-      "imageUrl": "https://images.unsplash.com/photo-1672190099996-d68681f49f4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaHVyY2glMjBjaHJpc3RtYXN8ZW58MHx8fHwxNzY4ODgzNTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Nhà thờ Tân Định (nhà thờ màu hồng) được trang trí lộng lẫy cho Giáng sinh.",
+      "imageUrl": "https://images.unsplash.com/photo-1614036161490-2d334550cda4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx2aWV0bmFtJTIwY2F0aG9saWMlMjBjaHVyY2h8ZW58MHx8fHwxNzIyNDAxOTg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "nhà thờ giáng sinh"
     },
     {
@@ -218,61 +218,61 @@
     },
     {
       "id": "gallery-christmas-2",
-      "description": "Linh mục đang giảng.",
+      "description": "Linh mục đang giảng trong Thánh lễ Đêm Giáng Sinh.",
       "imageUrl": "https://images.unsplash.com/photo-1639092390330-89abd3e6024a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcmllc3QlMjBob21pbHl8ZW58MHx8fHwxNzY4OTAwNzEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "linh mục giảng"
     },
     {
       "id": "gallery-christmas-3",
-      "description": "Cận cảnh hang đá trong nhà thờ.",
+      "description": "Cận cảnh hang đá được trang trí công phu trong nhà thờ.",
       "imageUrl": "https://images.unsplash.com/photo-1672479327199-3490e6e1600b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuYXRpdml0eSUyMHNjZW5lfGVufDB8fHx8MTc2ODg4MzUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "hang đá"
     },
     {
       "id": "gallery-christmas-4",
-      "description": "Giáo dân rước lễ.",
+      "description": "Giáo dân xếp hàng rước lễ.",
       "imageUrl": "https://images.unsplash.com/photo-1610131635230-9c4afb6238b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxob2x5JTIwY29tbXVuaW9ufGVufDB8fHx8MTc2ODg4Mjg5MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "rước lễ"
     },
     {
       "id": "gallery-christmas-5",
-      "description": "Nhà thờ được chiếu sáng vào ban đêm.",
+      "description": "Nhà thờ được chiếu sáng vào ban đêm với các ngôi sao và đèn trang trí.",
       "imageUrl": "https://images.unsplash.com/photo-1702761235637-918977918bc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2h1cmNoJTIwbmlnaHR8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "nhà thờ đêm"
     },
     {
       "id": "gallery-christmas-6",
-      "description": "Một gia đình đang thắp nến.",
+      "description": "Một gia đình đang cùng nhau thắp nến cầu nguyện.",
       "imageUrl": "https://images.unsplash.com/photo-1727118797443-344ed5d2c16e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsaWdodGluZyUyMGNhbmRsZXxlbnwwfHx8fDE3Njg5MDA3MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "thắp nến"
     },
     {
       "id": "gallery-easter-cover",
-      "description": "Nến phục sinh được thắp sáng trong một nhà thờ tối trong Đêm Vọng Phục Sinh.",
-      "imageUrl": "https://images.unsplash.com/photo-1634779846593-ad47a8f98b5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwYXNjaGFsJTIwY2FuZGxlfGVufDB8fHx8MTc2ODkwMDcwOXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "nến phục sinh"
+      "description": "Nội thất nhà thờ Đức Bà Sài Gòn trong một buổi lễ, ánh sáng chiếu qua các cửa sổ kính màu.",
+      "imageUrl": "https://images.unsplash.com/photo-1629657410313-2d2c1df87858?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2aWV0bmFtJTIwY2h1cmNofGVufDB8fHx8fDE3MjI0MDQxMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nhà thờ phục sinh"
     },
     {
       "id": "gallery-easter-1",
-      "description": "Các dự tòng được rửa tội.",
+      "description": "Các dự tòng được rửa tội trong đêm Vọng Phục Sinh.",
       "imageUrl": "https://images.unsplash.com/photo-1765267566923-4ce452dd9b02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiYXB0aXNtJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "lễ rửa tội"
     },
     {
       "id": "gallery-easter-2",
-      "description": "Cộng đoàn cầm nến sáng.",
+      "description": "Cộng đoàn cầm nến sáng trong đêm Vọng Phục sinh.",
       "imageUrl": "https://images.unsplash.com/photo-1623808427896-c682eef40c3d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjYW5kbGVzJTIwdmlnaWx8ZW58MHx8fHwxNzY4OTAwNzEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "canh thức nến"
     },
     {
       "id": "gallery-easter-3",
-      "description": "Việc đọc Exsultet.",
+      "description": "Linh mục công bố Tin Mừng Phục Sinh (Exsultet).",
       "imageUrl": "https://images.unsplash.com/photo-1622294763041-40e2e4932eda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsaXR1cmd5JTIwcmVhZGluZ3xlbnwwfHx8fDE3Njg5MDA3MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "đọc phụng vụ"
     },
     {
       "id": "gallery-easter-4",
-      "description": "Nhà thờ được trang trí bằng hoa loa kèn Phục sinh.",
+      "description": "Bàn thờ được trang trí bằng hoa loa kèn trắng cho Lễ Phục Sinh.",
       "imageUrl": "https://images.unsplash.com/photo-1675807729108-c14b02afd08b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxlYXN0ZXIlMjBsaWxpZXN8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "hoa loa kèn Phục sinh"
     },

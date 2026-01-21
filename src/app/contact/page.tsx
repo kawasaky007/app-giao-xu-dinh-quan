@@ -12,21 +12,21 @@ export default function ContactPage() {
                                 <MapPin className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                                 <div>
                                     <h3 className="font-bold text-foreground">Địa chỉ</h3>
-                                    <p className="text-foreground/80">123 Đường Đức Tin, TP. Tình Yêu, Việt Nam</p>
+                                    <p className="text-foreground/80">1 Công xã Paris, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
                                 <Phone className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                                 <div>
                                     <h3 className="font-bold text-foreground">Điện thoại</h3>
-                                    <p className="text-foreground/80"><a href="tel:028-3456-7890" className="hover:text-primary">(028) 3456-7890</a></p>
+                                    <p className="text-foreground/80"><a href="tel:02838220488" className="hover:text-primary">(028) 3822 0488</a></p>
                                 </div>
                             </div>
                                 <div className="flex items-start gap-4">
                                 <Mailbox className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                                 <div>
                                     <h3 className="font-bold text-foreground">Email</h3>
-                                    <p className="text-foreground/80"><a href="mailto:lienhe@giaoxu.com" className="hover:text-primary">lienhe@giaoxu.com</a></p>
+                                    <p className="text-foreground/80"><a href="mailto:vanphong@giaoxuducba.com" className="hover:text-primary">vanphong@giaoxuducba.com</a></p>
                                 </div>
                             </div>
                         </div>

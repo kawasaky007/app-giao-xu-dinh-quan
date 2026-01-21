@@ -3,8 +3,8 @@
     {
       "id": "picnic-giao-xu-2024",
       "slug": "picnic-giao-xu-2024",
-      "title": "Ngày Hội Giáo Xứ 2024",
-      "description": "Một ngày tuyệt vời của tình hiệp thông, ẩm thực và niềm vui dưới ánh nắng mặt trời. Cùng xem cộng đoàn chúng ta quây quần bên nhau.",
+      "title": "Ngày Hội Ẩm Thực Giáo Xứ 2024",
+      "description": "Một ngày tuyệt vời của tình hiệp thông, ẩm thực và niềm vui. Cùng xem lại những khoảnh khắc cộng đoàn chúng ta quây quần bên nhau thưởng thức các món ăn ngon.",
       "coverImage": "gallery-picnic-cover",
       "images": ["gallery-picnic-1", "gallery-picnic-2", "gallery-picnic-3", "gallery-picnic-4", "gallery-picnic-5", "gallery-picnic-6"]
     },
@@ -12,7 +12,7 @@
       "id": "giang-sinh-2023",
       "slug": "giang-sinh-2023",
       "title": "Mùa Giáng Sinh Tại Giáo Xứ 2023",
-      "description": "Mừng Chúa Giáng Sinh. Những khoảnh khắc từ Thánh Lễ Đêm và các Thánh Lễ ngày Giáng Sinh.",
+      "description": "Mừng Chúa Giáng Sinh. Những khoảnh khắc từ Thánh Lễ Đêm và các Thánh Lễ ngày Giáng Sinh tại nhà thờ.",
       "coverImage": "gallery-christmas-cover",
       "images": ["gallery-christmas-1", "gallery-christmas-2", "gallery-christmas-3", "gallery-christmas-4", "gallery-christmas-5", "gallery-christmas-6"]
     },
@@ -20,7 +20,7 @@
         "id": "vong-phuc-sinh-2024",
         "slug": "vong-phuc-sinh-2024",
         "title": "Đêm Vọng Phục Sinh 2024",
-        "description": "Đêm thánh thiêng nhất trong năm, khi chúng ta cử hành Chúa Phục Sinh.",
+        "description": "Đêm thánh thiêng nhất trong năm, khi chúng ta cử hành Chúa Phục Sinh từ cõi chết, mang lại niềm hy vọng cho toàn thể nhân loại.",
         "coverImage": "gallery-easter-cover",
         "images": ["gallery-easter-1", "gallery-easter-2", "gallery-easter-3", "gallery-easter-4", "gallery-easter-5", "gallery-easter-6"]
     }
@@ -28,21 +28,21 @@
   "videos": [
     {
       "id": "thong-diep-giang-sinh-2023",
-      "title": "Thông Điệp Giáng Sinh từ Cha Xứ",
-      "description": "Cha xứ chia sẻ thông điệp hy vọng và niềm vui cho mùa Giáng Sinh.",
-      "youtubeId": "dQw4w9WgXcQ"
+      "title": "Sứ điệp Giáng sinh 2023 của Đức TGM Giuse Nguyễn Năng",
+      "description": "Đức TGM Giuse Nguyễn Năng gửi sứ điệp Giáng sinh 2023 đến cộng đoàn dân Chúa.",
+      "youtubeId": "s_k5R3z-u-c"
     },
     {
       "id": "bai-giang-phuc-sinh-2024",
-      "title": "Bài Giảng Chúa Nhật Phục Sinh",
-      "description": "Cha phó chia sẻ một thông điệp mạnh mẽ về ý nghĩa của sự Phục Sinh.",
-      "youtubeId": "y6120QOlsfU"
+      "title": "Thánh lễ Chúa nhật Phục Sinh | 9:30 | 31-3-2024",
+      "description": "Thánh lễ Chúa nhật Phục Sinh tại nhà thờ chính tòa Đức Bà Sài Gòn.",
+      "youtubeId": "iS84VArK61o"
     },
     {
         "id": "video-lich-su-giao-xu",
-        "title": "Lịch Sử Giáo Xứ Chúng Ta",
-        "description": "Một bộ phim tài liệu ngắn khám phá lịch sử phong phú và sự thành lập của giáo xứ.",
-        "youtubeId": "3tmd-ClpJxA"
+        "title": "Nhà thờ Đức Bà Sài Gòn - Lịch sử 140 năm",
+        "description": "Một bộ phim tài liệu ngắn khám phá lịch sử phong phú và sự hình thành của Vương Cung Thánh Đường Đức Bà Sài Gòn.",
+        "youtubeId": "Cq423o7i1p4"
     }
   ]
 }

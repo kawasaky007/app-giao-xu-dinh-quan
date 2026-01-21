@@ -73,7 +73,7 @@ export default async function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="mb-2"><strong>Giờ làm việc:</strong> T2-T6, 9:00 - 16:00</p>
-                  <p className="mb-4">123 Đường Đức Tin, TP. Tình Yêu</p>
+                  <p className="mb-4">1 Công xã Paris, P. Bến Nghé, Q.1, TP.HCM</p>
                   <Button variant="outline" asChild>
                     <Link href="/contact">Xem Bản Đồ</Link>
                   </Button>
@@ -87,8 +87,8 @@ export default async function Home() {
                   <CardTitle className="font-headline text-2xl">Liên Hệ</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-2"><strong>Điện thoại:</strong> (028) 3456-7890</p>
-                  <p className="mb-4"><strong>Email:</strong> lienhe@giaoxu.com</p>
+                  <p className="mb-2"><strong>Điện thoại:</strong> (028) 3822 0488</p>
+                  <p className="mb-4"><strong>Email:</strong> vanphong@giaoxuducba.com</p>
                   <Button variant="outline" asChild>
                     <Link href="/contact">Gửi Tin Nhắn</Link>
                   </Button>
