@@ -49,7 +49,7 @@
       "category": "Sự Kiện Giáo Xứ",
       "excerpt": "Cùng ở lại sau Thánh lễ 10:30 để giao lưu với các giáo dân khác bên ly cà phê sữa đá và các món ăn nhẹ. Đây là cơ hội tuyệt vời để gặp gỡ những người bạn mới.",
       "description": "<p>Cùng ở lại sau Thánh lễ 10:30 để giao lưu với các giáo dân khác bên ly cà phê sữa đá và các món ăn nhẹ. Đây là cơ hội tuyệt vời để gặp gỡ những người bạn mới và xây dựng tình hiệp thông trong cộng đoàn.</p>",
-      "image": "https://images.unsplash.com/photo-1559925393-8be0ec476ac6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2aWV0bmFtZXNlJTIwY29mZmVlfGVufDB8fHx8fDE3MjI0MDQzNDl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      "image": "/images/events/community-coffee.jpg"
     },
     {
       "id": "buoi-hoa-nhac-tu-thien",
@@ -61,7 +61,7 @@
       "category": "Gây Quỹ",
       "excerpt": "Thưởng thức một buổi tối với những bản thánh ca bất hủ do ca đoàn Cêcilia và các ca sĩ khách mời trình diễn. Mọi đóng góp sẽ được ủng hộ cho các hoạt động bác ái của giáo xứ.",
       "description": "<p>Thưởng thức một buổi tối với những bản thánh ca bất hủ do ca đoàn Cêcilia và các ca sĩ khách mời trình diễn. Mọi đóng góp sẽ được ủng hộ cho các hoạt động bác ái của giáo xứ, giúp đỡ những người có hoàn cảnh khó khăn trong cộng đoàn.</p>",
-      "image": "https://images.unsplash.com/photo-1516280440315-7347348552a8?q=80&w=2070&auto=format&fit=crop"
+      "image": "/images/events/choir-concert.jpg"
     },
     {
       "id": "tinh-tam-mua-thu",
@@ -73,7 +73,7 @@
       "category": "Tăng Tiến Đời Sống Thiêng Liêng",
       "excerpt": "Dành một ngày để cầu nguyện, suy niệm và tĩnh lặng với Chúa. Chủ đề năm nay là 'Lòng Thương Xót Chúa trong thế giới hôm nay'. Có xe buýt đưa đón từ giáo xứ.",
       "description": "<p>Dành một ngày để cầu nguyện, suy niệm và tĩnh lặng với Chúa. Chủ đề năm nay là 'Lòng Thương Xót Chúa trong thế giới hôm nay'. Có xe buýt đưa đón từ giáo xứ.</p>",
-      "image": "https://images.unsplash.com/photo-1618279939527-333a395af6ce?q=80&w=1964&auto=format&fit=crop"
+      "image": "/images/events/prayer-retreat.jpg"
     }
   ]
 }
