@@ -87,23 +87,20 @@ export default function AboutPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[40vh] flex items-center justify-center text-center text-white bg-gray-800">
+        <section className="relative h-[40vh] flex items-center justify-center text-center bg-secondary">
           {aboutHeroImage && (
-            <>
-              <Image 
-                src={aboutHeroImage.imageUrl}
-                alt={aboutHeroImage.description}
-                fill
-                style={{ objectFit: 'cover' }}
-                className="absolute inset-0 w-full h-full"
-                data-ai-hint={aboutHeroImage.imageHint}
-                priority
-              />
-              <div className="absolute inset-0 w-full h-full bg-black/60"></div>
-            </>
+            <Image 
+              src={aboutHeroImage.imageUrl}
+              alt={aboutHeroImage.description}
+              fill
+              style={{ objectFit: 'cover' }}
+              className="absolute inset-0 w-full h-full opacity-20 dark:opacity-30"
+              data-ai-hint={aboutHeroImage.imageHint}
+              priority
+            />
           )}
           <div className="container mx-auto px-4 relative z-10">
-            <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-white drop-shadow-lg">
+            <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-primary drop-shadow-md">
               Giới Thiệu Về Giáo Xứ
             </h1>
           </div>

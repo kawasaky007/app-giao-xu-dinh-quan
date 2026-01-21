@@ -65,22 +65,22 @@ export function HeroCarousel() {
       <CarouselContent>
         {heroSlides.map(slide => (
             <CarouselItem key={slide.id}>
-                <div className="relative h-[70vh] flex items-center justify-center text-center bg-gray-800 text-white">
+                <div className="relative h-[70vh] flex items-center justify-center text-center bg-secondary">
                 {slide.image && (
                     <Image
                         src={slide.image.imageUrl}
                         alt={slide.image.description}
                         fill
-                        className="absolute inset-0 w-full h-full object-cover brightness-75"
+                        className="absolute inset-0 w-full h-full object-cover opacity-20 dark:opacity-30"
                         data-ai-hint={slide.image.imageHint}
                         priority={slide.id === 'slide-1'}
                     />
                 )}
                 <div className="relative z-10 container mx-auto px-4">
-                    <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight drop-shadow-lg mb-4">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-primary drop-shadow-md mb-4">
                         {slide.title}
                     </h1>
-                    <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-200 drop-shadow-md mb-8">
+                    <p className="max-w-3xl mx-auto text-lg md:text-xl text-foreground/80 drop-shadow-sm mb-8">
                         {slide.subtitle}
                     </p>
                     <Button size="lg" asChild>
