@@ -25,7 +25,7 @@ export default async function AlbumPage({ params }: Props) {
 
     return (
         <main className="py-16 md:py-24 bg-background">
-            <div className="container px-4">
+            <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto mb-12">
                     <Button asChild variant="ghost" className="mb-4">
                         <Link href="/gallery"><ArrowLeft className="mr-2 h-4 w-4" /> Quay lại Thư viện</Link>

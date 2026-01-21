@@ -3,7 +3,7 @@ import { MapPin, Phone, Mailbox } from 'lucide-react';
 export default function ContactPage() {
     return (
         <main className="py-16 md:py-24 bg-background">
-            <div className="container px-4">
+            <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-16">
                     <div>
                         <h2 className="text-2xl md:text-3xl font-headline font-bold text-primary mb-6">Thông Tin Liên Hệ</h2>

@@ -118,7 +118,7 @@ export default async function EventPage({ params }: Props) {
         </header>
       )}
 
-      <div className="container px-4">
+      <div className="container mx-auto px-4">
         <div className={`max-w-3xl mx-auto ${event.image ? '-mt-24 md:-mt-32' : 'pt-16'} relative z-10`}>
             <div className="bg-card shadow-xl rounded-lg p-6 md:p-10">
                 <div className="mb-4">

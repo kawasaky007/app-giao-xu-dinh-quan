@@ -25,7 +25,7 @@ export default async function SchedulePage() {
             data-ai-hint={scheduleHeaderImage.imageHint}
             priority
           />}
-          <div className="container px-4 z-10">
+          <div className="container mx-auto px-4 z-10">
             <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-white drop-shadow-lg">
               Lịch Phụng Vụ
             </h1>
@@ -36,7 +36,7 @@ export default async function SchedulePage() {
         </section>
 
         <section id="regular-schedule" className="py-16 md:py-24 bg-background">
-          <div className="container px-4">
+          <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <Clock className="w-12 h-12 mx-auto text-primary mb-4" />
               <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Lịch Thường Lệ</h2>
@@ -73,7 +73,7 @@ export default async function SchedulePage() {
         </section>
         
         <section id="special-schedules" className="py-16 md:py-24 bg-secondary/50">
-          <div className="container px-4">
+          <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <Calendar className="w-12 h-12 mx-auto text-primary mb-4" />
               <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Lịch Lễ Trọng & Đặc Biệt</h2>

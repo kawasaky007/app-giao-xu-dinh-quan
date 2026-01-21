@@ -98,7 +98,7 @@ export default function AboutPage() {
             data-ai-hint={aboutHeroImage.imageHint}
             priority
           />}
-          <div className="container px-4 z-10">
+          <div className="container mx-auto px-4 z-10">
             <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-white drop-shadow-lg">
               Giới Thiệu Về Giáo Xứ
             </h1>
@@ -125,7 +125,7 @@ export default function AboutPage() {
 
         {/* Mission, Vision, Values Section */}
         <section id="mission" className="py-16 md:py-24 bg-secondary/50">
-          <div className="container px-4">
+          <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
@@ -166,7 +166,7 @@ export default function AboutPage() {
 
         {/* Priests Section */}
         <section id="priests" className="py-16 md:py-24 bg-background">
-          <div className="container px-4">
+          <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <Users className="w-12 h-12 mx-auto text-primary mb-4" />
               <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Ban Linh Mục</h2>
@@ -232,7 +232,7 @@ export default function AboutPage() {
         
         {/* Organization Chart Section */}
         <section id="organization" className="py-16 md:py-24 bg-secondary/50">
-          <div className="container px-4">
+          <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <Users className="w-12 h-12 mx-auto text-primary mb-4" />
               <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Hội Đồng Mục Vụ & Các Đoàn Thể</h2>

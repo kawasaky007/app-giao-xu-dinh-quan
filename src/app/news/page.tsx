@@ -40,7 +40,7 @@ export default async function NewsPage({ searchParams }: NewsPageProps) {
 
   return (
     <main className="py-16 md:py-24 bg-background">
-      <div className="container px-4">
+      <div className="container mx-auto px-4">
         {/* Filtering and Search Controls */}
         <form className="mb-12 flex flex-col md:flex-row gap-4">
           <div className="relative flex-1">
