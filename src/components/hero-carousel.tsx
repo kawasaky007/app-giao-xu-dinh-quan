@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function HeroCarousel() {
-  const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: true }));
+  const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
 
   const heroSlides = [
     {
@@ -35,6 +35,22 @@ export function HeroCarousel() {
         subtitle: 'Tham gia các nhóm học hỏi và các chương trình đào tạo để đào sâu đời sống thiêng liêng.',
         buttonText: 'Chương Trình Giáo Lý',
         buttonLink: '/catechism',
+    },
+    {
+      id: 'slide-4',
+      image: PlaceHolderImages.find(p => p.id === 'worship-service'),
+      title: 'Cùng Nhau Thờ Phượng Chúa',
+      subtitle: 'Tham dự các Thánh lễ và giờ phụng vụ để nuôi dưỡng đời sống thiêng liêng.',
+      buttonText: 'Xem Lịch Phụng Vụ',
+      buttonLink: '/schedule',
+    },
+    {
+      id: 'slide-5',
+      image: PlaceHolderImages.find(p => p.id === 'volunteer-service'),
+      title: 'Phục Vụ Cộng Đoàn',
+      subtitle: 'Chung tay xây dựng giáo xứ và giúp đỡ những người xung quanh qua các hoạt động bác ái.',
+      buttonText: 'Tìm hiểu các Đoàn thể',
+      buttonLink: '/about#organization',
     },
   ];
 
