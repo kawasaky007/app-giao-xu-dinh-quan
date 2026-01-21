@@ -4,16 +4,18 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import * as lucide from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { HolyOrdersIcon } from '@/components/icons/holy-orders-icon';
+import { EucharistIcon } from '@/components/icons/eucharist-icon';
 
 // A map of icon names to their components
 const iconMap: { [key: string]: React.ComponentType<any> } = {
   Baby: lucide.Baby,
-  Cross: lucide.Cross,
+  EucharistCustom: EucharistIcon,
   Wind: lucide.Wind,
   HeartHandshake: lucide.HeartHandshake,
   KeyRound: lucide.KeyRound,
   Droplets: lucide.Droplets,
-  GraduationCap: lucide.GraduationCap,
+  HolyOrdersCustom: HolyOrdersIcon,
 };
 
 export default async function CatechismPage() {

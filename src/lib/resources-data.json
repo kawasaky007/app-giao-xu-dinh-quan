@@ -36,7 +36,7 @@
       "slug": "first-communion",
       "title": "Rước Lễ Lần Đầu",
       "description": "Hướng dẫn và lịch trình cho các em thiếu nhi chuẩn bị Rước Lễ Lần Đầu.",
-      "icon": "Cross"
+      "icon": "EucharistCustom"
     },
     {
       "slug": "confirmation",
@@ -66,7 +66,7 @@
       "slug": "holy-orders",
       "title": "Truyền Chức Thánh",
       "description": "Dành cho những ai đang tìm hiểu ơn gọi linh mục hoặc tu sĩ. Liên hệ cha xứ để được hướng dẫn.",
-      "icon": "GraduationCap"
+      "icon": "HolyOrdersCustom"
     }
   ],
   "sermons": [
