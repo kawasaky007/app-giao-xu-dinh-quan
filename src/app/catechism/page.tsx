@@ -21,37 +21,37 @@ export default async function CatechismPage() {
   const sacramentDocs = await getSacramentDocs();
 
   return (
-    <>
-      {/* Catechism Lessons Section */}
-      <section id="lessons" className="py-16 md:py-24">
-        <div className="container px-4 max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Các Lớp Giáo Lý</h2>
-            <p className="text-lg text-foreground/80">Giáo xứ cung cấp các chương trình đào tạo đức tin cho mọi lứa tuổi.</p>
+    <div className="py-16 md:py-24">
+      <div className="container mx-auto px-4">
+        {/* Catechism Lessons Section */}
+        <section id="lessons" className="mb-16 md:mb-24">
+          <div className="container px-4 max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Các Lớp Giáo Lý</h2>
+              <p className="text-lg text-foreground/80">Giáo xứ cung cấp các chương trình đào tạo đức tin cho mọi lứa tuổi.</p>
+            </div>
+            <Accordion type="single" collapsible className="w-full">
+              {catechismLessons.map((category, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-xl font-headline text-primary">{category.category}</AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-4 pl-4">
+                      {category.lessons.map((lesson, lessonIndex) => (
+                        <li key={lessonIndex} className="border-l-2 border-primary pl-4">
+                          <h4 className="font-bold text-foreground">{lesson.title}</h4>
+                          <p className="text-muted-foreground">{lesson.summary}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
-          <Accordion type="single" collapsible className="w-full">
-            {catechismLessons.map((category, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-xl font-headline text-primary">{category.category}</AccordionTrigger>
-                <AccordionContent>
-                  <ul className="space-y-4 pl-4">
-                    {category.lessons.map((lesson, lessonIndex) => (
-                      <li key={lessonIndex} className="border-l-2 border-primary pl-4">
-                        <h4 className="font-bold text-foreground">{lesson.title}</h4>
-                        <p className="text-muted-foreground">{lesson.summary}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
+        </section>
 
-      {/* Sacrament Preparation Section */}
-      <section id="sacraments" className="py-16 md:py-24 bg-secondary/50">
-        <div className="container mx-auto px-4">
+        {/* Sacrament Preparation Section */}
+        <section id="sacraments">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <lucide.Cross className="w-12 h-12 mx-auto text-primary mb-4" />
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary mb-4">Chuẩn Bị Lãnh Nhận Các Bí Tích</h2>
@@ -70,16 +70,16 @@ export default async function CatechismPage() {
                   </CardHeader>
                   <CardContent className="flex-grow flex flex-col">
                     <p className="mb-4 text-foreground/80 flex-grow">{doc.description}</p>
-                    <Button asChild variant="link">
-                      <Link href="/contact">Liên Hệ Văn Phòng</Link>
+                    <Button asChild>
+                      <Link href={`/catechism/${doc.slug}`}>Xem Chi Tiết</Link>
                     </Button>
                   </CardContent>
                 </Card>
               );
             })}
           </div>
-        </div>
-      </section>
-    </>
+        </section>
+      </div>
+    </div>
   );
 }

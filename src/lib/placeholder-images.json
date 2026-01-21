@@ -57,14 +57,14 @@
     {
       "id": "event-concert",
       "description": "Một ca đoàn đang biểu diễn một buổi hòa nhạc bên trong nhà thờ.",
-      "imageUrl": "https://images.unsplash.com/photo-1761901219072-491a18f3ccd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaG9pciUyMGNvbmNlcnR8ZW58MHx8fHwxNzY4ODk5MjQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1516280440315-7347348552a8?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "hòa tấu ca đoàn"
     },
     {
-      "id": "event-dinner",
-      "description": "Một bữa ăn tối cộng đồng đang được tổ chức tại hội trường giáo xứ.",
-      "imageUrl": "https://images.unsplash.com/photo-1721180672417-81a4c8515ea5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb21tdW5pdHklMjBkaW5uZXJ8ZW58MHx8fHwxNzY4ODk5MjQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "bữa tối cộng đồng"
+      "id": "event-retreat",
+      "description": "Một người đang cầu nguyện một mình trong một nhà nguyện yên tĩnh.",
+      "imageUrl": "https://images.unsplash.com/photo-1618279939527-333a395af6ce?q=80&w=1964&auto=format&fit=crop",
+      "imageHint": "cầu nguyện"
     },
     {
       "id": "schedule-header",
@@ -299,6 +299,48 @@
       "description": "Phép lành cuối cùng vào cuối Thánh lễ Vọng.",
       "imageUrl": "https://images.unsplash.com/photo-1765947385186-9d3c7897481c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcmllc3QlMjBibGVzc2luZ3xlbnwwfHx8fDE3Njg5MDA3MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "linh mục ban phước"
+    },
+    {
+      "id": "sacrament-baptism",
+      "description": "Linh mục cử hành Bí tích Rửa tội cho một em bé.",
+      "imageUrl": "https://images.unsplash.com/photo-1765267566923-4ce452dd9b02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiYXB0aXNtJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzY4OTAwNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lễ rửa tội"
+    },
+    {
+      "id": "sacrament-communion",
+      "description": "Một em bé rước lễ lần đầu.",
+      "imageUrl": "https://images.unsplash.com/photo-1610131635230-9c4afb6238b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxob2x5JTIwY29tbXVuaW9ufGVufDB8fHx8MTc2ODg4Mjg5MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rước lễ lần đầu"
+    },
+    {
+      "id": "sacrament-confirmation",
+      "description": "Cửa sổ kính màu có hình chim bồ câu, biểu tượng của Chúa Thánh Thần.",
+      "imageUrl": "https://images.unsplash.com/photo-1549633393-291a18c39b1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb25maXJtYXRpb258ZW58MHx8fHwxNzIyNDY4NjE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chúa thánh thần"
+    },
+    {
+      "id": "sacrament-marriage",
+      "description": "Một cặp đôi trao nhẫn cưới trước bàn thờ trong nhà thờ.",
+      "imageUrl": "https://images.unsplash.com/photo-1597157639070-4384955b92e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3ZWRkaW5nJTIwY2h1cmNofGVufDB8fHx8MTcyMjQ2ODY5Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "đám cưới nhà thờ"
+    },
+    {
+      "id": "sacrament-reconciliation",
+      "description": "Bên trong một tòa giải tội bằng gỗ.",
+      "imageUrl": "https://images.unsplash.com/photo-1621253494794-517a26f332c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25mZXNzaW9uYWx8ZW58MHx8fHwxNzIyNDY4NzM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tòa giải tội"
+    },
+    {
+      "id": "sacrament-anointing",
+      "description": "Một linh mục đang cầu nguyện và đặt tay trên một bệnh nhân.",
+      "imageUrl": "https://images.unsplash.com/photo-1620188461942-e199542a1738?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcmF5aW5nJTIwZm9yJTIwc2lja3xlbnwwfHx8fDE3MjI0Njg3ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cầu nguyện cho bệnh nhân"
+    },
+    {
+      "id": "sacrament-holy-orders",
+      "description": "Một giám mục đang đặt tay trên đầu một tân chức trong lễ truyền chức.",
+      "imageUrl": "https://images.unsplash.com/photo-1632763242084-a60d05051b75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvcmRpbmF0aW9ufGVufDB8fHx8fDE3MjI0Njg4MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lễ truyền chức"
     }
   ]
 }

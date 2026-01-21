@@ -15,6 +15,7 @@ export type SacramentDocument = {
   title: string;
   description: string;
   icon: string;
+  slug: string;
 };
 
 export type Sermon = {
