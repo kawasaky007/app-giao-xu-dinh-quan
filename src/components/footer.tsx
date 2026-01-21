@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
         <div className="flex flex-col items-center md:items-start">
           <Link href="/" className="flex items-center gap-3 text-primary font-headline font-bold text-2xl mb-4">
-            <Image src="/images/logo.png" alt="Giáo xứ Định Quán Logo" width={32} height={32} className="w-8 h-8" />
+            <Image src="/images/logo/logo.png" alt="Giáo xứ Định Quán Logo" width={32} height={32} className="w-8 h-8" />
             <span>Giáo xứ Định Quán</span>
           </Link>
           <p className="text-foreground/80 max-w-sm">

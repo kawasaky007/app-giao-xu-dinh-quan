@@ -55,7 +55,7 @@ export default function Header() {
           href="/"
           className="flex items-center gap-2 font-headline text-lg font-bold text-primary md:text-xl"
         >
-          <Image src="/images/logo.png" alt="Giáo xứ Định Quán Logo" width={28} height={28} className="h-7 w-7 shrink-0" />
+          <Image src="/images/logo/logo.png" alt="Giáo xứ Định Quán Logo" width={28} height={28} className="h-7 w-7 shrink-0" />
           <span className="hidden lg:inline">Giáo xứ Định Quán</span>
           <span className="lg:hidden">GX Định Quán</span>
         </Link>
@@ -108,7 +108,7 @@ export default function Header() {
                         href="/"
                         className="flex items-center gap-3 font-headline text-xl font-bold text-primary"
                     >
-                        <Image src="/images/logo.png" alt="Giáo xứ Định Quán Logo" width={32} height={32} className="h-8 w-8" />
+                        <Image src="/images/logo/logo.png" alt="Giáo xứ Định Quán Logo" width={32} height={32} className="h-8 w-8" />
                         <span>Giáo Xứ</span>
                     </Link>
                    </div>
