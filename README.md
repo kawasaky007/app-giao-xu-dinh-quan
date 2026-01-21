@@ -125,3 +125,6 @@ Act as a professional full-stack developer. Your task is to implement a complete
     *   Go through the files in `src/lib/` (e.g., `news.ts`, `events.ts`).
     *   Rewrite the functions (`getNewsArticles`, `getEventBySlug`, etc.) to `fetch` data from your newly created public API endpoints instead of reading from the local `.json` files. The local `.json` data files are now deprecated and can be ignored.
 ````
+
+
+TEST
