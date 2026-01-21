@@ -61,17 +61,17 @@ export default async function CatechismPage() {
             {sacramentDocs.map((doc) => {
               const IconComponent = iconMap[doc.icon] || lucide.FileText;
               return (
-                <Card key={doc.title} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <Card key={doc.title} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
                   <CardHeader>
                     <div className="mx-auto bg-primary text-primary-foreground rounded-full p-3 w-fit mb-4">
                       <IconComponent className="w-8 h-8" />
                     </div>
-                    <CardTitle className="font-headline text-2xl">{doc.title}</CardTitle>
+                    <CardTitle className="font-headline text-2xl h-14 flex items-center justify-center">{doc.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="mb-4 text-foreground/80">{doc.description}</p>
+                  <CardContent className="flex-grow flex flex-col">
+                    <p className="mb-4 text-foreground/80 flex-grow">{doc.description}</p>
                     <Button asChild variant="link">
-                      <Link href="#">Tìm Hiểu Thêm</Link>
+                      <Link href="/contact">Liên Hệ Văn Phòng</Link>
                     </Button>
                   </CardContent>
                 </Card>
