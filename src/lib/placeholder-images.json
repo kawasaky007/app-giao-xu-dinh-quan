@@ -15,31 +15,31 @@
     {
       "id": "hero-community-slide",
       "description": "Một nhóm người Việt Nam thuộc nhiều thế hệ đang cười và nói chuyện vui vẻ.",
-      "imageUrl": "/images/hero/community.jpg",
+      "imageUrl": "/images/cong-doan.png",
       "imageHint": "cộng đoàn"
     },
     {
       "id": "worship-service",
       "description": "Một cộng đoàn trong một buổi lễ thờ phượng, với một linh mục tại bàn thờ.",
-      "imageUrl": "/images/hero/worship-service.jpg",
+      "imageUrl": "/images/buoi-le.png",
       "imageHint": "buổi lễ"
     },
     {
       "id": "volunteer-service",
       "description": "Các tình nguyện viên của giáo xứ đang làm việc cùng nhau tại một ngân hàng thực phẩm địa phương.",
-      "imageUrl": "/images/hero/volunteer-service.jpg",
+      "imageUrl": "/images/tinh-nguyen.png",
       "imageHint": "tình nguyện"
     },
     {
       "id": "schedule-header",
       "description": "Bên trong nhà thờ Huyền Sỹ, một nhà thờ cổ kính tại TP.HCM, với những hàng cột và vòm trần trang trí công phu.",
-      "imageUrl": "/images/ui/schedule-header.jpg",
+      "imageUrl": "/images/nha-tho-2.png",
       "imageHint": "nhà thờ Việt Nam"
     },
     {
       "id": "about-hero",
       "description": "Cận cảnh chi tiết một cửa sổ kính màu tuyệt đẹp, hiển thị các hoa văn phức tạp và màu sắc rực rỡ.",
-      "imageUrl": "/images/about/hero.jpg",
+      "imageUrl": "/images/cua-so-kinh-mau.jpg",
       "imageHint": "kính màu"
     },
     {
